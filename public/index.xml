@@ -37,6 +37,15 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Hulk Hogan for President!!!</title>
+      <link>/about/hulk-hogan-for-president/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/hulk-hogan-for-president/</guid>
+      <description> THis is something  </description>
+    </item>
+    
+    <item>
       <title>Hugo Templates</title>
       <link>/post/hugo-templates/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
@@ -125,15 +134,6 @@ Features  It&amp;rsquo;s like having your own personal chef from 1,783,482,482 (
     </item>
     
     <item>
-      <title>Fancy App 1</title>
-      <link>/itemized/item1/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item1/</guid>
-      <description> App 1 </description>
-    </item>
-    
-    <item>
       <title>Fancy App 2</title>
       <link>/itemized/item2/</link>
       <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
@@ -158,6 +158,16 @@ Features  It&amp;rsquo;s like having your own personal chef from 1,783,482,482 (
       
       <guid>/itemized/item4/</guid>
       <description> App 4 </description>
+    </item>
+    
+    <item>
+      <title>My Test Item</title>
+      <link>/itemized/item1/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/item1/</guid>
+      <description> App 1  Maximum Fun!!!!
+ </description>
     </item>
     
     <item>

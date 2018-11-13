@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>/about/hulk-hogan-for-president/</loc>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/hugo-templates/</loc>
     <lastmod>2018-11-12T00:00:00+00:00</lastmod>
   </url>
@@ -58,11 +63,6 @@
   </url>
   
   <url>
-    <loc>/itemized/item1/</loc>
-    <lastmod>2017-06-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/itemized/item2/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
@@ -74,6 +74,11 @@
   
   <url>
     <loc>/itemized/item4/</loc>
+    <lastmod>2017-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/itemized/item1/</loc>
     <lastmod>2017-06-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -227,6 +232,12 @@
   </url>
   
   <url>
+    <loc>/categories/cool-stuff/</loc>
+    <lastmod>2017-06-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/dev/</loc>
     <lastmod>2018-03-10T17:23:09-08:00</lastmod>
     <priority>0</priority>
@@ -240,7 +251,7 @@
   
   <url>
     <loc>/categories/examplesite/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -258,7 +269,7 @@
   
   <url>
     <loc>/tags/howto/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

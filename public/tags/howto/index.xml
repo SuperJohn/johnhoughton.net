@@ -6,10 +6,19 @@
     <description>Recent content in howto on John Houghton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/howto/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hulk Hogan for President!!!</title>
+      <link>/about/hulk-hogan-for-president/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/hulk-hogan-for-president/</guid>
+      <description> THis is something  </description>
+    </item>
     
     <item>
       <title>Getting Started with Hugo</title>
