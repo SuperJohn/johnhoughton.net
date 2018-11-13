@@ -1,0 +1,486 @@
+---
+title: A Markdown Test
+author: John Houghton
+date: '2018-11-12'
+slug: a-markdown-test
+categories:
+  - R
+tags: []
+description: ''
+---
+
+
+
+<div id="resources" class="section level1">
+<h1>Resources</h1>
+<div id="performance-analysis-vignette" class="section level4">
+<h4>Performance Analysis Vignette</h4>
+<p><a href="https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html" class="uri">https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html</a></p>
+</div>
+<div id="really-great-article-i-walked-through" class="section level4">
+<h4>Really great article I walked through</h4>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html" class="uri">https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html</a></p>
+</div>
+<div id="really-great-article-2---same-as-above-or-extended" class="section level4">
+<h4>Really great article #2 - same as above or extended?</h4>
+<p><a href="https://rpubs.com/mr148/333431" class="uri">https://rpubs.com/mr148/333431</a></p>
+</div>
+<div id="backtesting-4-portfolio-optimization-strategies-in-r" class="section level4">
+<h4>Backtesting 4 Portfolio Optimization Strategies In R</h4>
+<p><a href="https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r" class="uri">https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r</a></p>
+<div id="using-roi-solvers-for-portfolio-analytics-vignette" class="section level5">
+<h5>Using ROI Solvers for Portfolio Analytics, Vignette</h5>
+<p><a href="https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf" class="uri">https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf</a></p>
+</div>
+</div>
+</div>
+<div id="r-notebook-options" class="section level1">
+<h1>R Notebook Options</h1>
+<pre class="r"><code>knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)</code></pre>
+</div>
+<div id="load-required-libraries-set-paths" class="section level1">
+<h1>Load Required Libraries &amp; Set Paths</h1>
+<pre><code>## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.1.0     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
+## ✔ tidyr   0.8.2     ✔ stringr 1.3.1
+## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
+<pre><code>## ── Conflicts ───────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre><code>## Loading required package: lubridate</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lubridate&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     date</code></pre>
+<pre><code>## Loading required package: PerformanceAnalytics</code></pre>
+<pre><code>## Loading required package: xts</code></pre>
+<pre><code>## Loading required package: zoo</code></pre>
+<pre><code>## 
+## Attaching package: &#39;zoo&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.Date, as.Date.numeric</code></pre>
+<pre><code>## 
+## Attaching package: &#39;xts&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     first, last</code></pre>
+<pre><code>## 
+## Attaching package: &#39;PerformanceAnalytics&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     legend</code></pre>
+<pre><code>## Loading required package: quantmod</code></pre>
+<pre><code>## Loading required package: TTR</code></pre>
+<pre><code>## Version 0.4-0 included new data defaults. See ?getSymbols.</code></pre>
+</div>
+<div id="set-query-parameters" class="section level1">
+<h1>Set Query Parameters</h1>
+</div>
+<div id="get-stock-data" class="section level1">
+<h1>Get Stock Data</h1>
+<pre><code>## # A tibble: 100 x 8
+##    symbol date        open  high   low close    volume adjusted
+##    &lt;chr&gt;  &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+##  1 SPY    2013-11-12  177.  177.  176.  177.  83990000     160.
+##  2 SPY    2013-11-13  176.  178.  176.  178. 103844000     162.
+##  3 SPY    2013-11-14  179.  179.  178.  179. 103435000     162.
+##  4 SPY    2013-11-15  180.  180.  179.  180. 102818000     163.
+##  5 SPY    2013-11-18  180.  180.  179.  179. 104796000     163.
+##  6 SPY    2013-11-19  179.  180.  179.  179.  93891000     162.
+##  7 SPY    2013-11-20  179.  180.  178.  178. 124909000     162.
+##  8 SPY    2013-11-21  179.  180.  179.  180.  92841000     163.
+##  9 SPY    2013-11-22  180.  181.  180.  181.  81296000     164.
+## 10 SPY    2013-11-25  181.  181.  180.  181.  79486000     164.
+## # ... with 90 more rows</code></pre>
+</div>
+<div id="visualize-stock-prices" class="section level1">
+<h1>Visualize Stock Prices</h1>
+<pre><code>## [1] &quot;SPY&quot;</code></pre>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-4-1.png" width="672" /><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-4-2.png" width="672" /><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-4-3.png" width="672" /><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-4-4.png" width="672" /><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-4-5.png" width="672" /></p>
+<pre><code>## [1] &quot;SPY&quot;</code></pre>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre><code>## # A tibble: 7 x 3
+##   yearly.returns type       date      
+##            &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;     
+## 1        0.135   arithmetic 2012-12-31
+## 2        0.297   arithmetic 2013-12-31
+## 3        0.113   arithmetic 2014-12-31
+## 4       -0.00812 arithmetic 2015-12-31
+## 5        0.0964  arithmetic 2016-12-30
+## 6        0.194   arithmetic 2017-12-29
+## 7        0.0408  arithmetic 2018-11-09</code></pre>
+<pre><code>## # A tibble: 7 x 3
+##   yearly.returns type  date      
+##            &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     
+## 1        0.126   log   2012-12-31
+## 2        0.260   log   2013-12-31
+## 3        0.107   log   2014-12-31
+## 4       -0.00816 log   2015-12-31
+## 5        0.0921  log   2016-12-30
+## 6        0.177   log   2017-12-29
+## 7        0.0400  log   2018-11-09</code></pre>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
+</div>
+<div id="calculate-returns" class="section level1">
+<h1>Calculate Returns</h1>
+<pre><code>## # A tibble: 54 x 4
+## # Groups:   symbol [9]
+##    symbol  year adjusted   return
+##    &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+##  1 TLT     2018    113.   -0.0865
+##  2 TLT     2017    124.    0.0918
+##  3 TLT     2016    114.    0.0117
+##  4 TLT     2015    112.   -0.0179
+##  5 TLT     2014    114.    0.273 
+##  6 TLT     2013     89.8  NA     
+##  7 SPY     2018    278.    0.0545
+##  8 SPY     2017    263.    0.217 
+##  9 SPY     2016    216.    0.120 
+## 10 SPY     2015    193.    0.0123
+## # ... with 44 more rows</code></pre>
+<pre><code>## # A tibble: 549 x 3
+## # Groups:   symbol [9]
+##    symbol date         returns
+##    &lt;chr&gt;  &lt;date&gt;         &lt;dbl&gt;
+##  1 TLT    2018-11-09  0.000397
+##  2 TLT    2018-10-31 -0.0293  
+##  3 TLT    2018-09-28 -0.0286  
+##  4 TLT    2018-08-31  0.0131  
+##  5 TLT    2018-07-31 -0.0144  
+##  6 TLT    2018-06-29  0.00646 
+##  7 TLT    2018-05-31  0.0200  
+##  8 TLT    2018-04-30 -0.0209  
+##  9 TLT    2018-03-29  0.0286  
+## 10 TLT    2018-02-28 -0.0304  
+## # ... with 539 more rows</code></pre>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-6-1.png" width="672" /><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-6-2.png" width="672" /></p>
+</div>
+<div id="growth-of-1000-version-1" class="section level1">
+<h1>Growth of $1000 version 1</h1>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="growth-of-1000-version-2" class="section level1">
+<h1>Growth of $1000 version 2</h1>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre><code>## Error in is.xts(x): object &#39;stock_returns&#39; not found</code></pre>
+</div>
+<div id="create-time-series-object-for-optimization" class="section level1">
+<h1>Create Time-Series Object for Optimization</h1>
+</div>
+<div id="portfolio-optimization" class="section level1">
+<h1>Portfolio Optimization</h1>
+<pre><code>## Loading required package: foreach</code></pre>
+<pre><code>## 
+## Attaching package: &#39;foreach&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:purrr&#39;:
+## 
+##     accumulate, when</code></pre>
+<pre><code>## Error in contrib.url(repos, &quot;source&quot;): trying to use CRAN without setting a mirror</code></pre>
+<pre><code>## Error in is.data.frame(x): object &#39;returns.portfolio&#39; not found</code></pre>
+<pre><code>## Error in is.portfolio(portfolio): object &#39;portf_minvar&#39; not found</code></pre>
+<pre><code>## Error in is.portfolio(portfolio): object &#39;portf_minvar&#39; not found</code></pre>
+<pre><code>## Error in is.portfolio(portfolio): object &#39;portf_minvar&#39; not found</code></pre>
+<pre><code>## Error in optimize.portfolio(R = returns, portfolio = portf_minvar, optimize_method = &quot;ROI&quot;, : object &#39;portf_minvar&#39; not found</code></pre>
+<pre><code>## Error in print(opt_gmv): object &#39;opt_gmv&#39; not found</code></pre>
+</div>
+<div id="visualize-portfolio-optimization" class="section level1">
+<h1>Visualize Portfolio Optimization</h1>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre><code>## Error in eval(lhs, parent, parent): object &#39;opt_gmv&#39; not found</code></pre>
+<pre><code>## Error in eval(lhs, parent, parent): object &#39;opt_gmv&#39; not found</code></pre>
+<div id="section" class="section level20">
+<p></p>
+</div>
+<div id="try-r-charts" class="section level3">
+<h3>TRY R CHARTS</h3>
+<div id="section-1" class="section level20">
+<p></p>
+</div>
+<div id="section-2" class="section level20">
+<p></p>
+</div>
+</div>
+<div id="try-slidfy" class="section level3">
+<h3>TRY SLIDFY</h3>
+<div id="section-3" class="section level20">
+<p></p>
+</div>
+</div>
+<div id="backtesting-portfolios" class="section level3">
+<h3>BACKTESTING PORTFOLIOS</h3>
+<pre><code>## Error in optimize.portfolio.rebalancing(R = returns, portfolio = portf_minvar, : object &#39;portf_minvar&#39; not found</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;bt_gmv&#39; not found</code></pre>
+</div>
+</div>
+<div id="get-performance" class="section level1">
+<h1>Get Performance</h1>
+<pre><code>## # A tibble: 9 x 17
+## # Groups:   symbol [9]
+##   symbol ArithmeticMean GeometricMean Kurtosis `LCLMean(0.95)` Maximum
+##   &lt;chr&gt;           &lt;dbl&gt;         &lt;dbl&gt;    &lt;dbl&gt;           &lt;dbl&gt;   &lt;dbl&gt;
+## 1 TLT          0.0041          0.0037   1.11           -0.0038  0.0982
+## 2 SPY          0.0095          0.009    0.714           0.0021  0.0853
+## 3 QQQ          0.0137          0.013    0.198           0.0039  0.114 
+## 4 IYR          0.0076          0.007    0.038          -0.0013  0.103 
+## 5 IWM          0.0076          0.0067   0.399          -0.003   0.111 
+## 6 GLD         -0.000300       -0.0011   0.261          -0.0105  0.109 
+## 7 EFA          0.0025          0.0019   0.0098         -0.0059  0.0661
+## 8 EEM          0.0022          0.0013   0.100          -0.0091  0.130 
+## 9 DBC         -0.0061         -0.007    0.129          -0.017   0.0971
+## # ... with 11 more variables: Median &lt;dbl&gt;, Minimum &lt;dbl&gt;, NAs &lt;dbl&gt;,
+## #   Observations &lt;dbl&gt;, Quartile1 &lt;dbl&gt;, Quartile3 &lt;dbl&gt;, SEMean &lt;dbl&gt;,
+## #   Skewness &lt;dbl&gt;, Stdev &lt;dbl&gt;, `UCLMean(0.95)` &lt;dbl&gt;, Variance &lt;dbl&gt;</code></pre>
+<pre><code>## # A tibble: 9 x 4
+## # Groups:   symbol [9]
+##   symbol AnnualizedReturn `AnnualizedSharpe(Rf=0%)` AnnualizedStdDev
+##   &lt;chr&gt;             &lt;dbl&gt;                     &lt;dbl&gt;            &lt;dbl&gt;
+## 1 TLT              0.0448                    0.419             0.107
+## 2 SPY              0.114                     1.14              0.1  
+## 3 QQQ              0.167                     1.26              0.133
+## 4 IYR              0.0879                    0.728             0.121
+## 5 IWM              0.0841                    0.588             0.143
+## 6 GLD             -0.0132                   -0.0958            0.137
+## 7 EFA              0.0235                    0.209             0.113
+## 8 EEM              0.0151                    0.0988            0.153
+## 9 DBC             -0.0808                   -0.547             0.148</code></pre>
+<pre><code>## # A tibble: 9 x 12
+## # Groups:   symbol [9]
+##   symbol `DownsideDeviat… `DownsideDeviat… `DownsideDeviat… GainDeviation
+##   &lt;chr&gt;             &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;         &lt;dbl&gt;
+## 1 TLT              0.019            0.0235           0.019         0.0216
+## 2 SPY              0.0169           0.0207           0.0169        0.0186
+## 3 QQQ              0.0203           0.0244           0.0203        0.0246
+## 4 IYR              0.0203           0.0247           0.0203        0.0235
+## 5 IWM              0.0269           0.031            0.0269        0.0246
+## 6 GLD              0.0259           0.0311           0.0259        0.0289
+## 7 EFA              0.0227           0.0272           0.0227        0.0185
+## 8 EEM              0.0301           0.0349           0.0301        0.0264
+## 9 DBC              0.035            0.0399           0.035         0.0213
+## # ... with 7 more variables: `HistoricalES(95%)` &lt;dbl&gt;,
+## #   `HistoricalVaR(95%)` &lt;dbl&gt;, LossDeviation &lt;dbl&gt;,
+## #   MaximumDrawdown &lt;dbl&gt;, `ModifiedES(95%)` &lt;dbl&gt;,
+## #   `ModifiedVaR(95%)` &lt;dbl&gt;, SemiDeviation &lt;dbl&gt;</code></pre>
+<pre><code>## # A tibble: 9 x 9
+## # Groups:   symbol [9]
+##   symbol Annualiseddowns… Downsidepotenti… Monthlydownside… Omega
+##   &lt;chr&gt;             &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt; &lt;dbl&gt;
+## 1 TLT              0.0659           0.0095           0.019  1.43 
+## 2 SPY              0.0586           0.0071           0.0169 2.33 
+## 3 QQQ              0.0705           0.0095           0.0203 2.44 
+## 4 IYR              0.0703           0.01             0.0203 1.76 
+## 5 IWM              0.0933           0.0126           0.0269 1.60 
+## 6 GLD              0.0897           0.0154           0.0259 0.978
+## 7 EFA              0.0786           0.0116           0.0227 1.21 
+## 8 EEM              0.104            0.0165           0.0301 1.13 
+## 9 DBC              0.121            0.0198           0.035  0.692
+## # ... with 4 more variables: `Omega-sharperatio` &lt;dbl&gt;,
+## #   Sortinoratio &lt;dbl&gt;, Upsidepotential &lt;dbl&gt;, Upsidepotentialratio &lt;dbl&gt;</code></pre>
+<pre><code>## # A tibble: 9 x 2
+## # Groups:   symbol [9]
+##   symbol     VaR
+##   &lt;chr&gt;    &lt;dbl&gt;
+## 1 TLT    -0.0439
+## 2 SPY    -0.0397
+## 3 QQQ    -0.0499
+## 4 IYR    -0.0482
+## 5 IWM    -0.0636
+## 6 GLD    -0.0593
+## 7 EFA    -0.0534
+## 8 EEM    -0.0694
+## 9 DBC    -0.0798</code></pre>
+<pre><code>## # A tibble: 9 x 4
+## # Groups:   symbol [9]
+##   symbol `ESSharpe(Rf=0%,p=95… `StdDevSharpe(Rf=0%,p… `VaRSharpe(Rf=0%,p=…
+##   &lt;chr&gt;                  &lt;dbl&gt;                  &lt;dbl&gt;                &lt;dbl&gt;
+## 1 TLT                  0.0701                 0.134                0.0938 
+## 2 SPY                  0.164                  0.328                0.238  
+## 3 QQQ                  0.200                  0.357                0.274  
+## 4 IYR                  0.124                  0.219                0.158  
+## 5 IWM                  0.0873                 0.184                0.119  
+## 6 GLD                 -0.00477               -0.00854             -0.00570
+## 7 EFA                  0.0358                 0.0757               0.0461 
+## 8 EEM                  0.0252                 0.0500               0.0319 
+## 9 DBC                 -0.0602                -0.143               -0.0763</code></pre>
+</div>
+<div id="example-of-efficiency-frontier-from-stack-overflow" class="section level1">
+<h1>Example of Efficiency Frontier from Stack Overflow</h1>
+<p><a href="https://stackoverflow.com/questions/30614457/r-portfolio-analytics-chart-efficientfrontier-function/30650972#30650972" class="uri">https://stackoverflow.com/questions/30614457/r-portfolio-analytics-chart-efficientfrontier-function/30650972#30650972</a> <img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-14-1.png" width="672" /><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
+<pre><code>## Error in chart.EfficientFrontier.efficient.frontier(prt_ef): could not match match.col with column name of efficient frontier</code></pre>
+</div>
+<div id="second-example-from-stack-overflow" class="section level1">
+<h1>Second Example from Stack Overflow</h1>
+<p><a href="https://stackoverflow.com/questions/30614457/r-portfolio-analytics-chart-efficientfrontier-function/30650972#30650972" class="uri">https://stackoverflow.com/questions/30614457/r-portfolio-analytics-chart-efficientfrontier-function/30650972#30650972</a></p>
+<pre><code>## Loading required package: quadprog</code></pre>
+<pre><code>##         DBC EEM EFA    GLD IWM IYR QQQ SPY    TLT
+## [1,] 1.0000   0   0 0.0000   0   0   0   0 0.0000
+## [2,] 0.9310   0   0 0.0490   0   0   0   0 0.0000
+## [3,] 0.8609   0   0 0.1191   0   0   0   0 0.0000
+## [4,] 0.8064   0   0 0.1534   0   0   0   0 0.0202
+## [5,] 0.7744   0   0 0.1361   0   0   0   0 0.0695
+## [6,] 0.7425   0   0 0.1188   0   0   0   0 0.1187</code></pre>
+<p><img src="/post/2018-11-12-a-markdown-test_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="calculate-returns-method-2" class="section level1">
+<h1>Calculate Returns, Method 2</h1>
+<p><a href="https://ntguardian.wordpress.com/2017/03/27/introduction-stock-market-data-r-1/" class="uri">https://ntguardian.wordpress.com/2017/03/27/introduction-stock-market-data-r-1/</a> (Here, is the natural log, and our definition does not depend as strongly on whether we use (<em>{t}) - (</em>{t - 1}) or (<em>{t+1}) - (</em>{t}).) The advantage of using log differences is that this difference can be interpreted as the percentage change in a stock but does not depend on the denominator of a fraction.</p>
+</div>
+<div id="example---multi-layer-optimization" class="section level1">
+<h1>Example - Multi Layer Optimization</h1>
+<pre><code>## 
+## 
+##  demo(multi_layer_optimization)
+##  ---- ~~~~~~~~~~~~~~~~~~~~~~~~
+## 
+## &gt; #&#39; ---
+## &gt; #&#39; title: &quot;Multi Layer Optimization Demo&quot;
+## &gt; #&#39; author: Ross Bennett
+## &gt; #&#39; date: &quot;7/17/2014&quot;
+## &gt; #&#39; ---
+## &gt; 
+## &gt; #&#39; Demonstrate multi layer portfolio optimization
+## &gt; #&#39; The top level (i.e. layer) optimization problem is to minimize modified ES
+## &gt; #&#39; with equal component contribution to modified ES of the two portfolios in 
+## &gt; #&#39; the lower layer.
+## &gt; #&#39; 
+## &gt; #&#39; The sub portfolios consist of different assets and different objectives
+## &gt; #&#39; relative to each other. The out of sample returns for each sub portfolio
+## &gt; #&#39; are calculated based on their respective constraints, objectives, and
+## &gt; #&#39; optimization parameters. The out of sample returns are then used as the
+## &gt; #&#39; returns input for the top level optimization.
+## &gt; 
+## &gt; #&#39; Load package and data.
+## &gt; library(PortfolioAnalytics)
+## 
+## &gt; data(edhec)
+## 
+## &gt; R &lt;- edhec[, 1:10]
+## 
+## &gt; funds &lt;- colnames(R)
+## 
+## &gt; #&#39; The first sub-portfolio, portf1, will contain assets 1:5 of edhec
+## &gt; #&#39; with an objective to minimize standard deviation.
+## &gt; portf1 &lt;- portfolio.spec(assets=funds[1:5])
+## 
+## &gt; portf1 &lt;- add.constraint(portfolio=portf1, type=&quot;weight_sum&quot;, 
+## +                          min_sum=0.99, max_sum=1.01)
+## 
+## &gt; portf1 &lt;- add.constraint(portfolio=portf1, type=&quot;long_only&quot;)
+## 
+## &gt; portf1 &lt;- add.objective(portfolio=portf1, type=&quot;risk&quot;, name=&quot;StdDev&quot;)
+## 
+## &gt; #&#39; The second sub-portfolio, portf2, will contain assets 6:10 of edhec
+## &gt; #&#39; with an objective to minimize expected shortfall.
+## &gt; portf2 &lt;- portfolio.spec(assets=funds[6:10])
+## 
+## &gt; # portf2 &lt;- portfolio.spec(assets=5)
+## &gt; portf2 &lt;- add.constraint(portfolio=portf2, type=&quot;weight_sum&quot;, 
+## +                          min_sum=0.99, max_sum=1.01)
+## 
+## &gt; portf2 &lt;- add.constraint(portfolio=portf2, type=&quot;long_only&quot;)
+## 
+## &gt; portf2 &lt;- add.objective(portfolio=portf2, type=&quot;risk&quot;, name=&quot;ES&quot;,
+## +                             arguments=list(p=0.9))
+## 
+## &gt; #&#39; portf1 and portf2 have the same constraints so they can used the same
+## &gt; #&#39; set of random portfolios.
+## &gt; set.seed(123)
+## 
+## &gt; rp &lt;- random_portfolios(portf2, 2000)
+## 
+## &gt; #&#39; The &#39;top level&#39; portfolio has objectives for equal contribution to risk
+## &gt; #&#39; where modified ES is the risk measure.
+## &gt; portf &lt;- portfolio.spec(assets=paste(&quot;proxy&quot;,1:2, sep=&quot;.&quot;))
+## 
+## &gt; portf &lt;- add.constraint(portfolio=portf, type=&quot;weight_sum&quot;, 
+## +                         min_sum=0.99, max_sum=1.01)
+## 
+## &gt; portf &lt;- add.constraint(portfolio=portf, type=&quot;long_only&quot;)
+## 
+## &gt; portf &lt;- add.objective(portfolio=portf, type=&quot;risk&quot;, name=&quot;ES&quot;,
+## +                         arguments=list(p=0.9))
+## 
+## &gt; portf &lt;- add.objective(portfolio=portf, type=&quot;risk_budget&quot;, name=&quot;ES&quot;,
+## +                        arguments=list(p=0.9), min_concentration=TRUE)
+## 
+## &gt; #&#39; Specify a mult-layer portfolio.
+## &gt; mult.portf &lt;- mult.portfolio.spec(portf)
+## 
+## &gt; #&#39; Add portf1 as a sub portfolio with optimization parameters specific to 
+## &gt; #&#39; running optimize.portfolio.rebalancing with portf1.
+## &gt; mult.portf &lt;- add.sub.portfolio(mult.portf, portf1, rp=rp, 
+## +                                 optimize_method=&quot;random&quot;,
+## +                                 rebalance_on=&quot;quarters&quot;, 
+## +                                 training_period=136)
+## 
+## &gt; #&#39; Add portf2 as a sub portfolio with optimization parameters specific to 
+## &gt; #&#39; running optimize.portfolio.rebalancing with portf2.
+## &gt; mult.portf &lt;- add.sub.portfolio(mult.portf, portf2, rp=rp,
+## +                                 optimize_method=&quot;random&quot;,
+## +                                 rebalance_on=&quot;months&quot;, 
+## +                                 training_period=136, 
+## +                                 trailing_periods=48)
+## 
+## &gt; #&#39; Generate random portfolios for the top layer optimization
+## &gt; set.seed(123)
+## 
+## &gt; rp.top &lt;- random_portfolios(portf, 1000)
+## 
+## &gt; #&#39; Run the multi layer optimization
+## &gt; opt.mult &lt;- optimize.portfolio(R, mult.portf,
+## +                                optimize_method=&quot;random&quot;, 
+## +                                trace=TRUE, rp=rp.top)
+## 
+## &gt; opt.mult
+## ***********************************
+## PortfolioAnalytics Optimization
+## ***********************************
+## 
+## Call:
+## optimize.portfolio(R = R, portfolio = mult.portf, optimize_method = &quot;random&quot;, 
+##     trace = TRUE, rp = rp.top)
+## 
+## Optimal Weights:
+## proxy.1 proxy.2 
+##   0.570   0.422 
+## 
+## Objective Measures:
+##      ES 
+## 0.03583 
+## 
+## contribution :
+## proxy.1 proxy.2 
+## 0.01793 0.01791 
+## 
+## pct_contrib_MES :
+## proxy.1 proxy.2 
+##  0.5002  0.4998</code></pre>
+</div>
+<div id="awesome-interactive-example" class="section level1">
+<h1>Awesome Interactive Example!!!!!</h1>
+<pre><code>## Loading required package: reshape2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;reshape2&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:tidyr&#39;:
+## 
+##     smiths</code></pre>
+<pre><code>## Loading required package: devtools</code></pre>
+<pre><code>## Skipping install of &#39;rCharts&#39; from a github remote, the SHA1 (479a4f98) has not changed since last install.
+##   Use `force = TRUE` to force installation</code></pre>
+<pre><code>## Loading required package: rCharts</code></pre>
+<pre><code>## 
+## Attaching package: &#39;rCharts&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     %||%</code></pre>
+<pre><code>## The following object is masked from &#39;package:readr&#39;:
+## 
+##     read_file</code></pre>
+<pre><code>## libraries/widgets/nyt_home/layouts/nyt_home.html</code></pre>
+</div>
+<div id="backtesting-4-portfolio-optimization-strategies-in-r-1" class="section level1">
+<h1>Backtesting 4 Portfolio Optimization Strategies In R</h1>
+<p><a href="https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r" class="uri">https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r</a></p>
+</div>

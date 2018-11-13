@@ -37,6 +37,29 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>A Markdown Test</title>
+      <link>/post/a-markdown-test/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-markdown-test/</guid>
+      <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
+ Really great article I walked through https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html
+ Really great article #2 - same as above or extended? https://rpubs.com/mr148/333431
+ Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
+Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
+   R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.</description>
+    </item>
+    
+    <item>
+      <title>Migrate Content Test</title>
+      <link>/post/migrate-content-test/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/migrate-content-test/</guid>
+      <description>R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, error=TRUE, cache = TRUE)  LOAD DATA &amp;amp; LIBRARIES  COMPARE FORECAST MODELS ## Error: At least one layer must contain all faceting variables: `f`. ## * Plot is missing `f` ## * Layer 1 is missing `f` ## * Layer 2 is missing `f` ## * Layer 3 is missing `f` # VISUALIZE FORECASTS VIA GGPLOT  {&#34;</description>
+    </item>
+    
+    <item>
       <title>Syntax Highlighting</title>
       <link>/post/syntax-highlighting/</link>
       <pubDate>Sat, 10 Mar 2018 17:23:09 -0800</pubDate>
