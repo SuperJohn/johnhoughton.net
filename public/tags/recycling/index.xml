@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recycling on My New Hugo Site</title>
+    <link>/tags/recycling/</link>
+    <description>Recent content in Recycling on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Mar 2018 09:17:17 -0800</lastBuildDate>
+    
+	<atom:link href="/tags/recycling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blorg Bread Baker</title>
+      <link>/project/blorg-bread-machine/</link>
+      <pubDate>Sat, 03 Mar 2018 09:17:17 -0800</pubDate>
+      
+      <guid>/project/blorg-bread-machine/</guid>
+      <description>The hand-crafted Blorg Bread Baker&amp;trade; enhances any kitchen. Produced from 100% post-consumer recycled materials you&amp;rsquo;ll never once think&amp;hellip; wait a minute, I&amp;rsquo;m baking my bread in other people&amp;rsquo;s refuse.
+Features  Bakes artisanal bread Slices Doubles as a bread-box Controllable-Anywhere, part of the Internet Of Things  Some versions may include a BetaMax&amp;trade; video tape interface.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on My New Hugo Site</title>
+    <link>/categories/hugo/</link>
+    <description>Recent content in Hugo on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Mar 2018 17:23:09 -0800</lastBuildDate>
+    
+	<atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Syntax Highlighting</title>
+      <link>/post/syntax-highlighting/</link>
+      <pubDate>Sat, 10 Mar 2018 17:23:09 -0800</pubDate>
+      
+      <guid>/post/syntax-highlighting/</guid>
+      <description>&lt;p&gt;Code examples in different languagues to demonstrate syntax highlighting with
+the current &lt;a href=&#34;https://github.com/solutionroute/hugo-smorg&#34;&gt;hugo-smorg&lt;/a&gt; theme.
+Inline code looks like &lt;code&gt;this-&amp;gt;var&lt;/code&gt; and &lt;code&gt;expand($flurb, $times)&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo Bulma Powered Blog Theme: Hugo-Smorg</title>
+      <link>/project/hugo-smorg/</link>
+      <pubDate>Wed, 07 Mar 2018 02:16:58 -0800</pubDate>
+      
+      <guid>/project/hugo-smorg/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/solutionroute/hugo-smorg&#34;&gt;Hugo-smorg&lt;/a&gt; (smorg = small org, or smorgasbord perhaps) is a responsive
+mobile-first, &lt;a href=&#34;https://bulma.io/&#34;&gt;Bulma&lt;/a&gt;-powered, reasonably minimalistic theme for the &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt; static site generator.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on My New Hugo Site</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Mar 2018 02:16:58 -0800</lastBuildDate>
+    
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo Bulma Powered Blog Theme: Hugo-Smorg</title>
+      <link>/project/hugo-smorg/</link>
+      <pubDate>Wed, 07 Mar 2018 02:16:58 -0800</pubDate>
+      
+      <guid>/project/hugo-smorg/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/solutionroute/hugo-smorg&#34;&gt;Hugo-smorg&lt;/a&gt; (smorg = small org, or smorgasbord perhaps) is a responsive
+mobile-first, &lt;a href=&#34;https://bulma.io/&#34;&gt;Bulma&lt;/a&gt;-powered, reasonably minimalistic theme for the &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt; static site generator.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blorg Bread Baker</title>
+      <link>/project/blorg-bread-machine/</link>
+      <pubDate>Sat, 03 Mar 2018 09:17:17 -0800</pubDate>
+      
+      <guid>/project/blorg-bread-machine/</guid>
+      <description>The hand-crafted Blorg Bread Baker&amp;trade; enhances any kitchen. Produced from 100% post-consumer recycled materials you&amp;rsquo;ll never once think&amp;hellip; wait a minute, I&amp;rsquo;m baking my bread in other people&amp;rsquo;s refuse.
+Features  Bakes artisanal bread Slices Doubles as a bread-box Controllable-Anywhere, part of the Internet Of Things  Some versions may include a BetaMax&amp;trade; video tape interface.</description>
+    </item>
+    
+    <item>
+      <title>XYZ 1000 Replicator</title>
+      <link>/project/xyz-1000/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 -0800</pubDate>
+      
+      <guid>/project/xyz-1000/</guid>
+      <description>With the XYZ 1000 Replicator you&amp;rsquo;ll never again be stuck with an empty kitchen and nothing for dinner!
+Features  It&amp;rsquo;s like having your own personal chef from 1,783,482,482 (and counting) planets in your kitchen! Can&amp;rsquo;t think of a dish? Use Random-Mode&amp;trade; (warning, not for the squeamish) Integrated Internet meal suggestions Fusion powered Self-cleaning Matches any decor  Availability The XYZ 1000 can be ordered at your local Starfleet commissary.</description>
+    </item>
+    
+  </channel>
+</rss>
