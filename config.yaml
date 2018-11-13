@@ -7,7 +7,7 @@
 # IMPORTANT:
 # themesDir is needed only to run exampleSite in-place; comment out or delete
 # this line for regular theme use:
-themesDir: "../.."
+# themesDir: "../.."
 
 # Mandatory $.Site Variables ---------------------------------------------
 # Site variables are built-in to the Hugo application and can be accessed using

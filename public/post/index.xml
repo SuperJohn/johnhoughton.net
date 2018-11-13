@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Post on Hugo Future Imperfect</title>
     <link>/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Post on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
@@ -12,17 +12,12 @@
     
     
     <item>
-      <title>A Markdown Test</title>
-      <link>/post/a-markdown-test/</link>
+      <title>Hugo Templates</title>
+      <link>/post/hugo-templates/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/a-markdown-test/</guid>
-      <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
- Really great article I walked through https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html
- Really great article #2 - same as above or extended? https://rpubs.com/mr148/333431
- Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
-Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
-   R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.</description>
+      <guid>/post/hugo-templates/</guid>
+      <description>Great Resource on getting started with blogdown  https://alison.rbind.io/post/up-and-running-with-blogdown/  A bunch of great blogdown sites for inspiration  https://awesome-blogdown.com/    Learn  https://github.com/matcornic/hugo-theme-learn/  Variant of Learn = Dockdock  https://docdock.netlify.com/    Beautiful Hugo  https://github.com/halogenica/beautifulhugo   Future Imperfect  Hugo Theme Page User Site that I like https://marionlouveaux.fr/  Pros  front page is most recent article great sidebar clean look    Universal Theme  https://github.</description>
     </item>
     
     <item>
@@ -32,6 +27,34 @@ Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/Portfol
       
       <guid>/post/migrate-content-test/</guid>
       <description>R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, error=TRUE, cache = TRUE)  LOAD DATA &amp;amp; LIBRARIES  COMPARE FORECAST MODELS ## Error: At least one layer must contain all faceting variables: `f`. ## * Plot is missing `f` ## * Layer 1 is missing `f` ## * Layer 2 is missing `f` ## * Layer 3 is missing `f` # VISUALIZE FORECASTS VIA GGPLOT  {&#34;</description>
+    </item>
+    
+    <item>
+      <title>Rebalancing Tool</title>
+      <link>/post/another_migration_test/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/another_migration_test/</guid>
+      <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
+ Really great article I walked through https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html
+ Really great article #2 - same as above or extended? https://rpubs.com/mr148/333431
+ Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
+Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
+   R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ───────────────────────────────────────────────────────────────────── tidyverse 1.</description>
+    </item>
+    
+    <item>
+      <title>A Markdown Test</title>
+      <link>/post/a-markdown-test/</link>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-markdown-test/</guid>
+      <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
+ Really great article I walked through https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html
+ Really great article #2 - same as above or extended? https://rpubs.com/mr148/333431
+ Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
+Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
+   R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.</description>
     </item>
     
     <item>

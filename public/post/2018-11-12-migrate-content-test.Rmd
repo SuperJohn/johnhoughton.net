@@ -1,0 +1,213 @@
+---
+title: Migrate Content Test
+author: John Houghton
+date: '2018-11-12'
+slug: migrate-content-test
+categories: []
+tags: []
+description: ''
+---
+---
+title: "Forecast Visualizations"
+output: html_notebook
+---
+# R Notebook Options
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, error=TRUE, cache = TRUE)
+```
+
+# LOAD DATA & LIBRARIES
+```{r}
+setwd("~/Documents/Github/highbeam/highbeam_dashboard")
+load("data/models.RData")
+load("data/ts_data.RData")
+load("data/financial_metrics.RData")
+
+library(tidyverse)
+library(forecast)
+library(seasonal)
+library(tibble)
+library(purrr)
+library(forecast)
+library(magrittr)
+library(dygraphs)
+library(ggplot2)
+library(DT)
+```
+
+# COMPARE FORECAST MODELS
+```{r}
+# library(tibbletime)
+load("~/Documents/Github/highbeam/highbeam_dashboard/data/models.RData")
+fcast_data %>% # yearmon issue: https://github.com/business-science/sweep/issues/5
+  filter(dataset == "liabilities_ts") %>% 
+  ggplot(aes(x = date, y = value, color = key, group = model_type)) +
+  geom_ribbon(aes(ymin = lo.95, ymax = hi.95), 
+              fill = "#D5DBFF", color = NA, size = 0) +
+  geom_ribbon(aes(ymin = lo.80, ymax = hi.80, fill = key), 
+              fill = "#596DD5", color = NA, size = 0, alpha = 0.8) +
+  geom_line(size = 1) +
+  facet_wrap(~f, nrow = 3) +
+  labs(title = "Income Forecasts",
+       subtitle = "Forecasting multiple models with sweep: ARIMA, BATS, ETS",
+       x = "", y = "Price") +
+  scale_y_continuous(labels = scales::dollar) +
+  scale_x_date(date_breaks = "5 years", date_labels = "%Y") +
+  theme_minimal()
+```
+# VISUALIZE FORECASTS VIA GGPLOT
+```{r}
+datatable(fcast_data_wide, class="compact", options = list(scrollX = TRUE))
+
+fcast_data %>% # yearmon issue: https://github.com/business-science/sweep/issues/5
+  filter(dataset == "liabilities_ts", model_type == "ets") %>% 
+  ggplot(aes(x = date, y = value, color = key)) +
+  #geom_smooth(method="lm") +
+  geom_ribbon(aes(x = date, ymin = lo.95, ymax = hi.95), fill = "#D5DBFF") +
+  geom_ribbon(aes(x = date, ymin = lo.80, ymax = hi.80), fill = "#596DD5") +
+  geom_line(size = 1) +
+  labs(title = "12-Month Forecast",
+       subtitle = "Time Series Forecast",
+       x = "", y = "($)") +
+  scale_y_continuous() +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
+  theme_minimal()
+
+lungDeaths <- cbind(ldeaths, mdeaths, fdeaths)
+
+dygraph(lungDeaths, main = "Deaths from Lung Disease (UK)") %>%
+  dySeries("fdeaths", stepPlot = TRUE, color = "red") %>% 
+  dyGroup(c("mdeaths", "ldeaths"), drawPoints = TRUE, color = c("blue", "green"))
+
+
+```
+
+
+# VISUALIZE FORECASTS USING DYGRAPHS
+```{r}
+ts_data <-seas_decomp %>% 
+  filter(dataset=="net_income_ts") %>%
+  ts(start=c(2015,1), frequency=12)
+
+fcast_data %>% 
+  filter(dataset == "liabilities_ts") %>% 
+  datatable(class="compact", options = list(scrollX = TRUE))
+
+dygraph(ts_data, main = "graph_title") %>% 
+      dyRangeSelector() %>% 
+      dyRangeSelector(height = 30,
+                      dateWindow = c("2015-01-01", "2019-06-01")) %>%
+      dySeries(name = "observed", label = "actual") %>%
+      dySeries(c("lower","point_forecast","upper"), label = "Predicted") %>%
+      dyLegend(show = "always", hideOnMouseOut = FALSE) %>%
+      dyHighlight(highlightCircleSize = 5,
+                  highlightSeriesOpts = list(strokeWidth = 2)) %>%
+      dyOptions(axisLineColor = "navy", gridLineColor = "grey")
+```
+
+
+# SEASONAL DECOMPOSITION
+```{r}
+library(tidyquant)
+seas_decomp %>% filter(key %in% c("observed", "season", "trend", "remainder", "seasadj"))
+  ggplot(aes(x = date, y = value, group = key)) +
+  geom_line(color = palette_light()[[2]]) +
+  geom_ma(ma_fun = SMA, n = 12, size = 1) +
+  facet_wrap(~ key, scales = "free_y") +
+  scale_x_yearmon(n = 10) +
+  labs(title = "US Alcohol Sales: ETS Decomposition", x = "") + 
+  theme_tq() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+# DYGRAPHS
+```{r}
+ts_data <- fcast_data %>% #group_by(dataset, model_type, date) %>% count() %>% filter(n>1)
+  filter(dataset == "acid_test_ts", model_type == "auto.arima") %>% 
+  select(-(1:4)) %>% 
+  ts(start=c(2015,1),frequency=12) 
+
+hw <- HoltWinters(net_income_ts)
+p <- predict(hw, n.ahead = 12, level = 0.50, prediction.interval = TRUE) #
+
+dygraph(p, main = "Predicted Lung Deaths (UK)") %>%
+  dySeries(c("lwr", "fit", "upr"), label = "Deaths")
+
+dygraph(ts_data, "Deaths from Lung Disease (UK)") %>%
+  dySeries("ldeaths", label = "Actual") %>%
+  dySeries(c("p.lwr", "p.fit", "p.upr"), label = "Predicted")
+
+# assign the "rainfall" series to the y2 axis
+dygraph(weather) %>%
+  dySeries("rainfall", axis = 'y2')
+
+dygraph(acid_test_ts, main = "Acid Test Ratio", group = "ts_observed")
+dygraph(net_income_ts, main = "Net Income", group = "ts_observed")
+dygraph(liabilities_ts, main = "Current Liabilities", group = "ts_observed")
+
+### 
+ts_data <-
+  fcast_data %>% 
+  filter(dataset=="net_income_ts", model_type=="stl") %>%
+  select(-dataset, -date, -model_type, -slope) %>%
+  ts(start=c(2015,1), frequency=12)
+
+dygraph(ts_data, main = "graph_title") %>% 
+      dyRangeSelector() %>% 
+      dyRangeSelector(height = 30, dateWindow = c("2015-01-01", "2019-06-01")) %>%
+      dySeries(name = "observed", label = "actual") %>%
+      dySeries(name = "season", label = "seasonal") %>% 
+      dySeries(name = "trend", label = "trend") %>% 
+      dySeries(name = "remainder", label = "remainder") %>% 
+      # dySeries(name = "seasadj", label = "seasonally adjusted") %>%
+      # dySeries(name = "level", label = "Forecasted") %>%
+      # dySeries(c("trend","level","season"), label = "components") %>%
+      dyLegend(show = "always", hideOnMouseOut = FALSE) %>%
+      dyHighlight(highlightCircleSize = 5,
+                  highlightSeriesOpts = list(strokeWidth = 2)) %>%
+      dyOptions(axisLineColor = "navy", gridLineColor = "grey")
+
+# new, after spread
+fcast_data %>% 
+      filter(dataset == "liabilities_ts", model_type == "stl") %>% 
+      select(-c(1:3), -fitted, -hi.95, -lo.95) %>%
+      ts(start=c(2015,1), frequency=12) %>%
+    dygraph() %>%
+      dyAxis("x", label = "Date", drawGrid = FALSE) %>%
+      dyAxis("y", label = "Amount") %>% 
+      dySeries(c("lo.80", "forecast", "hi.80"), label = "Forecast", strokeWidth = 2, strokePattern = "dashed") %>%
+      #dySeries(c("lo.95", "forecast", "hi.95")) %>%
+      # dySeries("fitted", label = "fitted") %>% 
+      dySeries("actual", label = "actual") %>% 
+      dyRangeSelector() %>% dyUnzoom() %>% 
+      dyCrosshair(direction = "vertical") %>% 
+      dyLegend(show = "always", width = 200) %>% 
+      dyOptions(axisLineColor = "black", colors = RColorBrewer::brewer.pal(3, "Set1"),
+                axisLineWidth = 3, includeZero = TRUE) 
+```
+# ACID TEST
+```{r}
+acid_test_data %>% 
+  ggplot(aes(x = date, y = acid_test, color = key, group = f)) +
+  geom_line(size = 1) +
+  facet_wrap(~f, nrow = 3) +
+  labs(title = "Acid Test Forecast",
+       subtitle = "Forecasting Solvency by comparing cash & receiables vs current liabilities",
+       x = "month / year", y = "Acid Test Ratio") +
+  scale_y_continuous() +
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") 
+  theme_minimal()
+
+acid_test_data %>% 
+  geom_line(aes(x=date, y=liabilities_ts, color = "red", group = f))
+```
+
+
+```{r}
+library(recipes)
+library(mlbench)
+data(Sonar)
+sonar_rec <- recipe(Class ~ ., data = Sonar) %>%
+  step_center(all_predictors()) %>%
+  step_scale(all_predictors())
+```

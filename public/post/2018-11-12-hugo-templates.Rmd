@@ -1,0 +1,48 @@
+---
+title: Hugo Templates
+author: John Houghton
+date: '2018-11-12'
+slug: hugo-templates
+categories:
+  - hugo
+  - blogdown
+tags: []
+description: ''
+featured: ''
+featuredalt: ''
+featuredpath: ''
+linktitle: ''
+---
+
+# Great Resource on getting started with blogdown
+* https://alison.rbind.io/post/up-and-running-with-blogdown/
+
+### A bunch of great blogdown sites for inspiration
+* https://awesome-blogdown.com/
+
+# Learn
+* https://github.com/matcornic/hugo-theme-learn/
+
+### Variant of Learn = Dockdock
+* https://docdock.netlify.com/
+
+# Beautiful Hugo
+* https://github.com/halogenica/beautifulhugo
+
+# Future Imperfect
+* [Hugo Theme Page](https://themes.gohugo.io/theme/future-imperfect/)
+* [User Site that I like](https://mvaugoyeau.netlify.com/contact/)
+* https://marionlouveaux.fr/
+
+### Pros
+  * front page is most recent article
+  * great sidebar
+  * clean look
+
+# Universal Theme
+* https://github.com/devcows/hugo-universal-theme
+* https://www.visibledata.co.uk/
+
+# Mainroad
+* https://github.com/Vimux/mainroad
+* https://www.datascienceblog.net/

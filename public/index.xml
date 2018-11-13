@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo-smorg on My New Hugo Site</title>
+    <title>hugo-smorg on Hugo Future Imperfect</title>
     <link>/</link>
-    <description>Recent content in hugo-smorg on My New Hugo Site</description>
+    <description>Recent content in hugo-smorg on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
@@ -37,17 +37,12 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>A Markdown Test</title>
-      <link>/post/a-markdown-test/</link>
+      <title>Hugo Templates</title>
+      <link>/post/hugo-templates/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/a-markdown-test/</guid>
-      <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
- Really great article I walked through https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html
- Really great article #2 - same as above or extended? https://rpubs.com/mr148/333431
- Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
-Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
-   R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.</description>
+      <guid>/post/hugo-templates/</guid>
+      <description>Great Resource on getting started with blogdown  https://alison.rbind.io/post/up-and-running-with-blogdown/  A bunch of great blogdown sites for inspiration  https://awesome-blogdown.com/    Learn  https://github.com/matcornic/hugo-theme-learn/  Variant of Learn = Dockdock  https://docdock.netlify.com/    Beautiful Hugo  https://github.com/halogenica/beautifulhugo   Future Imperfect  Hugo Theme Page User Site that I like https://marionlouveaux.fr/  Pros  front page is most recent article great sidebar clean look    Universal Theme  https://github.</description>
     </item>
     
     <item>
@@ -57,6 +52,34 @@ Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/Portfol
       
       <guid>/post/migrate-content-test/</guid>
       <description>R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, error=TRUE, cache = TRUE)  LOAD DATA &amp;amp; LIBRARIES  COMPARE FORECAST MODELS ## Error: At least one layer must contain all faceting variables: `f`. ## * Plot is missing `f` ## * Layer 1 is missing `f` ## * Layer 2 is missing `f` ## * Layer 3 is missing `f` # VISUALIZE FORECASTS VIA GGPLOT  {&#34;</description>
+    </item>
+    
+    <item>
+      <title>Rebalancing Tool</title>
+      <link>/post/another_migration_test/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/another_migration_test/</guid>
+      <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
+ Really great article I walked through https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html
+ Really great article #2 - same as above or extended? https://rpubs.com/mr148/333431
+ Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
+Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
+   R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ───────────────────────────────────────────────────────────────────── tidyverse 1.</description>
+    </item>
+    
+    <item>
+      <title>A Markdown Test</title>
+      <link>/post/a-markdown-test/</link>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/a-markdown-test/</guid>
+      <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
+ Really great article I walked through https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html
+ Really great article #2 - same as above or extended? https://rpubs.com/mr148/333431
+ Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
+Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
+   R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.</description>
     </item>
     
     <item>
@@ -102,6 +125,42 @@ Features  It&amp;rsquo;s like having your own personal chef from 1,783,482,482 (
     </item>
     
     <item>
+      <title>Fancy App 1</title>
+      <link>/itemized/item1/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/item1/</guid>
+      <description> App 1 </description>
+    </item>
+    
+    <item>
+      <title>Fancy App 2</title>
+      <link>/itemized/item2/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/item2/</guid>
+      <description> App 2 </description>
+    </item>
+    
+    <item>
+      <title>Fancy App 3</title>
+      <link>/itemized/item3/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/item3/</guid>
+      <description> App 3 </description>
+    </item>
+    
+    <item>
+      <title>Fancy App 4</title>
+      <link>/itemized/item4/</link>
+      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/item4/</guid>
+      <description> App 4 </description>
+    </item>
+    
+    <item>
       <title>401 Unauthorized</title>
       <link>/401/</link>
       <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
@@ -125,12 +184,32 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     
     <item>
       <title>Creating a New Theme</title>
+      <link>/blog/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
       <link>/post/creating-a-new-theme/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
       <guid>/post/creating-a-new-theme/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>/blog/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/goisforlovers/</guid>
+      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.</description>
     </item>
     
     <item>
@@ -145,6 +224,22 @@ This document is a brief primer on using go templates.</description>
     
     <item>
       <title>Getting Started with Hugo</title>
+      <link>/blog/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/hugoisforlovers/</guid>
+      <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
+
+&lt;p&gt;Go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
+appropriate version for your os and architecture.&lt;/p&gt;
+
+&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
+
+&lt;p&gt;More complete instructions are available at &lt;a href=&#34;/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
       <link>/post/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
@@ -155,6 +250,23 @@ More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
  Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>/blog/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/migrate-from-jekyll/</guid>
+      <description>&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
+    ▾ images/
+        logo.png
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>

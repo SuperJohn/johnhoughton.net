@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tips on My New Hugo Site</title>
+    <title>tips on Hugo Future Imperfect</title>
     <link>/tags/tips/</link>
-    <description>Recent content in Tips on My New Hugo Site</description>
+    <description>Recent content in tips on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Mar 2018 17:23:09 -0800</lastBuildDate>

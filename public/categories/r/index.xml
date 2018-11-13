@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on My New Hugo Site</title>
+    <title>R on Hugo Future Imperfect</title>
     <link>/categories/r/</link>
-    <description>Recent content in R on My New Hugo Site</description>
+    <description>Recent content in R on Hugo Future Imperfect</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>A Markdown Test</title>
       <link>/post/a-markdown-test/</link>
-      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/a-markdown-test/</guid>
       <description>Resources Performance Analysis Vignette https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html
