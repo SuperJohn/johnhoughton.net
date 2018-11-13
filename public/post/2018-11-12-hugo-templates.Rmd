@@ -20,6 +20,9 @@ linktitle: ''
 ### A bunch of great blogdown sites for inspiration
 * https://awesome-blogdown.com/
 
+# Undefined (theme name not given!)
+* https://www.garrickadenbuie.com/about/
+
 # Learn
 * https://github.com/matcornic/hugo-theme-learn/
 
