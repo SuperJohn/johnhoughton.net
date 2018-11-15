@@ -13,6 +13,16 @@
   </url>
   
   <url>
+    <loc>/post/titanic-kaggle/</loc>
+    <lastmod>2018-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/how-to-make-awesome-r-markdown-for-blogdown/</loc>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/hulk-hogan-for-president/</loc>
     <lastmod>2018-11-13T00:00:00+00:00</lastmod>
   </url>
@@ -190,8 +200,14 @@
   </url>
   
   <url>
+    <loc>/categories/markdown/</loc>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
-    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -203,7 +219,7 @@
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2018-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
