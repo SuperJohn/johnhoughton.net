@@ -32,6 +32,9 @@ knitr::read_chunk('~/Documents/Github/r_snippets/blogdown.R')
 ```{r knitr_optionss, include=TRUE}
 ```
 
+# Great Article on configuration / tips & tricks
+https://medium.com/@jeffmcmorris/tips-and-tricks-for-building-a-theme-in-hugo-4806bdd747d7
+
 ## blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.html
 ## Knitr Examples on Github
 https://github.com/yihui/knitr-examples

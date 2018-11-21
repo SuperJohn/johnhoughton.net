@@ -8,6 +8,7 @@
             {{ $.Scratch.Set "h1" true }}
             {{ .Render "header" }}
             <div id="content">
+                {{ .Render "related" }}
                 {{ .Content }}
             </div>
         </article>

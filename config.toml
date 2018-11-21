@@ -92,7 +92,7 @@ canonifyURLs = true
   # These are optional params related to the sidebar. They are recommended, but not
   # required for proper functionality. HTML is supported within the params.
 [params.intro]
-  header    = ""
+  # header    = ""
 
   paragraph = "Data Science | \nSan Diego, CA"
 
@@ -122,7 +122,7 @@ canonifyURLs = true
   weight = 1
 
 [[menu.main]]
-  name = "About"
+  name = "About Me"
   url = "/about/"
   identifier = "fa fa-id-card-o"
   weight = 2

@@ -115,7 +115,8 @@ It makes use of a variety of open source projects including:
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/how-to-make-awesome-r-markdown-for-blogdown/</guid>
-      <description> knitr::read_chunk(&amp;#39;~/Documents/Github/r_snippets/blogdown.R&amp;#39;) R Notebook Options blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.html  Knitr Examples on Github https://github.com/yihui/knitr-examples ## CheatSheet https://www.ethz.ch/content/dam/ethz/special-interest/math/statistics/sfs/Education/Advanced%20Studies%20in%20Applied%20Statistics/course-material-1719/Datenanalyse/rmarkdown-2.pdf
+      <description> knitr::read_chunk(&amp;#39;~/Documents/Github/r_snippets/blogdown.R&amp;#39;) R Notebook Options  Great Article on configuration / tips &amp;amp; tricks https://medium.com/@jeffmcmorris/tips-and-tricks-for-building-a-theme-in-hugo-4806bdd747d7
+blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.html  Knitr Examples on Github https://github.com/yihui/knitr-examples ## CheatSheet https://www.ethz.ch/content/dam/ethz/special-interest/math/statistics/sfs/Education/Advanced%20Studies%20in%20Applied%20Statistics/course-material-1719/Datenanalyse/rmarkdown-2.pdf
   Markdown Themes rmdformats package https://github.com/juba/rmdformats The github README.md provides some good examples
  Here’s a great collection of examples of themes http://www.datadreaming.org/post/r-markdown-theme-gallery/
  Custom Build Functions https://yutani.rbind.io/post/2017-10-25-blogdown-custom/
