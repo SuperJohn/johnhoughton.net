@@ -1,16 +1,10 @@
-
-
-+++
-type = "itemized"
-author = "John Houghton"
-date = "2018-11-20"
-title = "About Me"
-description = "I'm a Data Scientist living in San Diego, CA"
-categories = [""]
-linktitle = "about_me"
-format = "R"
-link = "#"
-+++
+---
+title: "About Me"
+date: 2018-11-20
+layout: subsection
+slug: about
+weight: 101
+---
 > ## Hi, I'm John. 
 ### I'm a Data Scientist living in San Diego, CA.
 
