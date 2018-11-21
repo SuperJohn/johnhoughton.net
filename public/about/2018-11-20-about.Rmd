@@ -1,0 +1,15 @@
+---
+title: About
+author: John Houghton
+date: '2018-11-20'
+slug: about
+categories: []
+tags: []
+description: ''
+featured: ''
+featuredalt: ''
+featuredpath: ''
+linktitle: ''
+---
+
+Here is some stuff I'm writing

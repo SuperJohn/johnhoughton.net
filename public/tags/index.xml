@@ -30,47 +30,11 @@
     </item>
     
     <item>
-      <title>dev</title>
-      <link>/tags/dev/</link>
-      <pubDate>Sat, 10 Mar 2018 17:23:09 -0800</pubDate>
-      
-      <guid>/tags/dev/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>/tags/development/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>/tags/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>howto</title>
       <link>/tags/howto/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/howto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>/tags/hugo/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -111,11 +75,11 @@
     </item>
     
     <item>
-      <title>templates</title>
-      <link>/tags/templates/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>shiny</title>
+      <link>/tags/shiny/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/templates/</guid>
+      <guid>/tags/shiny/</guid>
       <description></description>
     </item>
     
@@ -125,24 +89,6 @@
       <pubDate>Wed, 07 Mar 2018 02:16:58 -0800</pubDate>
       
       <guid>/tags/theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>/tags/themes/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/themes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tips</title>
-      <link>/tags/tips/</link>
-      <pubDate>Sat, 10 Mar 2018 17:23:09 -0800</pubDate>
-      
-      <guid>/tags/tips/</guid>
       <description></description>
     </item>
     

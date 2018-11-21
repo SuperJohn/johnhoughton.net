@@ -1,0 +1,18 @@
+---
+title: Embedded Shiny App Test
+author: John Houghton
+date: '2018-11-20'
+slug: embedded-shiny-app-test
+categories: [tests]
+tags: [shiny]
+description: 'Embedding a shiny app that I am working on into a blog post!'
+featured: '/static/img/main/logo.jpg'
+featuredalt: 'my img'
+featuredpath: '/static/img/main/logo.jpg'
+linktitle: ''
+featured_image: '/static/img/main/logo.jpg'
+---
+
+<iframe width="100%" height="700" scrolling="yes" frameborder="no"  src="https://superjohnca.shinyapps.io/portfolio_optimization/"> </iframe>
+
+

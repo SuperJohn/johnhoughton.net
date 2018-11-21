@@ -37,6 +37,52 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>About</title>
+      <link>/about/about/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>Here is some stuff I’m writing</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/about/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>Here is some stuff I&amp;rsquo;m writing</description>
+    </item>
+    
+    <item>
+      <title>Embedded Shiny App Test</title>
+      <link>/itemized/embedded-shiny-app-test/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/embedded-shiny-app-test/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Portfolio Optimization in R </title>
+      <link>/post/portfolio-optimization-in-r/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/portfolio-optimization-in-r/</guid>
+      <description>Project Summary I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ business-science.io, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written tidyquant, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</description>
+    </item>
+    
+    <item>
+      <title>Test Itemized Nov 20</title>
+      <link>/itemized/test-itemized-nov-20/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/itemized/test-itemized-nov-20/</guid>
+      <description>Titanic: Machine Learning from disaster https://www.kaggle.com/c/titanic
+## ── Attaching packages ───────────────────────────────────────── tidyverse 1.2.1 ── ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.5.1 ## ── Conflicts ──────────────────────────────────────────── tidyverse_conflicts() ── ## ✖ dplyr::filter() masks stats::filter() ## ✖ dplyr::lag() masks stats::lag() library(knitr) library(rmdformats) ## Global options options(max.</description>
+    </item>
+    
+    <item>
       <title>Titanic Kaggle</title>
       <link>/post/titanic-kaggle/</link>
       <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
@@ -52,12 +98,11 @@ library(knitr) library(rmdformats) ## Global options options(max.print=&amp;quot
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/how-to-make-awesome-r-markdown-for-blogdown/</guid>
-      <description>output:rmdformats::html_clean: toc: yes toc_depth: 2 self_contained: true thumbnails: true lightbox: true gallery: false highlight: kate
-knitr::read_chunk(&amp;#39;~/Documents/Github/r_snippets/blogdown.R&amp;#39;) R Notebook Options  Tabbed Section title content above tabbed region.
-tab 1 tab content 1
- tab 2 tab content 2
-   content below tabbed region
- Quarterly Results By Product data(iris) iris ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 1 5.1 3.5 1.4 0.2 setosa ## 2 4.9 3.0 1.</description>
+      <description> knitr::read_chunk(&amp;#39;~/Documents/Github/r_snippets/blogdown.R&amp;#39;) R Notebook Options blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.html  Knitr Examples on Github https://github.com/yihui/knitr-examples ## CheatSheet https://www.ethz.ch/content/dam/ethz/special-interest/math/statistics/sfs/Education/Advanced%20Studies%20in%20Applied%20Statistics/course-material-1719/Datenanalyse/rmarkdown-2.pdf
+  Markdown Themes rmdformats package https://github.com/juba/rmdformats The github README.md provides some good examples
+ Here’s a great collection of examples of themes http://www.datadreaming.org/post/r-markdown-theme-gallery/
+ Custom Build Functions https://yutani.rbind.io/post/2017-10-25-blogdown-custom/
+  </description>
     </item>
     
     <item>
@@ -67,6 +112,15 @@ tab 1 tab content 1
       
       <guid>/about/hulk-hogan-for-president/</guid>
       <description> THis is something  </description>
+    </item>
+    
+    <item>
+      <title>Hulk Hogan for President!!!</title>
+      <link>/about/hulk-hogan-for-president/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/hulk-hogan-for-president/</guid>
+      <description> THis is something </description>
     </item>
     
     <item>
@@ -116,14 +170,57 @@ Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/Portfol
     </item>
     
     <item>
-      <title>Syntax Highlighting</title>
-      <link>/post/syntax-highlighting/</link>
-      <pubDate>Sat, 10 Mar 2018 17:23:09 -0800</pubDate>
+      <title>Caramel Bottle</title>
+      <link>/portfolio/caramel-bottle/</link>
+      <pubDate>Thu, 12 Jul 2018 16:59:54 +0600</pubDate>
       
-      <guid>/post/syntax-highlighting/</guid>
-      <description>&lt;p&gt;Code examples in different languagues to demonstrate syntax highlighting with
-the current &lt;a href=&#34;https://github.com/solutionroute/hugo-smorg&#34;&gt;hugo-smorg&lt;/a&gt; theme.
-Inline code looks like &lt;code&gt;this-&amp;gt;var&lt;/code&gt; and &lt;code&gt;expand($flurb, $times)&lt;/code&gt;.&lt;/p&gt;</description>
+      <guid>/portfolio/caramel-bottle/</guid>
+      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Shopping Bag Concept</title>
+      <link>/portfolio/shopping-bag-concept/</link>
+      <pubDate>Thu, 12 Jul 2018 16:58:55 +0600</pubDate>
+      
+      <guid>/portfolio/shopping-bag-concept/</guid>
+      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Makeup Element</title>
+      <link>/portfolio/makeup-element/</link>
+      <pubDate>Thu, 12 Jul 2018 16:57:54 +0600</pubDate>
+      
+      <guid>/portfolio/makeup-element/</guid>
+      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Table Design</title>
+      <link>/portfolio/table-design/</link>
+      <pubDate>Thu, 12 Jul 2018 16:56:54 +0600</pubDate>
+      
+      <guid>/portfolio/table-design/</guid>
+      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Bottle Mockup</title>
+      <link>/portfolio/bottle-mockup/</link>
+      <pubDate>Thu, 12 Jul 2018 16:54:54 +0600</pubDate>
+      
+      <guid>/portfolio/bottle-mockup/</guid>
+      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Dew Drop</title>
+      <link>/portfolio/dew-drop/</link>
+      <pubDate>Thu, 12 Jul 2018 16:53:54 +0600</pubDate>
+      
+      <guid>/portfolio/dew-drop/</guid>
+      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
@@ -155,43 +252,6 @@ Features  Bakes artisanal bread Slices Doubles as a bread-box Controllable-Anywh
       <guid>/project/xyz-1000/</guid>
       <description>With the XYZ 1000 Replicator you&amp;rsquo;ll never again be stuck with an empty kitchen and nothing for dinner!
 Features  It&amp;rsquo;s like having your own personal chef from 1,783,482,482 (and counting) planets in your kitchen! Can&amp;rsquo;t think of a dish? Use Random-Mode&amp;trade; (warning, not for the squeamish) Integrated Internet meal suggestions Fusion powered Self-cleaning Matches any decor  Availability The XYZ 1000 can be ordered at your local Starfleet commissary.</description>
-    </item>
-    
-    <item>
-      <title>Fancy App 2</title>
-      <link>/itemized/item2/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item2/</guid>
-      <description> App 2 </description>
-    </item>
-    
-    <item>
-      <title>Fancy App 3</title>
-      <link>/itemized/item3/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item3/</guid>
-      <description> App 3 </description>
-    </item>
-    
-    <item>
-      <title>Fancy App 4</title>
-      <link>/itemized/item4/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item4/</guid>
-      <description> App 4 </description>
-    </item>
-    
-    <item>
-      <title>My Test Item</title>
-      <link>/itemized/item1/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item1/</guid>
-      <description> App 1  Maximum Fun!!!!
- </description>
     </item>
     
     <item>
@@ -227,31 +287,11 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
       <title>(Hu)go Template Primer</title>
       <link>/blog/goisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>/blog/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/goisforlovers/</guid>
       <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
 This document is a brief primer on using go templates.</description>
     </item>
@@ -270,48 +310,6 @@ appropriate version for your os and architecture.&lt;/p&gt;
 &lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
 
 &lt;p&gt;More complete instructions are available at &lt;a href=&#34;/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>/post/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>/blog/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/migrate-from-jekyll/</guid>
-      <description>&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
-With Jekyll, something that looked like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
-    ▾ images/
-        logo.png
-&lt;/code&gt;&lt;/pre&gt;</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>

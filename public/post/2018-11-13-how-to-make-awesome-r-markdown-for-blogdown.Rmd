@@ -19,66 +19,19 @@ output:
     toc: true
     toc_float: true 
 ---
-output:rmdformats::html_clean: 
-    toc: yes
-    toc_depth: 2
-self_contained: true
-    thumbnails: true
-    lightbox: true
-    gallery: false
-    highlight: kate
+    
 ```{r knitr_init, echo=FALSE, cache=FALSE}
 library(knitr)
 library(rmdformats)
-
-## Global options
-# options(max.print="75")
-# opts_chunk$set(echo=TRUE,
-# 	             cache=FALSE,
-#                prompt=FALSE,
-#                tidy=TRUE,
-#                comment=NA,
-#                message=FALSE,
-#                warning=FALSE)
-# # opts_knit$set(width=75)
 ```
 
-```{r cache=FALSE}
+```{r cache=TRUE}
 knitr::read_chunk('~/Documents/Github/r_snippets/blogdown.R')
 ```
 # R Notebook Options
 ```{r knitr_optionss, include=TRUE}
 ```
 
-# Tabbed Section
-## title {.tabset .tabset-fade}
-content above tabbed region.
-
-### tab 1 
-
-tab content 1
-
-### tab 2
-
-tab content 2
-
-##
-
-content below tabbed region
-
-## Quarterly Results {.tabset .tabset-fade .tabset-pills}
-### By Product
-```{r}
-data(iris)
-iris
-```
-### By Region
-```{r}
-iris
-```
-#### sdf
-
-# Reference 
 ## blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.html
 ## Knitr Examples on Github
 https://github.com/yihui/knitr-examples
@@ -89,18 +42,8 @@ https://www.ethz.ch/content/dam/ethz/special-interest/math/statistics/sfs/Educat
 ### rmdformats package  https://github.com/juba/rmdformats
 The github README.md provides some good examples
 
-Here's a great collection of examples of themes
+## Here's a great collection of examples of themes
 http://www.datadreaming.org/post/r-markdown-theme-gallery/
 
-
-
-## Quarterly Results {.tabset}
-
-### By Product
-
-(tab content)
-
-### By Region
-
-(tab content)
-
+## Custom Build Functions
+https://yutani.rbind.io/post/2017-10-25-blogdown-custom/

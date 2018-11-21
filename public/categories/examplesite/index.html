@@ -95,6 +95,10 @@
             
                 
             
+                
+                    <link rel="stylesheet" href="/static/css/add-on.css">
+                
+            
         
 
 
@@ -121,32 +125,9 @@ if (!doNotTrack) {
       
     </head>
     <body>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=326717324794700&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+      
 
 
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '473521516162587');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=473521516162587&ev=PageView&noscript=1"
-/></noscript>
 
       
       <div id="wrapper">
@@ -174,31 +155,19 @@ if (!doNotTrack) {
             
                 <li>
                     <a href="/blog/">
-                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Articles
                     </a>
                 </li>
             
                 <li>
                     <a href="/itemized/">
-                            <i class="fa fa-list">&nbsp;</i>Itemized
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="/categories/">
-                            <i class="fa fa-sitemap">&nbsp;</i>Categories
+                            <i class="fa fa-list">&nbsp;</i>Projects
                     </a>
                 </li>
             
                 <li>
                     <a href="/contact/">
                             <i class="fa fa-envelope-o">&nbsp;</i>Contact
-                    </a>
-                </li>
-            
-                <li>
-                    <a href="/post/goisforlovers/">
-                            <i class="">&nbsp;</i>(Hu)go Template Primer
                     </a>
                 </li>
             
@@ -255,7 +224,7 @@ if (!doNotTrack) {
                     <li>
                         <a href="/blog/">
                             <h3>
-                                <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Articles
                             </h3>
                         </a>
                     </li>
@@ -263,15 +232,7 @@ if (!doNotTrack) {
                     <li>
                         <a href="/itemized/">
                             <h3>
-                                <i class="fa fa-list">&nbsp;</i>Itemized
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/categories/">
-                            <h3>
-                                <i class="fa fa-sitemap">&nbsp;</i>Categories
+                                <i class="fa fa-list">&nbsp;</i>Projects
                             </h3>
                         </a>
                     </li>
@@ -280,14 +241,6 @@ if (!doNotTrack) {
                         <a href="/contact/">
                             <h3>
                                 <i class="fa fa-envelope-o">&nbsp;</i>Contact
-                            </h3>
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/post/goisforlovers/">
-                            <h3>
-                                <i class="">&nbsp;</i>(Hu)go Template Primer
                             </h3>
                         </a>
                     </li>
@@ -307,6 +260,18 @@ if (!doNotTrack) {
                     
                 
 
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/portfolio-optimization-in-r/">Portfolio Optimization in R </a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-20'>
+                                    November 20, 2018</time>
+                            </header>
+                            
+
+                        </article>
                 
                         <article class="mini-post">
                             <header>
@@ -347,18 +312,6 @@ if (!doNotTrack) {
                         <article class="mini-post">
                             <header>
                                 <h3><a href="/post/migrate-content-test/">Migrate Content Test</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2018-11-12'>
-                                    November 12, 2018</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/another_migration_test/">Rebalancing Tool</a></h3>
                                 
                                 <time class="published" datetime=
                                     '2018-11-12'>
@@ -417,63 +370,6 @@ if (!doNotTrack) {
   <footer>
     <ul class="actions">
       <li><a href="/post/another_migration_test/" class="button big">Continue Reading</a></li>
-    </ul>
-  <ul class="stats">
-  <li class="categories">
-    <ul>
-        
-            
-            
-                <i class="fa fa-folder"></i>
-                
-                
-                <li><a class="article-category-link" href="/categories/examplesite">exampleSite</a></li>
-                
-            
-        
-    </ul>
-  </li>
-  <li class="tags">
-    <ul>
-        
-    </ul>
-  </li>
-</ul>
-
-  </footer>
-</article>
-
-        
-            <article class="post">
-  <header>
-    <div class="title">
-        
-            <h2><a href="/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></h2>
-        
-        
-    </div>
-    <div class="meta">
-        
-
-        <time class="published"
-            datetime='2014-03-10'>
-            March 10, 2014</time>
-        <span class="author"></span>
-        
-            <p>4 minute read</p>
-        
-        
-    </div>
-</header>
-
-  
-
-  
-  <p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
-With Jekyll, something that looked like</p>
-  <footer>
-    <ul class="actions">
-      <li><a href="/post/migrate-from-jekyll/" class="button big">Continue Reading</a></li>
     </ul>
   <ul class="stats">
   <li class="categories">
@@ -634,7 +530,7 @@ San Diego, CA</p>
   <section class="recent-posts">
     <div class="mini-posts">
       <header>
-        <h3>Recent Posts</h3>
+        <h3>Recent Article</h3>
       </header>
       <div class="posts-container">
         
@@ -643,6 +539,20 @@ San Diego, CA</p>
           
         
 
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/portfolio-optimization-in-r/">Portfolio Optimization in R </a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-20'>
+                November 20, 2018
+              </time>
+            </header>
+            
+
+          </article>
         
           <article class="mini-post">
             <header>
@@ -690,20 +600,6 @@ San Diego, CA</p>
             <header>
               <h3>
                 <a href="/post/migrate-content-test/">Migrate Content Test</a>
-              </h3>
-              
-              <time class="published" datetime='2018-11-12'>
-                November 12, 2018
-              </time>
-            </header>
-            
-
-          </article>
-        
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/another_migration_test/">Rebalancing Tool</a>
               </h3>
               
               <time class="published" datetime='2018-11-12'>

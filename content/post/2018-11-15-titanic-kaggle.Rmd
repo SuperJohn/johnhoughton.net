@@ -5,7 +5,7 @@ date: '2018-11-15'
 slug: titanic-kaggle
 categories: []
 tags: []
-description: ''
+description: 'Titanic: Machine Learning from disaster. My R Notebook for Kaggle'
 featured: ''
 featuredalt: ''
 featuredpath: ''

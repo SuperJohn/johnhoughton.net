@@ -6,10 +6,19 @@
     <description>Recent content in Post on John Houghton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Portfolio Optimization in R </title>
+      <link>/post/portfolio-optimization-in-r/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/portfolio-optimization-in-r/</guid>
+      <description>Project Summary I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ business-science.io, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written tidyquant, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</description>
+    </item>
     
     <item>
       <title>Titanic Kaggle</title>
@@ -27,12 +36,11 @@ library(knitr) library(rmdformats) ## Global options options(max.print=&amp;quot
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/how-to-make-awesome-r-markdown-for-blogdown/</guid>
-      <description>output:rmdformats::html_clean: toc: yes toc_depth: 2 self_contained: true thumbnails: true lightbox: true gallery: false highlight: kate
-knitr::read_chunk(&amp;#39;~/Documents/Github/r_snippets/blogdown.R&amp;#39;) R Notebook Options  Tabbed Section title content above tabbed region.
-tab 1 tab content 1
- tab 2 tab content 2
-   content below tabbed region
- Quarterly Results By Product data(iris) iris ## Sepal.Length Sepal.Width Petal.Length Petal.Width Species ## 1 5.1 3.5 1.4 0.2 setosa ## 2 4.9 3.0 1.</description>
+      <description> knitr::read_chunk(&amp;#39;~/Documents/Github/r_snippets/blogdown.R&amp;#39;) R Notebook Options blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.html  Knitr Examples on Github https://github.com/yihui/knitr-examples ## CheatSheet https://www.ethz.ch/content/dam/ethz/special-interest/math/statistics/sfs/Education/Advanced%20Studies%20in%20Applied%20Statistics/course-material-1719/Datenanalyse/rmarkdown-2.pdf
+  Markdown Themes rmdformats package https://github.com/juba/rmdformats The github README.md provides some good examples
+ Here’s a great collection of examples of themes http://www.datadreaming.org/post/r-markdown-theme-gallery/
+ Custom Build Functions https://yutani.rbind.io/post/2017-10-25-blogdown-custom/
+  </description>
     </item>
     
     <item>
@@ -82,17 +90,6 @@ Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/Portfol
     </item>
     
     <item>
-      <title>Syntax Highlighting</title>
-      <link>/post/syntax-highlighting/</link>
-      <pubDate>Sat, 10 Mar 2018 17:23:09 -0800</pubDate>
-      
-      <guid>/post/syntax-highlighting/</guid>
-      <description>&lt;p&gt;Code examples in different languagues to demonstrate syntax highlighting with
-the current &lt;a href=&#34;https://github.com/solutionroute/hugo-smorg&#34;&gt;hugo-smorg&lt;/a&gt; theme.
-Inline code looks like &lt;code&gt;this-&amp;gt;var&lt;/code&gt; and &lt;code&gt;expand($flurb, $times)&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Hello R Markdown</title>
       <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
@@ -101,51 +98,6 @@ Inline code looks like &lt;code&gt;this-&amp;gt;var&lt;/code&gt; and &lt;code&gt
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>/post/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>

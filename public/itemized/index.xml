@@ -6,46 +6,28 @@
     <description>Recent content in Itemized on John Houghton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/itemized/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Fancy App 2</title>
-      <link>/itemized/item2/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      <title>Embedded Shiny App Test</title>
+      <link>/itemized/embedded-shiny-app-test/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/itemized/item2/</guid>
-      <description> App 2 </description>
+      <guid>/itemized/embedded-shiny-app-test/</guid>
+      <description>  </description>
     </item>
     
     <item>
-      <title>Fancy App 3</title>
-      <link>/itemized/item3/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
+      <title>Test Itemized Nov 20</title>
+      <link>/itemized/test-itemized-nov-20/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/itemized/item3/</guid>
-      <description> App 3 </description>
-    </item>
-    
-    <item>
-      <title>Fancy App 4</title>
-      <link>/itemized/item4/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item4/</guid>
-      <description> App 4 </description>
-    </item>
-    
-    <item>
-      <title>My Test Item</title>
-      <link>/itemized/item1/</link>
-      <pubDate>Thu, 22 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/itemized/item1/</guid>
-      <description> App 1  Maximum Fun!!!!
- </description>
+      <guid>/itemized/test-itemized-nov-20/</guid>
+      <description>Titanic: Machine Learning from disaster https://www.kaggle.com/c/titanic
+## ── Attaching packages ───────────────────────────────────────── tidyverse 1.2.1 ── ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.5.1 ## ── Conflicts ──────────────────────────────────────────── tidyverse_conflicts() ── ## ✖ dplyr::filter() masks stats::filter() ## ✖ dplyr::lag() masks stats::lag() library(knitr) library(rmdformats) ## Global options options(max.</description>
     </item>
     
   </channel>

@@ -22,6 +22,9 @@ canonifyURLs = true
   ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # Optional Params
+  # enable drafts
+  # draft = true
+  buildDrafts = false
   # Sets navbarTitle to match the section of the website
   dynamicTitles        = false
   # Sets RSS icons to appear on the sidebar with the social media buttons
@@ -59,7 +62,7 @@ canonifyURLs = true
   # files by adding the value, "default".
   # customCSS            = ["default", "/path/to/file"]
   # customJS             = ["default", "/path/to/file"]
-  customCSS            = ["default"]
+  customCSS            = ["default", "static/css/add-on.css"]
   customJS             = ["default"]
 
   # options for highlight.js (version, additional languages, and theme)
@@ -125,22 +128,22 @@ canonifyURLs = true
   weight = 2
 
 [[menu.main]]
-  name = "Blog"
-  url = "/blog/"
-  identifier = "fa fa-newspaper-o"
-  weight = 3
+  name = "Articles"
+ url = "/blog/"
+ identifier = "fa fa-newspaper-o"
+ weight = 3
 
 [[menu.main]]
-  name = "Itemized"
-  url = "/itemized/"
-  identifier = "fa fa-list"
-  weight = 4
+ name = "Projects"
+ url = "/itemized/"
+ identifier = "fa fa-list"
+ weight = 4
 
-[[menu.main]]
-  name = "Categories"
-  url = "/categories/"
-  identifier = "fa fa-sitemap"
-  weight = 5
+#[[menu.main]]
+# name = "Categories"
+# url = "/categories/"
+# identifier = "fa fa-sitemap"
+# weight = 5
 
 [[menu.main]]
   name = "Contact"

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About Hugo on John Houghton</title>
+    <title>About Us on John Houghton</title>
     <link>/about/</link>
-    <description>Recent content in About Hugo on John Houghton</description>
+    <description>Recent content in About Us on John Houghton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 18:19:33 +0600</lastBuildDate>
     
 	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
     
@@ -37,12 +37,39 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>About</title>
+      <link>/about/about/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>Here is some stuff I’m writing</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/about/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>Here is some stuff I&amp;rsquo;m writing</description>
+    </item>
+    
+    <item>
       <title>Hulk Hogan for President!!!</title>
       <link>/about/hulk-hogan-for-president/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/hulk-hogan-for-president/</guid>
       <description> THis is something  </description>
+    </item>
+    
+    <item>
+      <title>Hulk Hogan for President!!!</title>
+      <link>/about/hulk-hogan-for-president/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/hulk-hogan-for-president/</guid>
+      <description> THis is something </description>
     </item>
     
   </channel>
