@@ -15,10 +15,10 @@
 #
 # Every site needs these few: theme, baseURL, languageCode and title
 # Name of the theme your Hugo site uses; leave this in place:
-theme: "hugo-smorg"
-baseURL: "http://www.example.com/"
+theme: "hugo-future-imperfect"
+baseURL: "https://johnhoughton.net"
 languageCode: "en-us"
-title: "Hugo-Smorg Theme"
+title: "John Houghton"
 
 # Optional $.Site Variables ----------------------------------------------
 # More info on Site variables; https://gohugo.io/getting-started/configuration/
@@ -28,11 +28,11 @@ title: "Hugo-Smorg Theme"
 # author name appears in RSS and Atom feeds; 
 # author email address is optional and can be # commented out.
 author: 
-    name: "Your Name or your organization's name"
-    email: "thisemaildoesnotexist@www.example.com"
+    name: "John Houghton"
+    # email: "thisemaildoesnotexist@www.example.com"
 
 # copyright appears in the default site footer 
-copyright: "&copy; Your Name or Organization Name"
+copyright: "&copy; Houghton Analytics"
 
 # metaDataFormat for new content pages generated with the `hugo new` command if
 # not otherwise specified by an archetype. Hugo-Smorg theme examples all use
