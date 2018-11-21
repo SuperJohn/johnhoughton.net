@@ -12,9 +12,6 @@ featuredpath: ''
 linktitle: ''
 ---
 
-Titanic: Machine Learning from disaster
-https://www.kaggle.com/c/titanic
-
 ```{r, echo=FALSE}
 ## Import R Snippets File
 knitr::read_chunk('~/Documents/Github/r_snippets/blogdown.R')

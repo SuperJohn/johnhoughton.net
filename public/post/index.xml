@@ -12,12 +12,21 @@
     
     
     <item>
+      <title>Ridge Regression in Python</title>
+      <link>/post/ridge-regression-in-python/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ridge-regression-in-python/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
       <title>Portfolio Optimization in R </title>
       <link>/post/portfolio-optimization-in-r/</link>
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/portfolio-optimization-in-r/</guid>
-      <description>Project Summary I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ business-science.io, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written tidyquant, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</description>
+      <description># {{&amp;lt; fancybox &amp;quot;/img/profile_pics/&amp;quot; &amp;quot;profile1.jpg&amp;quot; &amp;quot;caption&amp;quot; &amp;quot;gallery2&amp;quot; &amp;gt;}} Project Summary I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ business-science.io, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written tidyquant, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</description>
     </item>
     
     <item>
@@ -26,8 +35,7 @@
       <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/titanic-kaggle/</guid>
-      <description>Titanic: Machine Learning from disaster https://www.kaggle.com/c/titanic
-library(knitr) library(rmdformats) ## Global options options(max.print=&amp;quot;75&amp;quot;) opts_chunk$set(#echo=FALSE, cache=TRUE, prompt=FALSE, tidy=TRUE, comment=NA, message=FALSE, warning=FALSE, results=&amp;#39;asis&amp;#39; ) opts_knit$set(width=75) print(&amp;quot;notebook options imported successfully!&amp;quot;) ## [1] &amp;quot;notebook options imported successfully!&amp;quot; # set the working directory setwd(&amp;quot;~/Documents/GitHub/titanic_kaggle_ml&amp;quot;) # read data files test.data &amp;lt;- read.csv(&amp;quot;test.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) train.data &amp;lt;- read.csv(&amp;quot;train.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) # convert ints factors train.data$Survived = factor(train.data$Survived) train.data$Pclass = factor(train.data$Pclass) # test.data$Survived = factor(test.data$Survived) # test.</description>
+      <description>library(knitr) library(rmdformats) ## Global options options(max.print=&amp;quot;75&amp;quot;) opts_chunk$set(#echo=FALSE, cache=TRUE, prompt=FALSE, tidy=TRUE, comment=NA, message=FALSE, warning=FALSE, results=&amp;#39;asis&amp;#39; ) opts_knit$set(width=75) print(&amp;quot;notebook options imported successfully!&amp;quot;) ## [1] &amp;quot;notebook options imported successfully!&amp;quot; # set the working directory setwd(&amp;quot;~/Documents/GitHub/titanic_kaggle_ml&amp;quot;) # read data files test.data &amp;lt;- read.csv(&amp;quot;test.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) train.data &amp;lt;- read.csv(&amp;quot;train.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) # convert ints factors train.data$Survived = factor(train.data$Survived) train.data$Pclass = factor(train.data$Pclass) # test.data$Survived = factor(test.data$Survived) # test.data$Pclass = factor(test.data$Pclass) # DETECTING MISSING VALUES sum(is.</description>
     </item>
     
     <item>

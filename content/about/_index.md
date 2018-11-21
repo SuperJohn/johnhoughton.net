@@ -1,6 +1,39 @@
----
-title: "About Us"
-date: 2018-07-12T18:19:33+06:00
----
 
-Here's some stuff! 
+
++++
+type = "itemized"
+author = "John Houghton"
+date = "2018-11-20"
+title = "About Me"
+description = "I'm a Data Scientist living in San Diego, CA"
+featured = ""
+featuredpath = ""
+featuredalt = ""
+categories = [""]
+linktitle = "about_me"
+format = "R"
+link = "#"
++++
+> ## Hi, I'm John. 
+### I'm a Data Scientist living in San Diego, CA.
+
+{{< img-post path="/img/profile_pics/" file="profile1.jpg" alt="Alt Text" type="left" >}}
+#### *Connect with me on LinkedIn*
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/johnkirkhoughton" data-format="inline" data-related="false"></script>
+
+<br>
+# Selected Projects: 
+> ## Portfolio Optimization (2018)  
+ - [Shiny Application (in progress)](https://superjohnca.shinyapps.io/portfolio_optimization/)  
+ - [code via gist @ github](https://gist.github.com/SuperJohn/58ced0f37a27b4ca073d6dd01dac6034)
+
+
+# To-Do List @ Nov 2018
+Item | Type | Expected Date
+---- | ---- | -------------
+Multi-Model Time-Series Optimization | notebook | Nov 2018
+Auto Machine Learning with H20.ai | blog post | Dec 2018
+Auto Machine Learning with H20.ai | notebook | Dec 2018
+Python in R markdown notebooks | notebook | Dec 2018
+Interprettable Models using Lime | notebook | Dec 2018

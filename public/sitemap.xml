@@ -28,12 +28,27 @@
   </url>
   
   <url>
-    <loc>/post/portfolio-optimization-in-r/</loc>
+    <loc>/itemized/ridge-regression-in-python/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/ridge-regression-in-python/</loc>
     <lastmod>2018-11-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/itemized/test-itemized-nov-20/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/portfolio-optimization-in-r/</loc>
     <lastmod>2018-11-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -78,11 +93,6 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2018-07-15T12:32:37+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/contact/</loc>
     <lastmod>2018-07-14T17:09:20+06:00</lastmod>
   </url>
@@ -95,11 +105,6 @@
   <url>
     <loc>/service/</loc>
     <lastmod>2018-07-14T12:58:14+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2018-07-12T18:19:33+06:00</lastmod>
   </url>
   
   <url>
@@ -163,34 +168,14 @@
   </url>
   
   <url>
-    <loc>/blog/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/hugo/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -268,7 +253,7 @@
   
   <url>
     <loc>/categories/hugo/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -317,12 +302,6 @@
   <url>
     <loc>/tags/theme/</loc>
     <lastmod>2018-03-07T02:16:58-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/tutorial/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

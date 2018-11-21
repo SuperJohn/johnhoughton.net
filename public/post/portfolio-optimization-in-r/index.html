@@ -24,7 +24,7 @@
         "datePublished": "2018-11-20 00:00:00 &#43;0000 UTC",
         "dateModified" : "2018-11-20 00:00:00 &#43;0000 UTC",
         "url" : "/post/portfolio-optimization-in-r/",
-        "wordCount" : "1908",
+        "wordCount" : "136",
         "keywords" : [ "Blog" ]
     }
     </script>
@@ -68,7 +68,7 @@
 
 <meta itemprop="datePublished" content="2018-11-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-11-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1908">
+<meta itemprop="wordCount" content="136">
 
 
 
@@ -155,7 +155,7 @@ if (!doNotTrack) {
                 </li>
             
                 <li>
-                    <a href="/blog/">
+                    <a href="/post/">
                             <i class="fa fa-newspaper-o">&nbsp;</i>Articles
                     </a>
                 </li>
@@ -227,7 +227,7 @@ if (!doNotTrack) {
                     </li>
                 
                     <li>
-                        <a href="/blog/">
+                        <a href="/post/">
                             <h3>
                                 <i class="fa fa-newspaper-o">&nbsp;</i>Articles
                             </h3>
@@ -268,6 +268,18 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/post/ridge-regression-in-python/">Ridge Regression in Python</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-20'>
+                                    November 20, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/post/portfolio-optimization-in-r/">Portfolio Optimization in R </a></h3>
                                 
                                 <time class="published" datetime=
@@ -275,6 +287,30 @@ if (!doNotTrack) {
                                     November 20, 2018</time>
                             </header>
                             
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/post/portfolio-optimization-in-r/" class="image featured">
+            <img src="/post//ridge-regression-in-python" alt="">
+        </a>
+    
+
 
                         </article>
                 
@@ -314,23 +350,11 @@ if (!doNotTrack) {
 
                         </article>
                 
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/migrate-content-test/">Migrate Content Test</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2018-11-12'>
-                                    November 12, 2018</time>
-                            </header>
-                            
-
-                        </article>
-                
 
                 
                     <a href=
                         
-                            /blog/
+                            /post/
                         
                         class="button">View more posts</a>
                 
@@ -457,7 +481,7 @@ if (!doNotTrack) {
             November 20, 2018</time>
         <span class="author">John Houghton</span>
         
-            <p>9 minute read</p>
+            <p>1 minute read</p>
         
         
     </div>
@@ -467,20 +491,36 @@ if (!doNotTrack) {
   
 
   
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/post/portfolio-optimization-in-r/" class="image featured">
+            <img src="/post//ridge-regression-in-python" alt="">
+        </a>
+    
+
 
   <div id="content">
     
-<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
-<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
-<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
-<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
 
 
+<pre class="r"><code># {{&lt; fancybox &quot;/img/profile_pics/&quot; &quot;profile1.jpg&quot; &quot;caption&quot; &quot;gallery2&quot; &gt;}}</code></pre>
 <div id="project-summary" class="section level1">
 <h1>Project Summary</h1>
 <p>I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ <a href="https://business-science.io">business-science.io</a>, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written <a href="https://business-science.github.io/tidyquant/">tidyquant</a>, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</p>
@@ -488,375 +528,7 @@ if (!doNotTrack) {
 <h2>My Shiny Application</h2>
 <p><a href="https://superjohnca.shinyapps.io/portfolio_optimization/" class="uri">https://superjohnca.shinyapps.io/portfolio_optimization/</a></p>
 <p>I have a shiny application that’s currently in development (as of Nov-2018), which implements a narrow optimization strategy that’s suited for my needs. I’m hoping to find time to build it out to handle more generalized needs in the near future. Check it out!</p>
-</div>
-</div>
-<div id="setup-r-environment" class="section level1">
-<h1>Setup R Environment</h1>
-<pre class="r"><code>library(knitr)
-library(rmdformats)
-## Global options
-options(max.print=&quot;75&quot;)
-opts_chunk$set(#echo=FALSE,
-               cache=TRUE,
-               prompt=FALSE,
-               tidy=TRUE,
-               comment=NA,
-               message=FALSE,
-               warning=FALSE, 
-               results=&#39;asis&#39;
-               )
-opts_knit$set(width=75)
-print(&quot;notebook options imported successfully!&quot;)</code></pre>
-<pre><code>## [1] &quot;notebook options imported successfully!&quot;</code></pre>
-<pre class="r"><code>## Load Required Libraries &amp; Set Paths
-library(tidyverse)
-library(tidyquant)
-library(lubridate)
-library(timetk)
-library(DT)
-library(PerformanceAnalytics)
-library(ROI.plugin.quadprog)
-library(ROI.plugin.glpk)
-# library(ROI.plugin.symphony)
-setwd(&quot;~/Documents/GitHub/rob_gordon_2018&quot;)</code></pre>
-</div>
-<div id="get-stock-data" class="section level1">
-<h1>Get Stock Data</h1>
-<pre class="r"><code>stocks &lt;- c(&quot;SPY&quot;, &quot;IYR&quot;, &quot;QQQ&quot;, &quot;TLT&quot;, &quot;GLD&quot;, &quot;IWM&quot;, &quot;EEM&quot;, &quot;DBC&quot;, &quot;EFA&quot;)
-stock_data &lt;- tq_get(stocks, get = &quot;stock.prices&quot;, from = Sys.Date() - months(12), 
-    to = Sys.Date())
-stock_data %&gt;% head(10)</code></pre>
-</div>
-<div id="a-tibble-10-x-8" class="section level1">
-<h1>A tibble: 10 x 8</h1>
-<p>symbol date open high low close volume adjusted <chr> <date> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> 1 SPY 2017-11-20 258. 259. 258. 258. 48075500 254. 2 SPY 2017-11-21 259. 260. 258. 260. 69176800 255. 3 SPY 2017-11-22 260 260. 260. 260. 45033400 255. 4 SPY 2017-11-24 260. 260. 260. 260. 27856500 256. 5 SPY 2017-11-27 260. 261. 260 260. 52274900 256. 6 SPY 2017-11-28 261. 263. 261. 263. 98971700 258. 7 SPY 2017-11-29 263. 264. 262. 263. 77512100 258. 8 SPY 2017-11-30 264. 266. 264. 265. 127894400 260. 9 SPY 2017-12-01 265. 265. 261. 264. 164390900 260. 10 SPY 2017-12-04 266. 267. 264. 264. 94040600 259.</p>
-</div>
-<div id="visualize-stock-prices" class="section level1">
-<h1>Visualize Stock Prices</h1>
-<ul>
-<li>Kept only 4 symbols in order to fit</li>
-<li>Will include all in dashboard via interactive filtering</li>
-</ul>
-<pre class="r"><code># using ggplot2
-stock_data %&gt;% filter(symbol %in% c(&quot;SPY&quot;, &quot;GLD&quot;, &quot;QQQ&quot;, &quot;DBC&quot;)) %&gt;% ggplot(aes(x = date, 
-    y = adjusted, color = symbol)) + geom_line(size = 1) + geom_bbands(aes(high = high, 
-    low = low, close = close), ma_fun = SMA, n = 5, show.legend = TRUE) + labs(title = &quot;Daily Stock Prices&quot;, 
-    x = &quot;&quot;, y = &quot;Adjusted Prices&quot;, color = &quot;&quot;) + facet_wrap(~symbol, ncol = 2, 
-    scales = &quot;free&quot;) + scale_y_continuous(labels = scales::dollar) + theme_tq() + 
-    scale_color_tq()</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-</div>
-<div id="calculate-returns" class="section level1 tabset tabset-fade">
-<h1>Calculate Returns</h1>
-<div id="simple-returns-data" class="section level2">
-<h2>Simple Returns Data</h2>
-<pre class="r"><code>mo_returns &lt;- stock_data %&gt;% group_by(symbol) %&gt;% tq_transmute(select = adjusted, 
-    mutate_fun = periodReturn, period = &quot;monthly&quot;, col_rename = &quot;returns&quot;)
-
-mo_returns %&gt;% mutate(returns = round(returns, 6)) %&gt;% arrange(desc(symbol), 
-    desc(date)) %&gt;% datatable(class = &quot;compact&quot;, options = list(scrollX = TRUE, 
-    dom = &quot;tp&quot;))</code></pre>
-<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117"],["TLT","TLT","TLT","TLT","TLT","TLT","TLT","TLT","TLT","TLT","TLT","TLT","TLT","SPY","SPY","SPY","SPY","SPY","SPY","SPY","SPY","SPY","SPY","SPY","SPY","SPY","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","QQQ","IYR","IYR","IYR","IYR","IYR","IYR","IYR","IYR","IYR","IYR","IYR","IYR","IYR","IWM","IWM","IWM","IWM","IWM","IWM","IWM","IWM","IWM","IWM","IWM","IWM","IWM","GLD","GLD","GLD","GLD","GLD","GLD","GLD","GLD","GLD","GLD","GLD","GLD","GLD","EFA","EFA","EFA","EFA","EFA","EFA","EFA","EFA","EFA","EFA","EFA","EFA","EFA","EEM","EEM","EEM","EEM","EEM","EEM","EEM","EEM","EEM","EEM","EEM","EEM","EEM","DBC","DBC","DBC","DBC","DBC","DBC","DBC","DBC","DBC","DBC","DBC","DBC","DBC"],["2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30","2018-11-19","2018-10-31","2018-09-28","2018-08-31","2018-07-31","2018-06-29","2018-05-31","2018-04-30","2018-03-29","2018-02-28","2018-01-31","2017-12-29","2017-11-30"],[0.015136,-0.029305,-0.028643,0.01312,-0.014369,0.006458,0.020044,-0.020881,0.028597,-0.030414,-0.032555,0.018126,-0.009656,-0.005653,-0.069104,0.005946,0.03192,0.037047,0.005751,0.024309,0.005168,-0.027411,-0.036361,0.056359,0.012128,0.025978,-0.045695,-0.085957,-0.002816,0.057807,0.027964,0.01145,0.056729,0.005058,-0.040788,-0.012928,0.087571,0.006031,0.008581,0.032518,-0.023869,-0.028534,0.023754,0.008315,0.040595,0.033712,0.002252,0.037719,-0.066573,-0.030243,-0.001233,0,-0.007798,-0.109878,-0.02325,0.043106,0.016491,0.006144,0.061636,0.009814,0.012175,-0.038437,0.02558,-0.003985,0.027553,0.004516,0.021195,-0.006607,-0.021381,-0.022419,-0.036149,-0.011959,-0.00954,0.00632,-0.02076,0.032349,0.021057,-0.001731,-0.0008,-0.081335,0.009653,-0.022358,0.02852,-0.015841,-0.018943,0.015212,-0.008396,-0.048348,0.050206,0.013488,0.015204,0.030388,-0.087605,-0.005791,-0.037673,0.03531,-0.045457,-0.026215,-0.028169,0.005414,-0.058985,0.08298,0.037616,-0.0204,-0.049528,-0.056205,0.033947,0.007536,-0.024321,-0.019412,0.026765,0.034158,0.022892,-0.02924,0.0295,0.027847,-0.001853]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>symbol<\/th>\n      <th>date<\/th>\n      <th>returns<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"scrollX":true,"dom":"tp","columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-<pre class="r"><code># simple returns = Rt = [ Pt - Pt-1 ]/ Pt-1 simple_returns &lt;- stock_data %&gt;%
-# group_by(symbol, year = year(date)) %&gt;% summarise(adjusted =
-# last(adjusted, order_by = year)) %&gt;% mutate(return = (adjusted -
-# lag(adjusted, order_by = year)) / lag(adjusted, order_by = year) , return
-# = round(return, 6)) %&gt;% arrange(desc(symbol), desc(year)) # %&gt;%
-# filter(symbol == &#39;SPY&#39;) datatable(simple_returns, class=&#39;compact&#39;, options
-# = list(scrollX = TRUE, dom = &#39;tp&#39;))</code></pre>
-</div>
-<div id="chart-returns" class="section level2">
-<h2>Chart: Returns</h2>
-<ul>
-<li>stocks filtered to fit</li>
-</ul>
-<pre class="r"><code>mo_returns %&gt;% filter(symbol %in% c(&quot;SPY&quot;, &quot;GLD&quot;, &quot;QQQ&quot;, &quot;DBC&quot;)) %&gt;% ggplot(aes(x = date, 
-    y = returns, fill = symbol)) + geom_line(aes(color = symbol)) + geom_hline(yintercept = 0, 
-    color = palette_light()[[1]]) + scale_y_continuous(labels = scales::percent) + 
-    labs(title = &quot; Monthly Returns&quot;, subtitle = &quot;stocks limited to fit&quot;, y = &quot;Monthly Returns&quot;, 
-        x = &quot;&quot;) + facet_wrap(~symbol, ncol = 2, scales = &quot;free&quot;) + theme_tq() + 
-    scale_fill_tq()</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-</div>
-<div id="chart-smoothed-returns" class="section level2">
-<h2>Chart: Smoothed Returns</h2>
-<pre class="r"><code>mo_returns %&gt;% filter(symbol %in% c(&quot;SPY&quot;, &quot;GLD&quot;, &quot;QQQ&quot;, &quot;DBC&quot;)) %&gt;% ggplot(aes(x = date, 
-    y = returns, fill = symbol)) + geom_smooth(aes(color = symbol), method = &quot;loess&quot;, 
-    formula = y ~ x, se = FALSE) + geom_hline(yintercept = 0, color = palette_light()[[1]]) + 
-    scale_y_continuous(labels = scales::percent) + labs(title = &quot; Monthly Returns&quot;, 
-    subtitle = &quot;stocks limited to fit&quot;, y = &quot;Monthly Returns&quot;, x = &quot;&quot;) + facet_wrap(~symbol, 
-    ncol = 2, scales = &quot;free&quot;) + theme_tq() + scale_fill_tq()</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-</div>
-</div>
-<div id="growth-of-1000-6mo" class="section level1 tabset tabset-fade">
-<h1>Growth of $1000 (6mo)</h1>
-<div id="data-table" class="section level2">
-<h2>Data Table</h2>
-<pre class="r"><code>init.investment &lt;- 1000
-growth &lt;- mo_returns %&gt;% arrange(date) %&gt;% mutate(final_value = init.investment * 
-    cumprod(1 + returns)) %&gt;% arrange(desc(final_value))
-growth %&gt;% filter(date == max(date)) %&gt;% select(-date)</code></pre>
-</div>
-</div>
-<div id="a-tibble-9-x-3" class="section level1">
-<h1>A tibble: 9 x 3</h1>
-</div>
-<div id="groups-symbol-9" class="section level1">
-<h1>Groups: symbol [9]</h1>
-<p>symbol returns final_value <chr> <dbl> <dbl> 1 QQQ -0.0457 1062. 2 SPY -0.00565 1061. 3 IYR 0.0325 1022. 4 IWM -0.00780 1008. 5 DBC -0.0495 996. 6 GLD 0.00452 954. 7 TLT 0.0151 935. 8 EFA -0.000800 931. 9 EEM 0.0304 876.</p>
-<div id="visualization" class="section level2">
-<h2>Visualization</h2>
-<pre class="r"><code>growth %&gt;% ggplot(aes(x = date, y = final_value, color = symbol)) + geom_line() + 
-    # geom_smooth(method = &#39;loess&#39;) +
-labs(title = &quot;Individual Portfolio: Comparing the Growth of $1K&quot;, subtitle = &quot;Quickly visualize performance&quot;, 
-    x = &quot;&quot;, y = &quot;Investment Value&quot;) + theme_tq() + theme(legend.position = &quot;right&quot;) + 
-    scale_y_continuous(labels = scales::dollar)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-9-1.png" width="672" /> ## winners (top 5)</p>
-<pre class="r"><code>winners &lt;- growth %&gt;% ungroup() %&gt;% filter(date == max(date)) %&gt;% mutate(rank = row_number()) %&gt;% 
-    top_n(5, final_value) %&gt;% select(rank, symbol, final_value)
-
-winners %&gt;% arrange(desc(final_value)) %&gt;% ggplot(aes(x = symbol, y = final_value, 
-    fill = symbol)) + geom_bar(stat = &quot;identity&quot;) + # geom_smooth(method = &#39;loess&#39;) +
-labs(title = &quot;Individual Portfolio: Comparing the Growth of $1K&quot;, subtitle = &quot;Quickly visualize performance&quot;, 
-    x = &quot;&quot;, y = &quot;Investment Value&quot;) + theme_tq() + theme(legend.position = &quot;right&quot;) + 
-    scale_y_continuous(labels = scales::dollar) + geom_text(aes(label = round(final_value, 
-    2), vjust = 3, size = 10))</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<pre class="r"><code>winners$symbol</code></pre>
-<p>[1] “QQQ” “SPY” “IYR” “IWM” “DBC”</p>
-</div>
-</div>
-<div id="portfolio-optimization" class="section level1">
-<h1>Portfolio Optimization</h1>
-<div id="create-time-series-object-for-optimization" class="section level2">
-<h2>Create Time-Series Object for Optimization</h2>
-<pre class="r"><code># convert to ts object
-stock_returns &lt;- mo_returns %&gt;% filter(symbol %in% winners$symbol) %&gt;% spread(key = symbol, 
-    value = returns) %&gt;% tk_xts(date_var = date) %&gt;% na.omit()
-
-# stock_returns %&gt;% class()</code></pre>
-</div>
-</div>
-<div id="optimize-backtest" class="section level1">
-<h1>Optimize &amp; BACKTEST</h1>
-<div id="get-historical-stock-returns-3-years" class="section level2">
-<h2>Get Historical Stock Returns (3 Years)</h2>
-<pre class="r"><code>hist_returns &lt;- tq_get(winners$symbol, get = &quot;stock.prices&quot;, from = Sys.Date() - 
-    months(36), to = Sys.Date()) %&gt;% group_by(symbol) %&gt;% tq_transmute(select = adjusted, 
-    mutate_fun = periodReturn, period = &quot;daily&quot;, type = &quot;arithmetic&quot;, col_rename = &quot;returns&quot;)
-
-hist_returns_ts &lt;- hist_returns %&gt;% spread(key = symbol, value = returns) %&gt;% 
-    tk_xts(date_var = date) %&gt;% na.omit()</code></pre>
-</div>
-<div id="run-minimum-variance-optimization" class="section level2">
-<h2>Run Minimum Variance Optimization</h2>
-<ul>
-<li>set objective: risk minimization (variance)</li>
-<li>contraint 1: invest all funds</li>
-<li>contrstaint 2: long only</li>
-</ul>
-<pre class="r"><code># Markowitz Optimization involves minimizing the risk(variance) of returns and maximizing returns.
-# https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
-library(PortfolioAnalytics)
-
-# Loading all suggested packages to fix ROI issue
-# list.of.packages &lt;- c(&quot;foreach&quot;, &quot;DEoptim&quot;, &quot;iterators&quot;, &quot;fGarch&quot;, &quot;Rglpk&quot;, &quot;quadprog&quot;, &quot;ROI&quot;, &quot;ROI.plugin.glpk&quot;, &quot;ROI.plugin.quadprog&quot;, &quot;ROI.plugin.symphony&quot;, &quot;pso&quot;, &quot;GenSA&quot;, &quot;corpcor&quot;, &quot;testthat&quot;, &quot;nloptr&quot;, &quot;MASS&quot;, &quot;robustbase&quot;)
-# new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
-# if(length(new.packages)) install.packages(new.packages)
-
-#&#39; Set up initial portfolio with basic constraints.
-init.portf &lt;- portfolio.spec(assets = colnames(hist_returns_ts))
-# Add full investment constraint to the portfolio object
-init.portf &lt;- add.constraint(portfolio=init.portf, type=&quot;full_investment&quot;)
-# Add long only constraints
-init.portf &lt;- add.constraint(portfolio=init.portf, type=&quot;box&quot;, min_sum=0.99, max_sum=1.01)
-
-# Add objective to minimize variance
-portf_minvar &lt;- add.objective(portfolio=init.portf, type=&quot;risk&quot;, name=&quot;var&quot;)
-# Dummy objectives for plotting and/or further analysis
-portf_minvar &lt;- add.objective(portf_minvar, type=&quot;return&quot;, name=&quot;mean&quot;, multiplier=0)
-portf_minvar &lt;- add.objective(portf_minvar, type=&quot;risk&quot;, name=&quot;ES&quot;, multiplier=0)
-portf_minvar &lt;- add.objective(portf_minvar, type=&quot;risk&quot;, name=&quot;StdDev&quot;, multiplier=0)
-
-opt_gmv &lt;- optimize.portfolio(R=hist_returns_ts,
-                              portfolio=portf_minvar,
-                              optimize_method=&quot;ROI&quot;,
-                              trace=TRUE,
-                              search_size=5000)
-
-### Print Min Variance Achieved via Optimization ###
-extractStats(opt_gmv)[1]</code></pre>
-<pre><code>    ES </code></pre>
-<p>0.01513927</p>
-<pre class="r"><code>### Print Weights ###
-weights &lt;- extractWeights(opt_gmv)
-weights_tbl &lt;- as.tibble(as.list(weights)) %&gt;% gather(&quot;symbol&quot;, &quot;weight&quot;, 1:length(weights)) %&gt;% arrange(desc(weight))
-weights_tbl</code></pre>
-</div>
-</div>
-<div id="a-tibble-5-x-2" class="section level1">
-<h1>A tibble: 5 x 2</h1>
-<p>symbol weight <chr> <dbl> 1 IYR 0.420 2 DBC 0.366 3 SPY 0.214 4 IWM 0<br />
-5 QQQ 0</p>
-<pre class="r"><code>### Bar Chart Weights ###
-opt_gmv %&gt;% chart.Weights(plot.type=&quot;barplot&quot;, ylim=c(0,1), las=1, colorset = rainbow12equal, main=&quot;Optimal Weights&quot;, cex.axis = .8 )</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
-<pre class="r"><code>### Pie Chart Weights ###
-library(scales)
-pie &lt;- ggplot(weights_tbl, aes(x=&quot;&quot;, y=weight, fill=symbol)) +
-  geom_bar(width = 1, stat = &quot;identity&quot;) + 
-  coord_polar(&quot;y&quot;, start=0) +
-  scale_fill_brewer(&quot;Blues&quot;) + #blank_theme() +
-  theme(axis.text.x=element_blank())+
-  geom_text(aes(y = weight/3 + c(0, cumsum(weight)[-length(weight)]), 
-                label = percent(weight)), size=5)
-pie</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
-<pre class="r"><code>paste(&quot;Min Variance Achieved: &quot;, round(opt_gmv$objective_measures$ES,5))</code></pre>
-<p>[1] “Min Variance Achieved: 0.01514”</p>
-<pre class="r"><code>### Chart Risk Reward ### 
-chart.RiskReward(opt_gmv, rp=TRUE, risk.col = &quot;ES&quot;, chart.assets=TRUE)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-13-3.png" width="672" /></p>
-<pre class="r"><code>annualized.moments &lt;- function(R, scale=12, portfolio=NULL){
-    out &lt;- list()
-    out$mu &lt;-    matrix(colMeans(R), ncol=1)
-    out$sigma &lt;- cov(R)/scale
-    return(out)
-  }
-
-### CALCULATE &amp; PLOT EFFICIENT FRONTIER ### 
-  prt_ef &lt;- create.EfficientFrontier(R=12*hist_returns_ts, portfolio=portf_minvar, type=&quot;mean-StdDev&quot;, 
-                                      match.col = &quot;StdDev&quot;, momentFUN=&quot;annualized.moments&quot;, scale=12)
-  ### Chart Efficient Frontier ### 
-  xlim &lt;- range(prt_ef$frontier[,2])*c(1, 1.5)
-  ylim &lt;- range(prt_ef$frontier[,1])*c(.80, 1.05)
-  chart.EfficientFrontier(prt_ef, match.col=&quot;StdDev&quot;, chart.assets = TRUE, n.portfolios = 1000
-                          , labels.assets = TRUE, xlim=xlim, ylim=ylim, main = &quot;Efficient Frontier&quot;)
-  points(with(annualized.moments(12*stock_returns, scale=12), cbind(sqrt(diag(sigma)), mu)), pch=19 ) 
-  text(with(annualized.moments(12*stock_returns, scale=12), cbind(sqrt(diag(sigma)), mu)), 
-       labels=colnames(stock_returns), cex=.8, pos=4) </code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-13-4.png" width="672" /></p>
-<pre class="r"><code>  ### Chart EF Weights ###
-  chart.EF.Weights(prt_ef, match.col=&quot;StdDev&quot;, colorset = rainbow12equal, main = &quot;Efficient Frontier&quot;)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-13-5.png" width="672" /></p>
-</div>
-<div id="visualize-portfolio-optimization" class="section level1">
-<h1>Visualize Portfolio Optimization</h1>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<div id="perform-backtest" class="section level2">
-<h2>Perform Backtest</h2>
-<pre class="r"><code># https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
-
-bt_gmv &lt;- optimize.portfolio.rebalancing(R=hist_returns_ts, portfolio=portf_minvar,
-                                         optimize_method=&quot;ROI&quot;,
-                                         trace = TRUE,
-                                         rebalance_on=&quot;months&quot;,
-                                         training_period=36,
-                                         # trailing_period=trailing, 
-                                         rolling_window = 12
-                                         )
-
-summary(bt_gmv)$annualized_returns[[1]]</code></pre>
-<p>[1] 0.1133622</p>
-<pre class="r"><code>summary(bt_gmv)$annualized_StdDev[[1]]</code></pre>
-<p>[1] 0.1018277</p>
-<pre class="r"><code>bt_weights &lt;- summary(bt_gmv)$weights
-bt_ret &lt;- summary(bt_gmv)$portfolio_returns
-
-charts.PerformanceSummary(cbind(bt_ret, opt_gmv$R), main=&quot;Optimization Performance&quot;, method = &quot;StdDev&quot;, wealth.index = TRUE, begin = &quot;axis&quot;)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
-<pre class="r"><code>x &lt;- Return.portfolio(hist_returns_ts, bt_weights, wealth.index = TRUE, verbose = TRUE)
-chart.CumReturns(x$returns, col=bluemono, begin=&quot;axis&quot;)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-15-2.png" width="672" /></p>
-<pre class="r"><code>chart.StackedBar(x$BOP.Weight)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-15-3.png" width="672" /></p>
-<pre class="r"><code>chart.StackedBar(x$BOP.Value)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-15-4.png" width="672" /></p>
-<pre class="r"><code># CHART BACKTEST WEIGHTS
-bt_gmv %&gt;% chart.Weights(ylim=c(0,1), las=1, main=&quot;Optimal Weights&quot;, cex.axis = 3 ,cex.legend = 3, col=rainbow12equal) # , legend.loc = &quot;topright&quot;</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-15-5.png" width="672" /></p>
-<pre class="r"><code># ret.bt.gmv &lt;- do.call(cbind, lapply(bt_gmv, function(x) summary(bt_gmv)$portfolio_returns))
-# colnames(ret.bt.gmv) &lt;- c(&quot;min ES&quot;, &quot;min ES RB&quot;, &quot;min ES Eq RB&quot;, &quot;stuff&quot;, &quot;other stuff&quot;)
-
-Rb &lt;- Return.portfolio(hist_returns_ts, weights = c(.2,.2,.2,.2,.2), wealth.index = TRUE, verbose = TRUE)
-chart.RelativePerformance(as.xts(x$returns), as.xts(Rb$returns), colorset = rainbow12equal, main = &quot;Performance Relative to Even Dist&quot;)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-15-6.png" width="672" /></p>
-<pre class="r"><code># `r library(dplyr, PerformanceAnalytics)` # Get Performance {.tabset
-# .tabset-fade} ## descriptive statistics `r mo_returns %&gt;%
-# tidyquant::tq_performance(Ra = returns, Rb = NULL, performance_fun =
-# table.Stats)` ## annualized returns `r mo_returns %&gt;%
-# tidyquant::tq_performance(Ra = returns, Rb = NULL, performance_fun =
-# table.AnnualizedReturns)` ## downside risks `r mo_returns %&gt;%
-# tidyquant::tq_performance(Ra = returns, Rb = NULL, performance_fun =
-# table.DownsideRisk)` ## downside risk ratios `r mo_returns %&gt;%
-# tidyquant::tq_performance(Ra = returns, Rb = NULL, performance_fun =
-# table.DownsideRiskRatio)` ## value at risk `r mo_returns %&gt;%
-# tidyquant::tq_performance(Ra = returns, Rb = NULL, performance_fun = VaR)`
-# ## sharpe ratio `r mo_returns %&gt;% tidyquant::tq_performance(Ra = returns,
-# Rb = NULL, performance_fun = SharpeRatio)`</code></pre>
-</div>
-</div>
-<div id="appendix" class="section level1">
-<h1>Appendix</h1>
-<div id="resources-notes" class="section level2">
-<h2>Resources &amp; Notes</h2>
-<ul>
-<li><a href="https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ05-performance-analysis-with-tidyquant.html">Performance Analysis Vignette</a></li>
-<li><a href="https://rstudio-pubs-static.s3.amazonaws.com/333431_8a130f2ff7f84e4faee2a4ac01d6c30e.html">Really great article I walked through</a></li>
-<li><a href="https://rpubs.com/mr148/333431">Really great article #2 - same as above or extended?</a></li>
-<li><a href="https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r">Backtesting 4 Portfolio Optimization Strategies In R</a></li>
-<li><a href="https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf">Using ROI Solvers for Portfolio Analytics, Vignette</a></li>
-<li><a href="https://systematicinvestor.wordpress.com/2012/08/21/adaptive-asset-allocation-sensitivity-analysis/">Example R Code from Rob via Systematic Investor</a></li>
-<li><a href="https://github.com/systematicinvestor/SIT">Systematic Investor Github with Library</a></li>
-<li><a href="https://www.bridgewater.com/resources/risk-parity-is-about-balance.pdf">Article from Rob re: strategy</a></li>
-<li><a href="https://quantstrattrader.wordpress.com/category/r/">Moments Lookback WIndow Optimization</a></li>
-</ul>
-</div>
-<div id="second-ef-example-from-stack-overflow" class="section level2">
-<h2><a href="https://stackoverflow.com/questions/30614457/r-portfolio-analytics-chart-efficientfrontier-function/30650972#30650972">Second EF Example from Stack Overflow</a></h2>
-<pre class="r"><code>require(quadprog)
-# min_x(-d^T x + 1/2 b^T D x) r.t A.x&gt;=b
-MV_QP &lt;- function(nx, tarRet, Sig = NULL, long_only = FALSE) {
-    if (is.null(Sig)) 
-        Sig = cov(nx)
-    dvec = rep(0, ncol(Sig))
-    meq = 2
-    Amat = rbind(rep(1, ncol(Sig)), apply(nx, 2, mean))
-    bvec = c(1, tarRet)
-    if (long_only) {
-        meq = 1
-        Amat = Amat[-1, ]
-        Amat = rbind(Amat, diag(1, ncol(Sig)), rep(1, ncol(Sig)), rep(-1, ncol(Sig)))
-        bvec = bvec[-1]
-        bvec = c(bvec, rep(0, ncol(Sig)), 0.98, -1.02)
-    }
-    sol &lt;- solve.QP(Dmat = Sig, dvec, t(Amat), bvec, meq = meq)$solution
-}
-
-steps = 50
-x = stock_returns
-µ.b &lt;- apply(X = x, 2, FUN = mean)
-long_only = TRUE
-range.bl &lt;- seq(from = min(µ.b), to = max(µ.b) * ifelse(long_only, 1, 1.6), 
-    length.out = steps)
-risk.bl &lt;- t(sapply(range.bl, function(targetReturn) {
-    w &lt;- MV_QP(x, targetReturn, long_only = long_only)
-    c(sd(x %*% w), w)
-}))
-
-weigthsl = round(risk.bl[, -1], 4)
-colnames(weigthsl) = colnames(x)
-weigthsl %&gt;% head()</code></pre>
-<pre><code>    DBC IWM    IYR QQQ SPY</code></pre>
-<p>[1,] 0.9784 0 0.0016 0 0 [2,] 0.9234 0 0.0566 0 0 [3,] 0.8685 0 0.1115 0 0 [4,] 0.8135 0 0.1665 0 0 [5,] 0.7585 0 0.2215 0 0 [6,] 0.7035 0 0.2765 0 0</p>
-<pre class="r"><code>risk.bl = risk.bl[, 1]
-rets.bl = weigthsl %*% µ.b
-fan = 12
-plot(x = risk.bl * fan^0.5, y = rets.bl * fan, col = 2, pch = 21, xlab = &quot;Annualized Risk &quot;, 
-    ylab = &quot;Annualized Return&quot;, main = &quot;long only EF with solve.QP&quot;)</code></pre>
-<p><img src="/post/2018-11-20-portfolio-optimization-in-r_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<script type="application/javascript" src="//gist.github.com/SuperJohn/58ced0f37a27b4ca073d6dd01dac6034.js"></script>
 </div>
 </div>
 
@@ -900,6 +572,9 @@ plot(x = risk.bl * fan^0.5, y = rets.bl * fan, col = 2, pch = 21, xlab = &quot;A
     
 
     
+        <li><a href="/post/ridge-regression-in-python/"
+                class="button big next">Ridge Regression in Python</a></li>
+    
 </ul>
 
 
@@ -918,7 +593,7 @@ plot(x = risk.bl * fan^0.5, y = rets.bl * fan, col = 2, pch = 21, xlab = &quot;A
     
       <header>
         <h2></h2>
-        <p>A personal blog. 
+        <p>Data Science | 
 San Diego, CA</p>
       </header>
     
@@ -1037,6 +712,20 @@ San Diego, CA</p>
           <article class="mini-post">
             <header>
               <h3>
+                <a href="/post/ridge-regression-in-python/">Ridge Regression in Python</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-20'>
+                November 20, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
                 <a href="/post/portfolio-optimization-in-r/">Portfolio Optimization in R </a>
               </h3>
               
@@ -1045,6 +734,30 @@ San Diego, CA</p>
               </time>
             </header>
             
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/post/portfolio-optimization-in-r/" class="image featured">
+            <img src="/post//ridge-regression-in-python" alt="">
+        </a>
+    
+
 
           </article>
         
@@ -1090,26 +803,12 @@ San Diego, CA</p>
 
           </article>
         
-          <article class="mini-post">
-            <header>
-              <h3>
-                <a href="/post/migrate-content-test/">Migrate Content Test</a>
-              </h3>
-              
-              <time class="published" datetime='2018-11-12'>
-                November 12, 2018
-              </time>
-            </header>
-            
-
-          </article>
-        
       </div>
 
       
         <a href=
           
-            /blog/
+            /post/
           
         class="button">View more posts</a>
       

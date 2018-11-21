@@ -6,35 +6,29 @@
     <description>Recent content in hugo on John Houghton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>/blog/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>Hugo Templates</title>
+      <link>/post/hugo-templates/</link>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/blog/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <guid>/post/hugo-templates/</guid>
+      <description>Great Resource on getting started with blogdown  https://alison.rbind.io/post/up-and-running-with-blogdown/  A bunch of great blogdown sites for inspiration  https://awesome-blogdown.com/    Undefined (theme name not given!)  https://www.garrickadenbuie.com/about/   Learn  https://github.com/matcornic/hugo-theme-learn/  Variant of Learn = Dockdock  https://docdock.netlify.com/    Beautiful Hugo  https://github.com/halogenica/beautifulhugo   Future Imperfect  Hugo Theme Page User Site that I like https://marionlouveaux.fr/  Pros  front page is most recent article great sidebar clean look    Universal Theme  https://github.</description>
     </item>
     
     <item>
-      <title>Getting Started with Hugo</title>
-      <link>/blog/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Hugo Bulma Powered Blog Theme: Hugo-Smorg</title>
+      <link>/project/hugo-smorg/</link>
+      <pubDate>Wed, 07 Mar 2018 02:16:58 -0800</pubDate>
       
-      <guid>/blog/hugoisforlovers/</guid>
-      <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
-
-&lt;p&gt;Go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
-appropriate version for your os and architecture.&lt;/p&gt;
-
-&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
-
-&lt;p&gt;More complete instructions are available at &lt;a href=&#34;/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>/project/hugo-smorg/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/solutionroute/hugo-smorg&#34;&gt;Hugo-smorg&lt;/a&gt; (smorg = small org, or smorgasbord perhaps) is a responsive
+mobile-first, &lt;a href=&#34;https://bulma.io/&#34;&gt;Bulma&lt;/a&gt;-powered, reasonably minimalistic theme for the &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt; static site generator.&lt;/p&gt;</description>
     </item>
     
   </channel>

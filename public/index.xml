@@ -64,12 +64,21 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>Portfolio Optimization in R </title>
-      <link>/post/portfolio-optimization-in-r/</link>
+      <title>Ridge Regression in Python</title>
+      <link>/itemized/ridge-regression-in-python/</link>
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/portfolio-optimization-in-r/</guid>
-      <description>Project Summary I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ business-science.io, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written tidyquant, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</description>
+      <guid>/itemized/ridge-regression-in-python/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Ridge Regression in Python</title>
+      <link>/post/ridge-regression-in-python/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ridge-regression-in-python/</guid>
+      <description> </description>
     </item>
     
     <item>
@@ -83,13 +92,21 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title>Portfolio Optimization in R </title>
+      <link>/post/portfolio-optimization-in-r/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/portfolio-optimization-in-r/</guid>
+      <description># {{&amp;lt; fancybox &amp;quot;/img/profile_pics/&amp;quot; &amp;quot;profile1.jpg&amp;quot; &amp;quot;caption&amp;quot; &amp;quot;gallery2&amp;quot; &amp;gt;}} Project Summary I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ business-science.io, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written tidyquant, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</description>
+    </item>
+    
+    <item>
       <title>Titanic Kaggle</title>
       <link>/post/titanic-kaggle/</link>
       <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/titanic-kaggle/</guid>
-      <description>Titanic: Machine Learning from disaster https://www.kaggle.com/c/titanic
-library(knitr) library(rmdformats) ## Global options options(max.print=&amp;quot;75&amp;quot;) opts_chunk$set(#echo=FALSE, cache=TRUE, prompt=FALSE, tidy=TRUE, comment=NA, message=FALSE, warning=FALSE, results=&amp;#39;asis&amp;#39; ) opts_knit$set(width=75) print(&amp;quot;notebook options imported successfully!&amp;quot;) ## [1] &amp;quot;notebook options imported successfully!&amp;quot; # set the working directory setwd(&amp;quot;~/Documents/GitHub/titanic_kaggle_ml&amp;quot;) # read data files test.data &amp;lt;- read.csv(&amp;quot;test.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) train.data &amp;lt;- read.csv(&amp;quot;train.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) # convert ints factors train.data$Survived = factor(train.data$Survived) train.data$Pclass = factor(train.data$Pclass) # test.data$Survived = factor(test.data$Survived) # test.</description>
+      <description>library(knitr) library(rmdformats) ## Global options options(max.print=&amp;quot;75&amp;quot;) opts_chunk$set(#echo=FALSE, cache=TRUE, prompt=FALSE, tidy=TRUE, comment=NA, message=FALSE, warning=FALSE, results=&amp;#39;asis&amp;#39; ) opts_knit$set(width=75) print(&amp;quot;notebook options imported successfully!&amp;quot;) ## [1] &amp;quot;notebook options imported successfully!&amp;quot; # set the working directory setwd(&amp;quot;~/Documents/GitHub/titanic_kaggle_ml&amp;quot;) # read data files test.data &amp;lt;- read.csv(&amp;quot;test.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) train.data &amp;lt;- read.csv(&amp;quot;train.csv&amp;quot;, na.strings = c(&amp;quot;NA&amp;quot;,&amp;quot;&amp;quot;)) # convert ints factors train.data$Survived = factor(train.data$Survived) train.data$Pclass = factor(train.data$Pclass) # test.data$Survived = factor(test.data$Survived) # test.data$Pclass = factor(test.data$Pclass) # DETECTING MISSING VALUES sum(is.</description>
     </item>
     
     <item>
@@ -274,42 +291,6 @@ Hugo-smorg provides the ability to generated a custom error page. 404 pages are 
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>/blog/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>/blog/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
-    </item>
-    
-    <item>
-      <title>Getting Started with Hugo</title>
-      <link>/blog/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/hugoisforlovers/</guid>
-      <description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;
-
-&lt;p&gt;Go to &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the
-appropriate version for your os and architecture.&lt;/p&gt;
-
-&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
-
-&lt;p&gt;More complete instructions are available at &lt;a href=&#34;/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

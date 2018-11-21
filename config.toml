@@ -17,7 +17,7 @@ canonifyURLs = true
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "John Houghton"
   # Sets where "View More Posts" links
-  viewMorePostLink     = "/blog/"
+  viewMorePostLink     = "/post/"
 
   ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
@@ -94,7 +94,7 @@ canonifyURLs = true
 [params.intro]
   header    = ""
 
-  paragraph = "A personal blog. \nSan Diego, CA"
+  paragraph = "Data Science | \nSan Diego, CA"
 
   about     = "Hey, there. I'm a Data Scientist in San Diego."
 
@@ -129,7 +129,7 @@ canonifyURLs = true
 
 [[menu.main]]
   name = "Articles"
- url = "/blog/"
+ url = "/post/"
  identifier = "fa fa-newspaper-o"
  weight = 3
 
