@@ -29,6 +29,15 @@
     </item>
     
     <item>
+      <title>Reference</title>
+      <link>/categories/reference/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/reference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>blogdown</title>
       <link>/categories/blogdown/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
@@ -40,7 +49,7 @@
     <item>
       <title>exampleSite</title>
       <link>/categories/examplesite/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/examplesite/</guid>
       <description></description>
@@ -52,15 +61,6 @@
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>products</title>
-      <link>/categories/products/</link>
-      <pubDate>Sat, 03 Mar 2018 09:17:17 -0800</pubDate>
-      
-      <guid>/categories/products/</guid>
       <description></description>
     </item>
     

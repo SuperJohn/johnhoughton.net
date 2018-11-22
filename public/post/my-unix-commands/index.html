@@ -1,0 +1,1404 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "My Unix Commands",
+        "headline" : "My Unix Commands",
+        "description" : "Transferring Files &amp; Directories 1) Push to remote server rsync -a &ndash;progress ~/dir1 username@remote_host:destination_directory 2) Pull from remote server rsync -a &ndash;progress jhoughton-admin@qycprdsasas301.corp.intuit.net:/data/08/jhoughton-admin/output/stage1c.tar.gz ~/data rsync -a &ndash;progress deploy@pprdpytas300.corp.intuit.net:/data/08/jhoughton-admin/pgm/qbo_overlap_may2017.sas download/rsync Compression 1) tar -cvzf tarballname.tar.gz itemtocompress
+rsync -a &ndash;progress ~/Downloads/weka-3-8-2jre-x64.exe.zip j7033694483256@supervanadventures.com:/home/j7033694483256/html
+2) compress files with a specific file extention tar -cvzf jpegarchive.tar.gz /path/to/images/*.jpg 3) unpacking gunzip filename.tar.gz 4) un tar-ing tar -xvf filename.tar &ndash;directory /target/directory (!!! directory is relative to current directory!",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2018",
+        "datePublished": "2018-11-21 00:00:00 &#43;0000 UTC",
+        "dateModified" : "2018-11-21 00:00:00 &#43;0000 UTC",
+        "url" : "/post/my-unix-commands/",
+        "wordCount" : "1831",
+        "keywords" : [ "Reference","Blog" ]
+    }
+    </script>
+        
+            
+                <title>My Unix Commands</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.51" />
+        
+
+
+        
+            <meta name="author" content="John Houghton">
+        
+        
+            
+                <meta name="description" content="Data Scientist &amp; R-User. San Diego, CA">
+            
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My Unix Commands"/>
+<meta name="twitter:description" content="Transferring Files &amp; Directories 1) Push to remote server rsync -a &ndash;progress ~/dir1 username@remote_host:destination_directory 2) Pull from remote server rsync -a &ndash;progress jhoughton-admin@qycprdsasas301.corp.intuit.net:/data/08/jhoughton-admin/output/stage1c.tar.gz ~/data rsync -a &ndash;progress deploy@pprdpytas300.corp.intuit.net:/data/08/jhoughton-admin/pgm/qbo_overlap_may2017.sas download/rsync Compression 1) tar -cvzf tarballname.tar.gz itemtocompress
+rsync -a &ndash;progress ~/Downloads/weka-3-8-2jre-x64.exe.zip j7033694483256@supervanadventures.com:/home/j7033694483256/html
+2) compress files with a specific file extention tar -cvzf jpegarchive.tar.gz /path/to/images/*.jpg 3) unpacking gunzip filename.tar.gz 4) un tar-ing tar -xvf filename.tar &ndash;directory /target/directory (!!! directory is relative to current directory!"/>
+
+        <meta property="og:title" content="My Unix Commands" />
+<meta property="og:description" content="Transferring Files &amp; Directories 1) Push to remote server rsync -a &ndash;progress ~/dir1 username@remote_host:destination_directory 2) Pull from remote server rsync -a &ndash;progress jhoughton-admin@qycprdsasas301.corp.intuit.net:/data/08/jhoughton-admin/output/stage1c.tar.gz ~/data rsync -a &ndash;progress deploy@pprdpytas300.corp.intuit.net:/data/08/jhoughton-admin/pgm/qbo_overlap_may2017.sas download/rsync Compression 1) tar -cvzf tarballname.tar.gz itemtocompress
+rsync -a &ndash;progress ~/Downloads/weka-3-8-2jre-x64.exe.zip j7033694483256@supervanadventures.com:/home/j7033694483256/html
+2) compress files with a specific file extention tar -cvzf jpegarchive.tar.gz /path/to/images/*.jpg 3) unpacking gunzip filename.tar.gz 4) un tar-ing tar -xvf filename.tar &ndash;directory /target/directory (!!! directory is relative to current directory!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/my-unix-commands/" /><meta property="article:published_time" content="2018-11-21T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-11-21T00:00:00&#43;00:00"/>
+
+        <meta property="og:image" content="//images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        
+<meta itemprop="name" content="My Unix Commands">
+<meta itemprop="description" content="Transferring Files &amp; Directories 1) Push to remote server rsync -a &ndash;progress ~/dir1 username@remote_host:destination_directory 2) Pull from remote server rsync -a &ndash;progress jhoughton-admin@qycprdsasas301.corp.intuit.net:/data/08/jhoughton-admin/output/stage1c.tar.gz ~/data rsync -a &ndash;progress deploy@pprdpytas300.corp.intuit.net:/data/08/jhoughton-admin/pgm/qbo_overlap_may2017.sas download/rsync Compression 1) tar -cvzf tarballname.tar.gz itemtocompress
+rsync -a &ndash;progress ~/Downloads/weka-3-8-2jre-x64.exe.zip j7033694483256@supervanadventures.com:/home/j7033694483256/html
+2) compress files with a specific file extention tar -cvzf jpegarchive.tar.gz /path/to/images/*.jpg 3) unpacking gunzip filename.tar.gz 4) un tar-ing tar -xvf filename.tar &ndash;directory /target/directory (!!! directory is relative to current directory!">
+
+
+<meta itemprop="datePublished" content="2018-11-21T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-11-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1831">
+
+
+
+<meta itemprop="keywords" content="Reference," />
+
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+        
+
+        
+            
+                
+            
+                
+                    <link rel="stylesheet" href="/static/css/add-on.css">
+                
+            
+        
+
+
+  
+    
+    <link href='//cdn.bootcss.com/highlight.js/9.11.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+  
+
+
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-3822671-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+      
+    </head>
+    <body>
+      
+
+
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">John Houghton</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About Me
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/post/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Articles
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/itemized/">
+                            <i class="fa fa-list">&nbsp;</i>Projects
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/contact/">
+                            <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About Me
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/post/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Articles
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/itemized/">
+                            <h3>
+                                <i class="fa fa-list">&nbsp;</i>Projects
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/contact/">
+                            <h3>
+                                <i class="fa fa-envelope-o">&nbsp;</i>Contact
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/my-unix-commands/">My Unix Commands</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-21'>
+                                    November 21, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/ridge-regression-in-python/">Ridge Regression in Python</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-20'>
+                                    November 20, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/portfolio-optimization-in-r/">Portfolio Optimization in R </a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-20'>
+                                    November 20, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/titanic-kaggle/">Titanic Kaggle</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-15'>
+                                    November 15, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/how-to-make-awesome-r-markdown-for-blogdown/">How to Make Awesome R Markdown for Blogdown</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2018-11-13'>
+                                    November 13, 2018</time>
+                            </header>
+                            
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /post/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=%2fpost%2fmy-unix-commands%2f&amp;text=My%20Unix%20Commands&amp;via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//plus.google.com/share?url=%2fpost%2fmy-unix-commands%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u=%2fpost%2fmy-unix-commands%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//reddit.com/submit?url=%2fpost%2fmy-unix-commands%2f&amp;title=My%20Unix%20Commands" target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fmy-unix-commands%2f&amp;title=My%20Unix%20Commands" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.stumbleupon.com/submit?url=%2fpost%2fmy-unix-commands%2f&amp;title=My%20Unix%20Commands" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url=%2fpost%2fmy-unix-commands%2f&amp;description=My%20Unix%20Commands" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mailto:?subject=Check out this post by John%20Houghton&amp;body=%2fpost%2fmy-unix-commands%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+  </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/my-unix-commands/">My Unix Commands</a></h1>
+            
+        
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2018-11-21'>
+            November 21, 2018</time>
+        <span class="author">John Houghton</span>
+        
+            <p>9 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+  
+  
+  
+  
+  
+X
+  <div id="content">
+    
+
+<p>Transferring Files &amp; Directories
+1) Push to remote server
+rsync -a &ndash;progress ~/dir1 username@remote_host:destination_directory
+2) Pull from remote server
+rsync -a &ndash;progress jhoughton-admin@qycprdsasas301.corp.intuit.net:/data/08/jhoughton-admin/output/stage1c.tar.gz ~/data
+rsync -a &ndash;progress deploy@pprdpytas300.corp.intuit.net:/data/08/jhoughton-admin/pgm/qbo_overlap_may2017.sas download/rsync
+Compression
+1) tar -cvzf tarballname.tar.gz itemtocompress</p>
+
+<p>rsync -a &ndash;progress ~/Downloads/weka-3-8-2jre-x64.exe.zip j7033694483256@supervanadventures.com:/home/j7033694483256/html</p>
+
+<p>2) compress files with a specific file extention
+tar -cvzf jpegarchive.tar.gz /path/to/images/*.jpg
+3) unpacking
+gunzip filename.tar.gz
+4) un tar-ing
+tar -xvf filename.tar &ndash;directory /target/directory (!!! directory is relative to current directory!)
+* Check tar progress :
+    tar cf - /folder-with-big-files -P | pv -s $(du -sb /folder-with-big-files | awk &lsquo;{print $1}&rsquo;) | gzip &gt; big-files.tar.gz
+tar cf - /se_36475 -P | pv -s $(du -sb /se_36475 | awk &lsquo;{print $1}&rsquo;) | gzip &gt; se_36475.tar.gz
+tar cf - se_36475 -P | pv -s $(($(du -sk se_36475 | awk &lsquo;{print $1}&rsquo;) * 1024)) | gzip &gt; se_36475.tar.gz</p>
+
+<p>Process Management
+top -u jhoughton-admin</p>
+
+<p>Show all hidden files in OSX
+ defaults write com.apple.finder AppleShowAllFiles YES</p>
+
+<p>Permissions
+Change permissions to user &amp; group recursively for a directory
+* chown -R ec2-user:ec2-user mammoth2016</p>
+
+<p>Jupiter notebook on remote machine
+1) on your remote server’s shell
+jupyter notebook &ndash;no-browser &ndash;port=8889
+2) on your local machine’s shell
+ssh -N -f -L localhost:8888:localhost:8889 deploy@pprdpytas300.corp.intuit.net
+3) on your local web browser
+localhost:8888
+Python Automation Server
+* Host = pprdpytas300.corp.intuit.net
+* user = deploy
+* psw = intuit01
+To install packages :
+export https_proxy=<a href="http://qy1prdproxy02.ie.intuit.net:80/">http://qy1prdproxy02.ie.intuit.net:80/</a>
+export http_proxy=<a href="http://qy1prdproxy02.ie.intuit.net:80/">http://qy1prdproxy02.ie.intuit.net:80/</a></p>
+
+<p>SSH Keys &amp; Keygen
+SSH Keygen
+ssh-keygen -t rsa -b 4096 -C &ldquo;your_email@example.com&rdquo;
+Output SSH key info
+nano ~/.ssh/id_rsa.pub</p>
+
+<p>Linux Server access control via IPtables
+* <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-iptables-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-iptables-on-ubuntu-14-04</a>
+* <a href="http://www.thegeekstuff.com/2011/03/iptables-inbound-and-outbound-rules/">http://www.thegeekstuff.com/2011/03/iptables-inbound-and-outbound-rules/</a></p>
+
+<p>Disk Utilities in linux</p>
+
+<p>Check disk space utilization
+df -h and df -ih
+For all files and folders in a given directory
+* du -sh /data/08/sevans2-admin/pgm/TY16_ARS/
+Get directory sizes by 1 level
+* du -mh &ndash;max-depth 1 | sort -rn</p>
+
+<p>Get top file sizes
+sudo du -ah / | sort -n -r | head -n 10
+sudo du / | sort -nr | head -n 10</p>
+
+<p>Find big files in linux
+sudo find / -type f -size +10M -exec ls -lh {} \;
+find /data/08/jhoughton-admin/ -type f -size +1G -exec ls -gGhS {} \;
+<a href="http://stackoverflow.com/questions/20031604/amazon-ec2-disk-full">http://stackoverflow.com/questions/20031604/amazon-ec2-disk-full</a></p>
+
+<p>Find large directories in Linux
+* du -x / | sort -rn | head -n 5</p>
+
+<p>Finding Shit in LInux
+find / -type f -name &ldquo;*.conf”
+<a href="https://www.linode.com/docs/tools-reference/tools/find-files-in-linux-using-the-command-line">https://www.linode.com/docs/tools-reference/tools/find-files-in-linux-using-the-command-line</a>
+Finding &amp; Copying files with specific extension
+find . -name *.sas -exec cp {} /data/08/jhoughton-admin/pgm/fed_ars \;</p>
+
+<p><a href="http://stackoverflow.com/questions/16956810/how-to-find-all-files-containing-specific-text-on-linux">http://stackoverflow.com/questions/16956810/how-to-find-all-files-containing-specific-text-on-linux</a>
+This will only search through those files which have .c or .h extensions:
+grep &ndash;include=*.{c,h} -rnw &lsquo;/path/to/somewhere/&rsquo; -e “pattern&rdquo;
+grep &ndash;include=*.sas -rnw &lsquo;/data/08/jhoughton-admin/pgm&rsquo; -e &ldquo;DND_DR_TTO_LAUNCH_TY16_V4&rdquo;
+* This will exclude searching all the files ending with .o extension:
+grep &ndash;exclude=*.o -rnw &lsquo;/path/to/somewhere/&rsquo; -e &ldquo;pattern&rdquo;
+* Just like exclude files, it&rsquo;s possible to exclude/include directories through &ndash;exclude-dir and &ndash;include-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching <em>.dst/:
+grep &ndash;exclude-dir={dir1,dir2,</em>.dst} -rnw &lsquo;/path/to/somewhere/&rsquo; -e &ldquo;pattern&rdquo;
+Find files containing specific string
+grep -rnw &lsquo;/path/to/somewhere/&rsquo; -e “pattern”
+find data/08/jhoughton-admin/pgm -name *.sas | grep -rnw ‘data/08/jhoughton-admin/pgm&rsquo; -e “pattern”
+Find the difference between two files
+fgrep -v -f file1 file2 &gt; missing_from_file2.txt</p>
+
+<p>Find and replace in files
+sed -i &rsquo;s/*//‘ file.txt</p>
+
+<p>Zip all files of a certain extension
+zip -e your_zip_file.zip *.txt &gt; /dev/null</p>
+
+<p>Bash &amp; Systems Admin
+Getting command line (bash) history
+* Bash History Settings Tutorial
+Outputting log to file
+* Command &gt; /dir/log_name.log</p>
+
+<p>Proxy Server in Linux
+* export https_proxy=<a href="http://qy1prdproxy02.ie.intuit.net:80/">http://qy1prdproxy02.ie.intuit.net:80/</a>
+* export http_proxy=<a href="http://qy1prdproxy02.ie.intuit.net:80/">http://qy1prdproxy02.ie.intuit.net:80/</a></p>
+
+<p>Git
+Show all files under version control
+    git ls-tree -r master</p>
+
+<p>Use Python Virtual Environment
+source activate py3k</p>
+
+<p>Setup the sshfs on local machine &lt;&gt;
+sshfs -p 22 hsohn@4.26.4.57:/ebs/user/hsohn /Users/hsohn/Documents/remoteHome/dev/ -o auto_cache,reconnect,defer_permissions,negative_vncache,volname=dev</p>
+
+<p>Hadoop
+For dev access, do
+ssh bi@4.26.4.57</p>
+
+<p>For prod access do
+ssh bi@4.26.4.55</p>
+
+<p>Run a file in pig
+     pig -f query_20150917_test.pig</p>
+
+<p>Run locally
+     pig -x local script.pig</p>
+
+<p>Retrieving Results from HDFS
+     hdfs dfs -text [path / directory]*.gz</p>
+
+<p>Redirect to a file
+hdfs dfs -text [path / directory]<em>.gz &gt; [directory / file name]
+i.e. hdfs dfs -text hdfs://hadoop-prod-nn1/user/bi/jhoughton/test/part-r-00000.gz | head -n 100  &gt; ./output.tsv
+hdfs dfs -text hdfs://hadoop-prod-nn1/user/bi/jhoughton/test/</em>.gz | head -n 100  &gt; ./output.tsv
+hdfs dfs -text hdfs://hadoop-prod-nn1/user/bi/jhoughton/report/temporary/report_target2/<em>.gz &gt; ./results/output.tsv
+hdfs dfs -text hdfs://hadoop-prod-nn1/user/bi/jhoughton/report/temporary/report_target2/</em>.gz | head -n 1000 &gt; ./results/output.tsv</p>
+
+<p>sample data
+     tracking_logs =  hdfs://hadoop-prod-nn1/user/hive/warehouse/rsyslog_optsoa_tracking/d=2015-10-07/b=2100/dummy_server/part-m-00000.gz
+     targeting_logs = hdfs://hadoop-prod-nn1/user/etl/ds/optsoa_rsyslog/rsyslog_OptSOATargeting2/d=2015-10-07/2100/52.22.75.7/rsyslog_OptSOATargeting2.log.201510071444252381.gz
+     persona_data = hdfs://10.10.8.5:8020/user/hive/warehouse/rsyslog_OptSOAPersona/d=2015-10-07/part-m-00262.gz.parquet</p>
+
+<p>See the head of a .gz dataset
+     head persona/tracking_logs.gz | less</p>
+
+<p>invoke grunt
+(just type “pig”)</p>
+
+<p>DS hadoop cheatsheet
+<a href="https://docs.google.com/document/d/1i50Dmowb79KiazYW9WzpB8hejngYIHOqmvtxm4MO_eo/edit">https://docs.google.com/document/d/1i50Dmowb79KiazYW9WzpB8hejngYIHOqmvtxm4MO_eo/edit</a></p>
+
+<p>browse hdsf
+     hdfs dfs -ls [directory / path]
+     hdfs dfs -ls hdfs://hadoop-prod-nn1/user/bi/jhoughton/report/temporary/report_target2/</p>
+
+<p>Copy a file from HDFS to localfsc
+* hdfs dfs -get /user/hadoop/file</p>
+
+<p>copy file to local from server
+     scp bi@4.26.4.55:/home/bi/jhoughton/results/output2.tsv ./Downloads/
+     scp bi@4.26.4.55:/home/bi/jhoughton/results/output2.tsv /Users/john.houghton/Downloads/
+     scp [server path] [local path]</p>
+
+<p>copy file from local to server
+scope ~/downloads/foo.txt bi@4.26.4.57:~ # to current path
+scp ~/downloads/foo.txt bi@4.26.4.57:/jhoughton # to some directory</p>
+
+<p>Get directory size
+     hdfs dfs -du -s hdfs://10.10.8.5:8020/user/etl/ds/optsoa_rsyslog/rsyslog_OptSOATargeting2/d=2015-10-07/</p>
+
+<p>Copy TO hdfs from local
+(to overwrite, first rm, i.e.  hdfs dfs -rm hdfs://hadoop-prod-nn1/user/bi/jhoughton/report/temporary/lookup.txt )
+ hdfs dfs -copyFromLocal /home/bi/jhoughton/pig/lookup.txt hdfs://hadoop-prod-nn1/user/bi/jhoughton/report/temporary/</p>
+
+<p>Kill Job
+mapred -job list (get list of active jobs to get job_id)
+mapred -job kill [job_id]</p>
+
+<p>vsql from command line</p>
+
+<p>place this script in $HOME/scripts
+#!/bin/sh
+vsql &ndash;echo-all &ndash;host bi.tapjoy-data.net &ndash;username    ateam &ndash;password XXXX &ndash;set &lsquo;PROMPT1=%<code>/bin/date</code> %n%R%# &lsquo;
+vsql &ndash;echo-all &ndash;host pprddaavth-vip.ie.intuit.net &ndash;port 5433 -d Analytics &ndash;username jhoughton &ndash;password Infinitetacos1 &ndash;set &lsquo;PROMPT1=%<code>/bin/date</code> %n%R%# &lsquo;
+Access Mint Data through vsql
+vsql &ndash;echo-all &ndash;host mint-vertica01.intuit.net &ndash;port 5433 -d mint &ndash;username jhoughton &ndash;password Infinitetacos1</p>
+
+<p>add to path
+PATH=$PATH:/opt/vertica/bin:$HOME/scripts</p>
+
+<p>Run file from command line:
+‘bi’ to initiate vsql (per script @ $HOME/scripts)
+1. Add the vsql connection script to $PATH
+    1. PATH=$PATH:/opt/vertica/bin:$HOME/scripts
+2. type “bi” to initiate vsql
+3. Tell Vertica where to store output
+    1. \o ~/downloads/singing_monsters_data.tsv
+4. (optional) turn off column names and row counts
+    1. \t
+5. Specify delimiter
+    1. \pset fieldsep &lsquo;\t&rsquo;
+    2. \f &lsquo;\t&rsquo;
+6. unalign output ( I have no idea why I’d have to do this)
+    1. \a
+7. Tell what query to run
+    1. \i ~/downloads/singing_monsters_failed_rewards_data.sql
+8. To quit from results
+    1. \o to close output process and closes file
+    2. control + Z to get out
+    3. fg to jump back into vsql
+    4. \g to go back to prompt from long resultsselect * from ctg_analyst_layer.product_analytics_master limit 10;</p>
+
+<p>Vertical Create Table, Then Insert Into
+&ndash; create video user table
+create table sandbox.jh_video_users (
+udid varchar(80)
+, video_type varchar(15)
+)</p>
+
+<p>Upload data into vertica table from cvs / text file</p>
+
+<p>&ndash; create table</p>
+
+<p>CREATE TABLE sandbox.jh_lifelock (
+status varchar(20)
+, datetime TIMESTAMP
+) ;</p>
+
+<p>&ndash; import data</p>
+
+<p>COPY sandbox.jh_lifelock ( status, datetime )
+FROM LOCAL &lsquo;/Users/john.houghton/downloads/data_min.csv&rsquo; WITH DELIMITER &lsquo;,&rsquo;
+NO ESCAPE
+ENCLOSED BY &lsquo;&ldquo;&rsquo;
+rejected data &lsquo;/Users/john.houghton/downloads/foo.rejects&rsquo;
+exceptions &lsquo;/Users/john.houghton/downloads/myData.exceptions&rsquo; ;</p>
+
+<p>INSERT QUERY RESULTS INTO TABLE</p>
+
+<p>&ndash; get all udids by video vs non-video
+INSERT INTO sandbox.jh_video_users<br />
+        ( select udid
+        , CASE WHEN source=&lsquo;display_ad&rsquo; THEN &lsquo;non-video&rsquo;
+                  WHEN source=&lsquo;offerwall_interstitial&rsquo; THEN &lsquo;non-video&rsquo;
+                  WHEN source=&lsquo;video_from_message&rsquo; THEN &lsquo;video&rsquo;
+                  WHEN source=&lsquo;doubleclick&rsquo; THEN &lsquo;non-video&rsquo;
+                  WHEN source=&lsquo;offerwall_from_message&rsquo; THEN &lsquo;non-video&rsquo;
+                  ELSE &lsquo;other&rsquo;
+                END as type
+        from actions
+        where day = &lsquo;2015-11-08&rsquo;
+        group by 1,2
+        &ndash; limit 1000
+        )</p>
+
+<p>set session role none;
+set session role aggmod_users ;</p>
+
+<p>set session role none;
+set session role secure_role;</p>
+
+<p>Examples from Stella</p>
+
+<p>&ndash;CREATE TABLE WITH FIELDS SAME AS FILE
+CREATE TABLE SECURE_WS.PAID_MVT_SE
+(   RIID INT,
+    CAMPAIGN_VERSION_ID INT
+);</p>
+
+<p>&ndash;COPY CSV FILE INTO TABLE YOU CREATED
+COPY SECURE_WS.PAID_MVT_SE
+FROM LOCAL &lsquo;C:\import_data\36401_003_TTOPAIDC3-sentrecords-20161207.csv&rsquo;&ndash;FILE LOCATION/PATH
+EXCEPTIONS &lsquo;c:\import_data\exceptions.txt&rsquo;&ndash;THIS WILL GENERATE A FILE IN YOUR LOCAL FOLDER WITH EXCEPTIONS IF ANY RECORDS DON&rsquo;T GET LOADED
+REJECTED DATA &lsquo;c:\import_data\rejected.txt&rsquo;&ndash;THIS WILL GENERATE A FILE IN YOUR LOCAL FOLDER WITH REJECTED RECORDS IF ANY RECORDS DON&rsquo;T GET LOADED
+DELIMITER &lsquo;,&rsquo;;</p>
+
+<p>&ndash;COPY TAB DELIMITED FILE INTO TABLE YOU CREATED
+COPY SECURE_WS.PAID_MVT_SE
+FROM LOCAL &lsquo;C:\import_data\36401_003_TTOPAIDC3-sentrecords-20161207.txt&rsquo;&ndash;FILE LOCATION/PATH
+EXCEPTIONS &lsquo;c:\import_data\exceptions.txt&rsquo;&ndash;THIS WILL GENERATE A FILE IN YOUR LOCAL FOLDER WITH EXCEPTIONS IF ANY RECORDS DON&rsquo;T GET LOADED
+REJECTED DATA &lsquo;c:\import_data\rejected.txt&rsquo;&ndash;THIS WILL GENERATE A FILE IN YOUR LOCAL FOLDER WITH REJECTED RECORDS IF ANY RECORDS DON&rsquo;T GET LOADED
+DELIMITER E&rsquo;\t&rsquo;;
+pandas python output for stack overflow
+df[:5].to_dict()</p>
+
+<p>linode
+ssh root@45.79.70.90
+un = superjohn pw = superj0hn-</p>
+
+<p>hostgator email
+rsvps@mamoth2016.com
+WmTC5l(!NU5!</p>
+
+<p>amazon ec2 ip = 52.3.242.61
+un = superjohn
+access key id = AKIAI2LCBTKLK3J44SCA
+secret access key = 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
+ssh -i ~/.ssh/john_amazon_key_oct2015.pem ec2-user@ec2-52-3-242-61.compute-1.amazonaws.com
+ssh -i ~/.ssh/john_amazon_key_oct2015.pem ec2-user@52.70.220.25</p>
+
+<h1 id="virginia-instance-looking-at-disk-space-on-blank-instance">virginia instance looking at disk space on blank instance</h1>
+
+<p>ssh -i ~/.ssh/john_amazon_key_oct2015.pem ec2-user@52.23.213.146</p>
+
+<p>Nor Cal instances
+Production
+* ssh -i ~/.ssh/superjohn_keywest.pem ec2-user@
+* Wedding - bigger edition
+* ssh -i ~/.ssh/superjohn_keywest.pem ec2-user@52.53.253.162
+Wedding micro - with 100gb storage
+* ssh -i ~/.ssh/superjohn_keywest.pem ec2-user@54.183.153.155
+* FTP: superjohn Ee271828
+Large Rstudio Test Server
+* ssh -i ~/.ssh/superjohn_keywest.pem ec2-user@54.183.174.210</p>
+
+<p>How to SCP using public keys on EC2
+* from local to remote ec2 instance
+    * scp -i ~/.ssh/superjohn_keywest.pem ~/downloads/filename.zip ec2-user@54.183.153.155:~filename.zip
+* scp ec2-user@52.53.244.62:/var/www/html/mammoth2016/rsvp_projectdb.sqlite3 /home/rstudio_user/</p>
+
+<p>sudo rsync  -azv -SHAX &ndash;progress -e &ldquo;ssh -i $HOME/.ssh/superjohn_keywest.pem&rdquo; <br />
+  &ndash;rsync-path &ldquo;sudo rsync&rdquo; <br />
+  ec2-user@54.183.153.155:/var/www/html/mammmoth2016/marriage-html <br />
+  ~/Desktop/</p>
+
+<p>sudo rsync  -azv -SHAX &ndash;progress -e &ldquo;ssh -i $HOME/.ssh/superjohn_keywest.pem&rdquo; <br />
+  &ndash;rsync-path &ldquo;sudo rsync&rdquo; <br />
+  ~/downloads/slide4-min.jpg <br />
+  ec2-user@54.183.153.155:/home/ec2-user/</p>
+
+<p>sudo rsync -azv -SHAX &ndash;progress -e &ldquo;ssh -i $HOME/.ssh/superjohn_keywest.pem&rdquo; &ndash;rsync-path &ldquo;sudo rsync” ec2-user@54.183.153.155:/var/www/html/mammmoth2016/marriage-html ~/Desktop/</p>
+
+<p>ssh -i ~/.ssh/superjohn_keywest.pem ec2-user@54.183.192.125</p>
+
+<p>#shiny server
+ssh -i ~/.ssh/superjohn_west.pem ec2-user@54.183.173.107</p>
+
+<p>Ubuntu instancefgit
+ssh -i ~/.ssh/superjohn_west.pem ubuntu@52.53.218.64</p>
+
+<p>mysql @ amazon ec2
+root , pw = Ee271828
+mysql -h localhost -u root -p
+mysql -h ec2-52-3-242-61.compute-1.amazonaws.com -u superjohn -p
+mysql -h localhost -u superjohn -p</p>
+
+<p>spericorn
+Access Key ID:
+AKIAIX4QGNWT2SFEUHYA
+Secret Access Key:
+LkIIKx8IidD7lTwyctD4qm+5TriTTrPkYgAUDuyP</p>
+
+<p>RDS
+superjohn-db.ci4fqf0cg1fi.us-east-1.rds.amazonaws.com : 3306
+superjohn
+Ee271828
+mysql -p superjohn -u Ee271828 superjohn-db.ci4fqf0cg1fi.us-east-1.rds.amazonaws.com
+EDITOR=nano crontab -e
+export EDITOR=nano</p>
+
+<p>aws opsworks register &ndash;infrastructure-class ec2 &ndash;region us-east-1a &ndash;stack-id 3d2dc09f-86f7-4c98-8ba8-26a738f6300b &ndash;ssh-username ec2-user &ndash;ssh-private-key ~/.ssh/john_amazon_key_oct2015.pem i-261eb9df</p>
+
+<p>mammoth2016 email
+un = email@
+pw = 6L?FHCJWE;9l</p>
+
+<p>Find Apache httpd.conf file
+ps -ef | grep apache
+/usr/sbin/apache2 -V | grep SERVER_CONFIG_FILE
+Edit Apache httpd.conf in Amazon Ec2
+1. sudo sh
+2. nano /etc/httpd/conf/httpd.conf
+3. su ec2-user
+Restarting Apache
+/sbin/service httpd restart</p>
+
+<p>Give ec2-user directory permissions
+down vote
+accepted
+To allow user ec2-user (Amazon AWS) write access to the public web directory (/var/www/html),
+enter this command via Putty or Terminal, as the root user sudo:
+chown -R ec2-user /var/www/html
+Make sure permissions on that entire folder were correct:
+chmod -R 755 /var/www/html</p>
+
+<p>How to use screen
+<a href="http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/">http://www.tecmint.com/screen-command-examples-to-manage-linux-terminals/</a></p>
+
+<p>citrix access code = superEe271828
+Google Maps API key AIzaSyCfYgeLqLsFIP3w8FYnqxC55awsOAQwqLU</p>
+
+<p>Git Quick guide:
+1. clone to code to your localhost</p>
+
+<h1 id="git-clone-root-45-79-70-90-var-www-project">git clone root@45.79.70.90:/var/www/project</h1>
+
+<ol>
+<li>cd project/</li>
+
+<li><p>check the change history by:</p>
+
+<h1 id="git-log">git log</h1></li>
+
+<li><p>see the detail of one fixing</p>
+
+<h1 id="git-show-head">git show HEAD</h1>
+
+<h1 id="git-show-head-1">git show HEAD~1</h1>
+
+<h1 id="git-show-27876e7753e51dbbe9977b118c67aafd1bcdd926">git show 27876e7753e51dbbe9977b118c67aafd1bcdd926</h1></li>
+</ol>
+
+<p>finding columns in vertica schema</p>
+
+<p>select
+    table_name
+   ,column_name
+from
+    v_catalog.columns
+where
+    column_name like &lsquo;%install_id%&rsquo;</p>
+
+<p>Installing and running R &amp; Shiny Server
+How to install R on Amazon Lixux EC2 image
+<a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-shiny-server-on-ubuntu-14-04">https://www.digitalocean.com/community/tutorials/how-to-set-up-shiny-server-on-ubuntu-14-04</a></p>
+
+<p>config
+* sudo su
+* nano /etc/shiny-server/shiny-server.conf</p>
+
+<p>Run R script from R console
+* source(&ldquo;/home/bi/jhoughton/transform.R&rdquo;)
+Run R script from the command line
+* R CMD BATCH filename.R
+* R CMD BATCH /Users/john.houghton/Library/&lsquo;Mobile Documents&rsquo;/com~apple~CloudDocs/tapjoy_data/v2i_insights/change_monitor/change_monitor_final.R
+Generating Excel &amp; XSLX Files with R</p>
+
+<p>install.packages(&ldquo;reshape2&rdquo;, dependencies=TRUE, repos=&lsquo;<a href="http://cran.rstudio.com/'">http://cran.rstudio.com/'</a>)
+R -e &ldquo;install.packages(&lsquo;shiny&rsquo;, repos=&lsquo;<a href="http://cran.rstudio.com/')&quot;">http://cran.rstudio.com/')&quot;</a></p>
+
+<p>Allow R to install packages on low ram instances by lowering swappiness
+Rstudio Server Login un=rstudio_user, pw=Ee271828
+<a href="http://superjohnca.com:8787/">http://superjohnca.com:8787/</a></p>
+
+<p>sqlite commands</p>
+
+<p>from command line
+* sqlite3 db.sqlite3 (sqlite3 ‘filename’)
+* .help (to get help)</p>
+
+<p>Sending emails with Python
+Send gmail allow remote server</p>
+
+<p>Managing my Django App</p>
+
+<p>connect the sessions by executing:
+  # screen -d -r</p>
+
+<p>The service can be launched by:
+  # cd /var/www/html/mammoth2016/rsvp_project/
+  # bash runserver.sh</p>
+
+<p>s3 aws access keys aug 2016
+Access Key ID:
+AKIAIK4BYHDLPPWVUO3Q
+Secret Access Key:
+AMY7kMAO1545+vkEOGMmKg+43Qk+gMIocFwg+H7W</p>
+
+    
+  
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+            
+            
+                <i class="fa fa-folder"></i>
+                
+                
+                <li><a class="article-category-link" href="/categories/unix">unix</a></li>
+                
+            
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/tags/reference">Reference</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+      <h1>Comments Welcomed</h1>
+      <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+        
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/post/ridge-regression-in-python/"
+                class="button big previous">Ridge Regression in Python</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+<section id="sidebar">
+
+  
+  <section id="intro">
+    
+    
+      
+        <a href='/' class="logo"><img src="/img/main/logo5.jpg" alt="Hugo Future Imperfect" /></a>
+      
+    
+    
+      <header>
+        <h2></h2>
+        <p>Data Science | 
+San Diego, CA</p>
+      </header>
+    
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/SuperJohn" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+  <li><a href="//stackoverflow.com/users/2716298" target="_blank" title="Stack Overflow" class="fa fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/johnkirkhoughton" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:john@johnhoughton.net" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+  </section>
+
+  
+  <section class="recent-posts">
+    <div class="mini-posts">
+      <header>
+        <h3>Recent Article</h3>
+      </header>
+      <div class="posts-container">
+        
+
+        
+          
+        
+
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/my-unix-commands/">My Unix Commands</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-21'>
+                November 21, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/ridge-regression-in-python/">Ridge Regression in Python</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-20'>
+                November 20, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/portfolio-optimization-in-r/">Portfolio Optimization in R </a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-20'>
+                November 20, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/titanic-kaggle/">Titanic Kaggle</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-15'>
+                November 15, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+          <article class="mini-post">
+            <header>
+              <h3>
+                <a href="/post/how-to-make-awesome-r-markdown-for-blogdown/">How to Make Awesome R Markdown for Blogdown</a>
+              </h3>
+              
+              <time class="published" datetime='2018-11-13'>
+                November 13, 2018
+              </time>
+            </header>
+            
+
+          </article>
+        
+      </div>
+
+      
+        <a href=
+          
+            /post/
+          
+        class="button">View more posts</a>
+      
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+  
+    <section id="mini-bio">
+      <h3>About</h3>
+      <p>Hey, there. I'm a Data Scientist in San Diego.</p>
+      <a href="/about/" class="button">Learn More</a>
+    </section>
+  
+
+  
+  <section id="footer">
+    
+      <ul class="icons">
+        
+          
+    <li><a href="/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fa fa-rss"></a></li>
+
+
+        
+        
+  <li><a href="//github.com/SuperJohn" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+  <li><a href="//stackoverflow.com/users/2716298" target="_blank" title="Stack Overflow" class="fa fa-stack-overflow"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="//linkedin.com/in/johnkirkhoughton" target="_blank" title="LinkedIn" class="fa fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li><a href="mailto:john@johnhoughton.net" title="Email" class="fa fa-envelope"></a></li>
+
+
+      </ul>
+    
+    <p class="copyright">
+      
+        &copy; 2018
+        
+          John Houghton
+        
+      .
+      Powered by <a href="//gohugo.io" target="_blank">Hugo</a>
+    </p>
+  </section>
+</section>
+
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/highlight.min.js"></script>
+        
+        
+        
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/r.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/yaml.min.js"></script>
+        <script src="//cdn.bootcss.com/highlight.js/9.11.0/languages/css.min.js"></script>
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+      
+        
+      
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

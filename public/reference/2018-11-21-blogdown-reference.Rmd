@@ -1,0 +1,31 @@
+---
+title: Blogdown Reference
+author: John Houghton
+date: '2018-11-21'
+slug: blogdown-reference
+categories:
+  - Reference
+tags:
+  - Blogdown
+  - hugo
+description: ''
+featured: ''
+featuredalt: ''
+featuredpath: ''
+linktitle: ''
+---
+
+# Add images to blogdown post
+## float image left
+{{< img-post path="/img/profile_pics/" file="profile1.jpg" alt="Alt Text" type="left" >}}
+
+# LinkedIn 1
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/johnkirkhoughton" data-format="inline" data-related="false"></script>
+
+
+# LinkedIn Public profile badge
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="johnkirkhoughton"><a class="LI-simple-link" href='https://www.linkedin.com/in/johnkirkhoughton?trk=profile-badge'>John Houghton</a></div>
+
+

@@ -19,6 +19,7 @@
         <p>{{ .paragraph | safeHTML }}</p>
       </header>
     {{ end }}
+    
     {{ if .Site.Params.socialAppearAtTop }}
       <ul class="icons">
         {{ if .Site.Params.rssAppearAtTop }}
@@ -28,12 +29,41 @@
       </ul>
     {{ end }}
   </section>
+  
+  <!-- SMALL Posts List showMiniSidebarPosts --> 
+  {{ if .Site.Params.showMiniSidebarPosts }}
+  <section>
+			<ul class="posts">
+				{{ range first ($.Scratch.Get "postLimit") (where ($.Scratch.Get "recentPosts") "Type" "post") }}
+				<li>
+					<article>
+						<header>
+							<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+							<time class="published" datetime='{{ ($.Scratch.Get "dateType").Format "2006-01-02" }}'>
+							  {{ ($.Scratch.Get "dateType").Format "January 2, 2006" }}</time>
+						</header>
+						<a href="{{ .RelPermalink }}" class="image">
+						  <img src="https://developers.google.com/search/mobile-sites/imgs/mobile-seo/devices.png" alt="">
+					  </a>
+					</article>
+				</li>
+			{{ end }}
+			</ul>
+		</section>
+		{{ end }}
 
-  <!-- Posts List -->
+
+ <!-- Linked In -->
+    <section >
+      <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="johnkirkhoughton"><a class="LI-simple-link" href='https://www.linkedin.com/in/johnkirkhoughton?trk=profile-badge'>John Houghton</a></div>
+    </section>
+
+<!-- Posts List -->
+{{ if eq .Site.Params.showMiniSidebarPosts false }}
   <section class="recent-posts">
     <div class="mini-posts">
       <header>
-        <h3>Recent Article</h3>
+        <h3>Recent Articles</h3>
       </header>
       <div class="posts-container">
         {{ $.Scratch.Set "recentPosts" .Site.Pages }}
@@ -55,10 +85,14 @@
                 {{ ($.Scratch.Get "dateType").Format "January 2, 2006" }}
               </time>
             </header>
+            <a href="#" class="image">
+              <img src="https://developers.google.com/search/mobile-sites/imgs/mobile-seo/devices.png"/>
+            </a>
             {{ .Render "featured" }}
           </article>
-        {{ end }}
+          {{ end }}
       </div>
+      
 
       {{ if ge (len (where .Site.Pages "Type" "post")) ($.Scratch.Get "postLimit") }}
         <a href=
@@ -71,7 +105,9 @@
       {{ end }}
     </div>
   </section>
-
+  {{ end }}
+  
+  
   <!-- This if statement only applies if someone goes to the /categories url -->
   <!-- Otherwise this section is shown for all other links -->
   {{ if .Site.Params.showSidebarCategories  }}
@@ -106,15 +142,6 @@
         {{ end }}
     </section>
   {{ end }}
-  {{ end }}
-
-  <!-- About -->
-  {{ with .Site.Params.intro.about }}
-    <section id="mini-bio">
-      <h3>About</h3>
-      <p>{{ . | safeHTML }}</p>
-      <a href="/about/" class="button">Learn More</a>
-    </section>
   {{ end }}
 
   <!-- Footer -->

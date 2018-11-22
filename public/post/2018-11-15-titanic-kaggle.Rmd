@@ -6,7 +6,7 @@ slug: titanic-kaggle
 categories: []
 tags: []
 description: 'Titanic: Machine Learning from disaster. My R Notebook for Kaggle'
-featured: ''
+featured: 'https://www.elegantthemes.com/img/homepage-image-bloom.jpg'
 featuredalt: ''
 featuredpath: ''
 linktitle: ''

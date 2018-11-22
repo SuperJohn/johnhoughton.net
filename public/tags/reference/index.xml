@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on John Houghton</title>
+    <link>/tags/reference/</link>
+    <description>Recent content in Reference on John Houghton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My Unix Commands</title>
+      <link>/post/my-unix-commands/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/my-unix-commands/</guid>
+      <description>Transferring Files &amp;amp; Directories 1) Push to remote server rsync -a &amp;ndash;progress ~/dir1 username@remote_host:destination_directory 2) Pull from remote server rsync -a &amp;ndash;progress jhoughton-admin@qycprdsasas301.corp.intuit.net:/data/08/jhoughton-admin/output/stage1c.tar.gz ~/data rsync -a &amp;ndash;progress deploy@pprdpytas300.corp.intuit.net:/data/08/jhoughton-admin/pgm/qbo_overlap_may2017.sas download/rsync Compression 1) tar -cvzf tarballname.tar.gz itemtocompress
+rsync -a &amp;ndash;progress ~/Downloads/weka-3-8-2jre-x64.exe.zip j7033694483256@supervanadventures.com:/home/j7033694483256/html
+2) compress files with a specific file extention tar -cvzf jpegarchive.tar.gz /path/to/images/*.jpg 3) unpacking gunzip filename.tar.gz 4) un tar-ing tar -xvf filename.tar &amp;ndash;directory /target/directory (!!! directory is relative to current directory!</description>
+    </item>
+    
+  </channel>
+</rss>

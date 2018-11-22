@@ -1,21 +1,26 @@
 ---
-title: "About Me"
-date: 2018-11-20
-layout: subsection
+title: About Me
+author: John Houghton
+date: '2018-11-21'
 slug: about
-weight: 101
+categories: []
+tags: []
+description: ''
+featured: ''
+featuredalt: ''
+featuredpath: '/images/'
+linktitle: ''
 ---
-> ## Hi, I'm John. 
-### I'm a Data Scientist living in San Diego, CA.
-
 {{< img-post path="/img/profile_pics/" file="profile1.jpg" alt="Alt Text" type="left" >}}
+
 #### *Connect with me on LinkedIn*
-<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/johnkirkhoughton" data-format="inline" data-related="false"></script>
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="johnkirkhoughton"><a class="LI-simple-link" href='https://www.linkedin.com/in/johnkirkhoughton?trk=profile-badge'>John Houghton</a></div>
 
 <br>
+<br />
 # Selected Projects: 
-> ## Portfolio Optimization (2018)  
+
+## Portfolio Optimization (2018)  
  - [Shiny Application (in progress)](https://superjohnca.shinyapps.io/portfolio_optimization/)  
  - [code via gist @ github](https://gist.github.com/SuperJohn/58ced0f37a27b4ca073d6dd01dac6034)
 
@@ -28,3 +33,8 @@ Auto Machine Learning with H20.ai | blog post | Dec 2018
 Auto Machine Learning with H20.ai | notebook | Dec 2018
 Python in R markdown notebooks | notebook | Dec 2018
 Interprettable Models using Lime | notebook | Dec 2018
+
+# Skills, Visualized via gist
+{{< gist SuperJohn ddfe7891fece3ac14eaf8f1838526deb >}}
+
+

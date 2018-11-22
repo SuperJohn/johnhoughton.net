@@ -1,0 +1,53 @@
+---
+title: About Me
+author: John Houghton
+date: '2018-11-21'
+slug: index
+categories: []
+tags: []
+description: ''
+featured: ''
+featuredalt: ''
+featuredpath: ''
+linktitle: ''
+---
+
+
+
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ──────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>## ✔ ggplot2 3.1.0     ✔ purrr   0.2.5
+## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
+## ✔ tidyr   0.8.2     ✔ stringr 1.3.1
+## ✔ readr   1.1.1     ✔ forcats 0.3.0</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.1</code></pre>
+<pre><code>## ── Conflicts ─────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code># Create data (could be way easier but it&#39;s late)
+value1 &lt;- abs(rnorm(6))*2
+don &lt;- data.frame(
+  x=LETTERS[1:24], 
+  val=c( value1, value1+1+rnorm(6, 14,1) ,value1+1+rnorm(6, sd=1) ,value1+1+rnorm(6, 12, 1) ),
+  grp=rep(c(&quot;grp1&quot;, &quot;grp2&quot;, &quot;grp3&quot;, &quot;grp4&quot;), each=6)
+  ) %&gt;%
+  arrange(val) %&gt;%
+  mutate(x=factor(x, x))
+
+
+# With a bit more style
+ggplot(don) +
+  geom_segment( aes(x=x, xend=x, y=0, yend=val), color=&quot;grey&quot;) +
+  geom_point( aes(x=x, y=val, color=grp), size=3 ) +
+  coord_flip()+
+  #theme_ipsum() +
+  theme(
+    legend.position = &quot;none&quot;,
+    panel.border = element_blank(),
+    panel.spacing = unit(0.1, &quot;lines&quot;),
+    strip.text.x = element_text(size = 8)
+  ) +
+  xlab(&quot;&quot;) +
+  ylab(&quot;Value of Y&quot;) +
+  facet_wrap(~grp, ncol=1, scale=&quot;free_y&quot;)</code></pre>
+<p><img src="/about/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>

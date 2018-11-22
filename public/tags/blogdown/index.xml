@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogdown on John Houghton</title>
+    <link>/tags/blogdown/</link>
+    <description>Recent content in Blogdown on John Houghton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blogdown Reference</title>
+      <link>/reference/blogdown-reference/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/reference/blogdown-reference/</guid>
+      <description> Add images to blogdown post float image left {{&amp;lt; img-post path=“/img/profile_pics/” file=“profile1.jpg” alt=“Alt Text” type=“left” &amp;gt;}}
+  LinkedIn 1    LinkedIn Public profile badge  John Houghton   </description>
+    </item>
+    
+  </channel>
+</rss>

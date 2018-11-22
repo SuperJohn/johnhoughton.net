@@ -12,46 +12,13 @@
     
     
     <item>
-      <title>Contact Us</title>
-      <link>/about/contact/</link>
-      <pubDate>Sun, 08 Apr 2018 09:16:58 -0800</pubDate>
+      <title>Blogdown Reference</title>
+      <link>/reference/blogdown-reference/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/about/contact/</guid>
-      <description>We are a little busy exploring space right now; we&amp;rsquo;ll get back to you when we return to this solar system.</description>
-    </item>
-    
-    <item>
-      <title>This Theme</title>
-      <link>/about/hugo/</link>
-      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/hugo/</guid>
-      <description>Hugo-Smorg is a theme for Hugo, the blazingly fast super flexible static site engine.
-See the project page: https://github.com/solutionroute/hugo-smorg, and
-the demo site: https://solutionroute.github.io/hugo-smorg/exampleSite/
-for more information.
-Go Hugo!
-Hugo Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/about/</link>
-      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/about/</guid>
-      <description>Here is some stuff I’m writing</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/about/</link>
-      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/about/</guid>
-      <description>Here is some stuff I&amp;rsquo;m writing</description>
+      <guid>/reference/blogdown-reference/</guid>
+      <description> Add images to blogdown post float image left {{&amp;lt; img-post path=“/img/profile_pics/” file=“profile1.jpg” alt=“Alt Text” type=“left” &amp;gt;}}
+  LinkedIn 1    LinkedIn Public profile badge  John Houghton   </description>
     </item>
     
     <item>
@@ -124,24 +91,6 @@ blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.
     </item>
     
     <item>
-      <title>Hulk Hogan for President!!!</title>
-      <link>/about/hulk-hogan-for-president/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/hulk-hogan-for-president/</guid>
-      <description> THis is something  </description>
-    </item>
-    
-    <item>
-      <title>Hulk Hogan for President!!!</title>
-      <link>/about/hulk-hogan-for-president/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/hulk-hogan-for-president/</guid>
-      <description> THis is something </description>
-    </item>
-    
-    <item>
       <title>Hugo Templates</title>
       <link>/post/hugo-templates/</link>
       <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
@@ -185,91 +134,6 @@ Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/Portfol
  Backtesting 4 Portfolio Optimization Strategies In R https://seekingalpha.com/article/4166115-backtesting-4-portfolio-optimization-strategies-r
 Using ROI Solvers for Portfolio Analytics, Vignette https://rdrr.io/cran/PortfolioAnalytics/f/inst/doc/ROI_vignette.pdf
    R Notebook Options knitr::opts_chunk$set(echo=FALSE, warning=FALSE, progress = TRUE, verbose = TRUE, error=TRUE, cache = TRUE)  Load Required Libraries &amp;amp; Set Paths ## ── Attaching packages ────────────────────────────────────────────────────── tidyverse 1.</description>
-    </item>
-    
-    <item>
-      <title>Caramel Bottle</title>
-      <link>/portfolio/caramel-bottle/</link>
-      <pubDate>Thu, 12 Jul 2018 16:59:54 +0600</pubDate>
-      
-      <guid>/portfolio/caramel-bottle/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Shopping Bag Concept</title>
-      <link>/portfolio/shopping-bag-concept/</link>
-      <pubDate>Thu, 12 Jul 2018 16:58:55 +0600</pubDate>
-      
-      <guid>/portfolio/shopping-bag-concept/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Makeup Element</title>
-      <link>/portfolio/makeup-element/</link>
-      <pubDate>Thu, 12 Jul 2018 16:57:54 +0600</pubDate>
-      
-      <guid>/portfolio/makeup-element/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Table Design</title>
-      <link>/portfolio/table-design/</link>
-      <pubDate>Thu, 12 Jul 2018 16:56:54 +0600</pubDate>
-      
-      <guid>/portfolio/table-design/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Bottle Mockup</title>
-      <link>/portfolio/bottle-mockup/</link>
-      <pubDate>Thu, 12 Jul 2018 16:54:54 +0600</pubDate>
-      
-      <guid>/portfolio/bottle-mockup/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Dew Drop</title>
-      <link>/portfolio/dew-drop/</link>
-      <pubDate>Thu, 12 Jul 2018 16:53:54 +0600</pubDate>
-      
-      <guid>/portfolio/dew-drop/</guid>
-      <description>Consectur in Bibendum Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebetea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est dolorem ipsum quia dolor amet consectetur adipisci velit. lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Hugo Bulma Powered Blog Theme: Hugo-Smorg</title>
-      <link>/project/hugo-smorg/</link>
-      <pubDate>Wed, 07 Mar 2018 02:16:58 -0800</pubDate>
-      
-      <guid>/project/hugo-smorg/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/solutionroute/hugo-smorg&#34;&gt;Hugo-smorg&lt;/a&gt; (smorg = small org, or smorgasbord perhaps) is a responsive
-mobile-first, &lt;a href=&#34;https://bulma.io/&#34;&gt;Bulma&lt;/a&gt;-powered, reasonably minimalistic theme for the &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
-&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt; static site generator.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Blorg Bread Baker</title>
-      <link>/project/blorg-bread-machine/</link>
-      <pubDate>Sat, 03 Mar 2018 09:17:17 -0800</pubDate>
-      
-      <guid>/project/blorg-bread-machine/</guid>
-      <description>The hand-crafted Blorg Bread Baker&amp;trade; enhances any kitchen. Produced from 100% post-consumer recycled materials you&amp;rsquo;ll never once think&amp;hellip; wait a minute, I&amp;rsquo;m baking my bread in other people&amp;rsquo;s refuse.
-Features  Bakes artisanal bread Slices Doubles as a bread-box Controllable-Anywhere, part of the Internet Of Things  Some versions may include a BetaMax&amp;trade; video tape interface.</description>
-    </item>
-    
-    <item>
-      <title>XYZ 1000 Replicator</title>
-      <link>/project/xyz-1000/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 -0800</pubDate>
-      
-      <guid>/project/xyz-1000/</guid>
-      <description>With the XYZ 1000 Replicator you&amp;rsquo;ll never again be stuck with an empty kitchen and nothing for dinner!
-Features  It&amp;rsquo;s like having your own personal chef from 1,783,482,482 (and counting) planets in your kitchen! Can&amp;rsquo;t think of a dish? Use Random-Mode&amp;trade; (warning, not for the squeamish) Integrated Internet meal suggestions Fusion powered Self-cleaning Matches any decor  Availability The XYZ 1000 can be ordered at your local Starfleet commissary.</description>
     </item>
     
     <item>

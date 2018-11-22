@@ -8,6 +8,9 @@ tags: []
 description: 'Optimizing & Rebalancing Financial Portfolios in R using tidyquant & PerformanceAnalytics'
 LinkTitle: "about_me"
 summary: "A custom summary of my post."
+featured: 'https://www.elegantthemes.com/img/homepage-image-bloom.jpg'
+featuredalt: ''
+featuredpath: '/images/'
 ---
 
 ```{r}

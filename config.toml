@@ -11,6 +11,9 @@ pluralizeListTitles = false
 enableRobotsTXT = true
 canonifyURLs = true
 
+# Test image
+# https://developers.google.com/search/mobile-sites/imgs/mobile-seo/devices.png
+
 [params]
   # Sets the meta tag description
   description          = "Data Scientist & R-User. San Diego, CA"
@@ -19,12 +22,15 @@ canonifyURLs = true
   # Sets where "View More Posts" links
   viewMorePostLink     = "/post/"
 
-  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+  ignoreFiles = ["\\.Rmarkdown$", "_files$", "_cache$"]
+  # "\\.Rmd$", 
 
 # Optional Params
+  # Show mini-sidebar posts instead of large imgs
+  showMiniSidebarPosts = true
   # enable drafts
-  # draft = true
   buildDrafts = false
+  
   # Sets navbarTitle to match the section of the website
   dynamicTitles        = false
   # Sets RSS icons to appear on the sidebar with the social media buttons
@@ -43,7 +49,7 @@ canonifyURLs = true
   # apple-touch-icon-precomposed.png, favicon.png, favicon.ico, and mstile.png.
   # These are stored in the favicon folder. See the following for more information:
   # https://github.com/audreyr/favicon-cheat-sheet
-  loadFavicon          = false
+  loadFavicon          = true
   faviconVersion       = ""
   # Sets Social Share links to appear on posts
   socialShare          = false
@@ -61,9 +67,9 @@ canonifyURLs = true
   # can load multiple files if necessary. You can also load the standard theme
   # files by adding the value, "default".
   # customCSS            = ["default", "/path/to/file"]
-  # customJS             = ["default", "/path/to/file"]
-  customCSS            = ["default", "static/css/add-on.css"]
-  customJS             = ["default"]
+  #customJS             = ["default", "/path/to/file"]
+  customCSS            = ["css/add-on.css", "css/main_custom.css", "css/academicons_custom.min.css"]
+  customJS             = ["default", "js/add-on.js"]
 
   # options for highlight.js (version, additional languages, and theme)
   disable_highlight = false # set to true to disable Highlight
@@ -93,11 +99,9 @@ canonifyURLs = true
   # required for proper functionality. HTML is supported within the params.
 [params.intro]
   # header    = ""
-
   paragraph = "Data Science | \nSan Diego, CA"
-
   about     = "Hey, there. I'm a Data Scientist in San Diego."
-
+  
   # This appears at the top of the sidebar above params.intro.header.
   # A width of less than 100px is recommended from a design perspective.
   [params.intro.pic]
@@ -106,8 +110,8 @@ canonifyURLs = true
     circle    = false
     # Sets Image to be Future Imperfect's hexagon
     imperfect = true
-    width     = "200"
-    alt       = "Hugo Future Imperfect"
+    width     = "200px"
+    alt       = "John Houghton"
 
 [params.postAmount]
 # Sets the number of recent posts to show in the sidebar. The default value is 5.
