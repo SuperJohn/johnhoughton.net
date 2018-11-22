@@ -22,8 +22,7 @@ canonifyURLs = true
   # Sets where "View More Posts" links
   viewMorePostLink     = "/post/"
 
-  ignoreFiles = ["\\.Rmarkdown$", "_files$", "_cache$"]
-  # "\\.Rmd$", 
+  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # Optional Params
   # Show mini-sidebar posts instead of large imgs

@@ -6,10 +6,19 @@
     <description>Recent content in Post on John Houghton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 21 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Find ANYTHING with Unix | Linux</title>
+      <link>/post/find-anything-with-unix-linux/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/find-anything-with-unix-linux/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ridge Regression in Python</title>

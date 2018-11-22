@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unix on John Houghton</title>
+    <link>/tags/unix/</link>
+    <description>Recent content in unix on John Houghton</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find ANYTHING with Unix | Linux</title>
+      <link>/post/find-anything-with-unix-linux/</link>
+      <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/find-anything-with-unix-linux/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
