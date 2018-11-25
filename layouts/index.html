@@ -1,6 +1,8 @@
+{{ partial "general-title" . }}
 {{ partial "header" . }}
     {{ $.Scratch.Set "shareNav" true }}
     {{ partial "navbar" . }}
+    
     <!-- Main -->
     <div id="main">
         {{ range first 5 (where .Site.Pages "Type" "itemized") }}

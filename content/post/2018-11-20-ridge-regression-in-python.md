@@ -8,8 +8,7 @@ tags: []
 description: ''
 featured: ''
 featuredalt: ''
-featuredpath: ''
-linktitle: ''
+featuredpath: http://www.glowscript.org/docs/VPythonDocs/images/graph.png
 ---
 
 {{<gist SuperJohn 5174ec5984df4b2e502e4cb52258a513>}}

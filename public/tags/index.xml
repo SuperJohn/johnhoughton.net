@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on John Houghton</title>
+    <title>Tags on johnhoughton.net</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on John Houghton</description>
+    <description>Recent content in Tags on johnhoughton.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>bulma</title>
-      <link>/tags/bulma/</link>
-      <pubDate>Wed, 07 Mar 2018 02:16:58 -0800</pubDate>
-      
-      <guid>/tags/bulma/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>howto</title>
       <link>/tags/howto/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
@@ -39,29 +30,11 @@
     </item>
     
     <item>
-      <title>iot</title>
-      <link>/tags/iot/</link>
-      <pubDate>Sat, 03 Mar 2018 09:17:17 -0800</pubDate>
-      
-      <guid>/tags/iot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>plot</title>
       <link>/tags/plot/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>recycling</title>
-      <link>/tags/recycling/</link>
-      <pubDate>Sat, 03 Mar 2018 09:17:17 -0800</pubDate>
-      
-      <guid>/tags/recycling/</guid>
       <description></description>
     </item>
     
@@ -80,15 +53,6 @@
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/shiny/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>theme</title>
-      <link>/tags/theme/</link>
-      <pubDate>Wed, 07 Mar 2018 02:16:58 -0800</pubDate>
-      
-      <guid>/tags/theme/</guid>
       <description></description>
     </item>
     

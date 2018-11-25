@@ -11,5 +11,7 @@ linktitle = ""
 format = ""
 title = ""
 type = "itemized"
-
+resources:
+- name: header
+  src: "http://www.glowscript.org/docs/VPythonDocs/images/graph.png"
 +++

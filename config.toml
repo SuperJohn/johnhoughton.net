@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "John Houghton"
+title = "johnhoughton.net"
 theme = "hugo-future-imperfect"
 preserveTaxonomyNames = true
 paginate = 5
@@ -19,7 +19,7 @@ canonifyURLs = true
   # Sets where "View More Posts" links
   viewMorePostLink     = "/post/"
 
-  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 # Optional Params
   # enable drafts
@@ -62,7 +62,7 @@ canonifyURLs = true
   # files by adding the value, "default".
   # customCSS            = ["default", "/path/to/file"]
   # customJS             = ["default", "/path/to/file"]
-  customCSS            = ["default", "static/css/add-on.css"]
+  customCSS            = ["default", "static/css/add-on.css", "static/css/main_custom.css"]
   customJS             = ["default"]
 
   # options for highlight.js (version, additional languages, and theme)
@@ -107,7 +107,7 @@ canonifyURLs = true
     # Sets Image to be Future Imperfect's hexagon
     imperfect = true
     width     = "200"
-    alt       = "Hugo Future Imperfect"
+    alt       = "Houghton Analytics"
 
 [params.postAmount]
 # Sets the number of recent posts to show in the sidebar. The default value is 5.
