@@ -62,7 +62,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # files by adding the value, "default".
   # customCSS            = ["default", "/path/to/file"]
   # customJS             = ["default", "/path/to/file"]
-  customCSS            = ["default", "static/css/add-on.css", "static/css/main_custom.css"]
+  customCSS            = ["css/add-on.css", "css/main_custom.css"]
   customJS             = ["default"]
 
   # options for highlight.js (version, additional languages, and theme)

@@ -56,8 +56,10 @@
               </time>
             </header>
             
-            {{with .Params.featuredpath }}
-             <a href="#" class = "image">
+            {{ $.Scratch.Set "my_link" .RelPermalink }}
+            
+            {{ with .Params.featuredpath }}
+             <a href="{{ $.Scratch.Get "my_link" }}" class = "image">
               <img src="{{.}}"/>
             </a>
             {{ end }}

@@ -9,3 +9,10 @@ section.recent-posts{
   margin: 0;
   padding: 0;
 }
+
+.gist iframe.render-viewer {
+    border: 0;
+    height: 480px;
+    overflow: hidden;
+    width: 100%;
+}

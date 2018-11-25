@@ -8,10 +8,11 @@ tags: []
 description: 'Optimizing & Rebalancing Financial Portfolios in R using tidyquant & PerformanceAnalytics'
 LinkTitle: "about_me"
 summary: "A custom summary of my post."
-featuredpath: http://www.glowscript.org/docs/VPythonDocs/images/graph.png
+featuredpath: post/2018-11-20-portfolio-optimization-in-r_files/RidgeRegression.png
 featured: ""
 featuredalt: ""
 ---
+
 
 ```{r}
 # {{< fancybox "/img/profile_pics/" "profile1.jpg" "caption" "gallery2" >}}
