@@ -1,0 +1,142 @@
+---
+title: "Predictive Analytics using h2o ML & Random Forest"
+date: '2018-11-26'
+slug: predictive-analytics-using-h2o-and-random-forest
+description: 'Using h2o library & random forest for classification. Predicting credit card attachment & insights on key drivers.'
+summary: "Using h2o library & random forest for classification. Predicting credit card attachment & insights on key drivers."
+featuredpath: /articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/rf_models_h2o.png
+
+---
+![](/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/rf_models_h2o.png#floatleft){width=600px height=300px}
+
+This was a project that I did recently that asked that I predict whether a user would attach their credit card to the account and determine what the key drivers were for credit card attachment. 
+
+I'll type up a walk-through when I have more time, but for now, code and R notebook posted, below. 
+
+```{r, echo=FALSE}
+## Import R Snippets File
+knitr::read_chunk('~/Documents/Github/r_snippets/blogdown.R')
+```
+
+```{r knitr_options, include=TRUE}
+
+```
+
+```{r, echo=FALSE, warning=FALSE, error=FALSE}
+# Load libraries
+library(h2o)        # Awesome ML Library
+library(timetk)     # Toolkit for working with time series in R
+library(tidyquant)  # Loads tidyverse, financial pkgs, used to get data
+library(dplyr)      # Data wrangling swiss army knife
+
+ds_test_data <- readRDS("~/Downloads/Data_Scientist_Test_Data_source_0.rds")
+```
+
+```{r}
+ds_test_data %>% glimpse()
+```
+```{r}
+ds_test_data_clean <- ds_test_data %>%
+  select(-organization_id) %>% 
+  select_if(~ !is.Date(.)) %>%
+  select_if(~ !any(is.na(.))) %>%
+  mutate_if(is.ordered, ~ as.character(.) %>% as.factor) 
+ds_test_data_clean
+```
+
+```{r}
+# change cc to factor
+ds_test_data <- ds_test_data_clean %>% 
+  mutate(cc = as.factor(cc), vertical = as.factor(vertical), plan_tier = as.factor(plan_tier))
+
+# Split into training, validation and test sets
+
+## 75% of the sample size for train, 12.5% for validation & test
+train_size <- floor(0.75 * nrow(ds_test_data))
+valid_size <- floor(.50 * (nrow(ds_test_data)-train_size))
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind <- sample(seq_len(nrow(ds_test_data)), size = train_size)
+train_tbl <- ds_test_data[train_ind, ]
+valid_ind <- sample(seq_len(nrow(ds_test_data[-train_ind, ])), size = valid_size)
+valid_tbl <- ds_test_data[valid_ind, ]
+test_ind <- sample(seq_len(nrow(ds_test_data[c(-train_ind,-valid_ind), ])), size = valid_size)
+test_tbl <- ds_test_data[test_ind, ]
+valid_no_test <- ds_test_data[-train_ind, ]
+h2o.init()        # Fire up h2o
+
+h2o.no_progress() # Turn off progress bars
+
+# Convert to H2OFrame objects
+train_h2o <- as.h2o(train_tbl)
+valid_h2o <- as.h2o(valid_tbl)
+test_h2o  <- as.h2o(test_tbl)
+valid_no_test_h20 <- as.h2o(valid_no_test)
+
+# Set names for h2o
+y <- "cc"
+x <- setdiff(names(train_h2o), y)
+
+# linear regression model used, but can use any model
+automl_models_h2o <- h2o.automl(
+  project_name = "ds_test_models",
+  x = x, 
+  y = y, 
+  training_frame = train_h2o, 
+  validation_frame = valid_h2o, 
+  leaderboard_frame = test_h2o, 
+  max_runtime_secs = 60, 
+  stopping_metric = "AUC"
+  , sort_metric = "AUC")
+
+# Extract leader model
+automl_leader <- automl_models_h2o@leader
+
+# Get Results
+pred_h2o <- h2o.predict(automl_leader, test_h2o)
+h2o.performance(automl_leader, test_h2o)
+h2o.varimp(automl_leader)
+h2o.varimp_plot(automl_leader, 20)
+h2o.download_mojo(automl_leader, "~/Downloads/", FALSE)
+h2o.partialPlot(automl_leader, data = train_h2o, cols = "jobs_completed")
+h2o.partialPlot(automl_leader, data = train_h2o, cols = "owner_operator")
+h2o.partialPlot(automl_leader, data = train_h2o, cols = "cc_rate")
+h2o.partialPlot(automl_leader, data = train_h2o, cols = "vertical")
+h2o.partialPlot(automl_leader, data = train_h2o, cols = "plan_tier")
+# Gains / Lift
+h2o.gainsLift(automl_leader, train_h2o)
+# Generating a Confusion Matrix
+h2o.confusionMatrix(h2o.performance(automl_leader, test_h2o))
+```
+Distributed Random Forest produced the best classification results, which is great since trees are fairly interpretable. Precision Metrics as follows:
+Mean Per-Class Error:  0.145845
+AUC:  0.9079832
+Gini:  0.8159664
+
+Most important variable in determining cc attachment is 
+re: vertical ~ Plumbing & Electrical folks are solid, but other categories, especially 
+```{bash, echo=FALSE, warning = FALSE, error = FALSE}
+# save mojo plot as .png file
+java -cp ~/Downloads/h2o-3.20.0.8/h2o.jar hex.genmodel.tools.PrintMojo --tree 1 -i ~/Downloads/DRF_0_AutoML_20181009_162129.zip -o ~/Downloads/rf_models_h2o.gv
+dot -Tpng ~/Downloads/rf_models_h2o.gv -o ~/Downloads/rf_models_h2o.png
+```
+
+```{r}
+# RANDOM FOREST
+rf_models_h2o <- h2o.randomForest(
+  # project_name = "ds_test_models",
+  x = x, 
+  y = y, 
+  training_frame = train_h2o, 
+  validation_frame = valid_no_test_h20, 
+  categorical_encoding = "Enum", 
+  max_runtime_secs = 60
+ )
+
+pred_h2o <- h2o.predict(rf_models_h2o, test_h2o)
+h2o.performance(rf_models_h2o, test_h2o)
+h2o.varimp(rf_models_h2o)
+h2o.varimp_plot(rf_models_h2o, 20)
+h2o.download_mojo(rf_models_h2o, "~/Downloads/", FALSE)
+```
+

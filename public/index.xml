@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Predictive Analytics using h2o ML &amp; Random Forest</title>
+      <link>/articles/predicting-cc-attachment/predictive-analytics-using-h2o-and-random-forest/</link>
+      <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/predicting-cc-attachment/predictive-analytics-using-h2o-and-random-forest/</guid>
+      <description>This was a project that I did recently that asked that I predict whether a user would attach their credit card to the account and determine what the key drivers were for credit card attachment.
+I’ll type up a walk-through when I have more time, but for now, code and R notebook posted, below.
+library(knitr) library(rmdformats) ## Global options options(max.print=&amp;quot;75&amp;quot;) opts_chunk$set(#echo=FALSE, cache=TRUE, prompt=FALSE, tidy=TRUE, comment=NA, message=FALSE, warning=FALSE, results=&amp;#39;asis&amp;#39; ) opts_knit$set(width=75) print(&amp;quot;notebook options imported successfully!</description>
+    </item>
+    
+    <item>
       <title>Ridge Regression with cross-validation in Python</title>
       <link>/articles/ridge-regression-cross-validation-in-python/</link>
       <pubDate>Sat, 24 Nov 2018 00:00:00 +0000</pubDate>
@@ -179,6 +190,15 @@ Hugo-smorg provides the ability to generated a custom error page. 404 pages are 
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/articles/predicting-cc-attachment/predicting-credit-card-attachment-using-h2o.nb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/predicting-cc-attachment/predicting-credit-card-attachment-using-h2o.nb/</guid>
+      <description>Predictive Analytics using h2o ML &amp;amp; Random Forest          code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs) { hljs.configure({languages: []}); hljs.initHighlightingOnLoad(); if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); } }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
   </channel>

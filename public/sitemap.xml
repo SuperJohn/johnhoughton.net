@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/articles/predicting-cc-attachment/predictive-analytics-using-h2o-and-random-forest/</loc>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2018-11-24T00:00:00+00:00</lastmod>
   </url>
@@ -98,8 +103,12 @@
   </url>
   
   <url>
+    <loc>/articles/predicting-cc-attachment/predicting-credit-card-attachment-using-h2o.nb/</loc>
+  </url>
+  
+  <url>
     <loc>/articles/</loc>
-    <lastmod>2018-11-24T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,144 @@
+---
+title: "Predictive Analytics using h2o ML & Random Forest"
+date: '2018-11-26'
+slug: predictive-analytics-using-h2o-and-random-forest
+description: 'Using h2o library & random forest for classification. Predicting credit card attachment & insights on key drivers.'
+summary: "Using h2o library & random forest for classification. Predicting credit card attachment & insights on key drivers."
+featuredpath: /articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/rf_models_h2o.png
+
+---
+
+
+
+<div class="figure">
+<img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/rf_models_h2o.png#floatleft" width="600" height="300" />
+
+</div>
+<p>This was a project that I did recently that asked that I predict whether a user would attach their credit card to the account and determine what the key drivers were for credit card attachment.</p>
+<p>I’ll type up a walk-through when I have more time, but for now, code and R notebook posted, below.</p>
+<pre class="r"><code>library(knitr)
+library(rmdformats)
+## Global options
+options(max.print=&quot;75&quot;)
+opts_chunk$set(#echo=FALSE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE, 
+               results=&#39;asis&#39;
+               )
+opts_knit$set(width=75)
+print(&quot;notebook options imported successfully!&quot;)</code></pre>
+<pre><code>## [1] &quot;notebook options imported successfully!&quot;</code></pre>
+<pre class="r"><code>ds_test_data %&gt;% glimpse()</code></pre>
+<p>Observations: 1,690 Variables: 8 $ organization_id <dbl> 67, 80, 588, 1005, 1098, 1216, 1230, 133… $ feature_adoption_rate <dbl> 0.00, NA, 0.67, 0.48, 0.67, 0.58, 0.73, … $ owner_operator <dbl> 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0… $ jobs_completed <dbl> 0, 194, 81, 50, 8, 71, 45, 0, 0, 238, 43… $ cc_rate <dbl> 2.90, 2.69, 2.69, 2.69, 2.69, 2.69, 2.90… $ plan_tier <chr> “starter”, “small”, “medium”, “small”, “… $ vertical <chr>”Other“,”Plumbing“,”Other“,”Heating &amp;… $ cc <dbl> 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0…</p>
+<pre class="r"><code>ds_test_data_clean &lt;- ds_test_data %&gt;% select(-organization_id) %&gt;% select_if(~!is.Date(.)) %&gt;% 
+    select_if(~!any(is.na(.))) %&gt;% mutate_if(is.ordered, ~as.character(.) %&gt;% 
+    as.factor)
+ds_test_data_clean</code></pre>
+<div id="a-tibble-1690-x-6" class="section level1">
+<h1>A tibble: 1,690 x 6</h1>
+<p>owner_operator jobs_completed cc_rate plan_tier vertical cc <dbl> <dbl> <dbl> <chr> <chr> <dbl> 1 1 0 2.9 starter Other 0 2 0 194 2.69 small Plumbing 1 3 0 81 2.69 medium Other 1 4 0 50 2.69 small Heating &amp; Air Co… 1 5 0 8 2.69 small Other 1 6 0 71 2.69 small Carpet Cleaning 1 7 0 45 2.9 small Other 1 8 0 0 2.69 small Carpet Cleaning 0 9 1 0 2.69 small Other 0 10 0 238 2.69 medium Carpet Cleaning 1 # … with 1,680 more rows</p>
+<pre class="r"><code># change cc to factor
+ds_test_data &lt;- ds_test_data_clean %&gt;% mutate(cc = as.factor(cc), vertical = as.factor(vertical), 
+    plan_tier = as.factor(plan_tier))
+
+# Split into training, validation and test sets
+
+## 75% of the sample size for train, 12.5% for validation &amp; test
+train_size &lt;- floor(0.75 * nrow(ds_test_data))
+valid_size &lt;- floor(0.5 * (nrow(ds_test_data) - train_size))
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind &lt;- sample(seq_len(nrow(ds_test_data)), size = train_size)
+train_tbl &lt;- ds_test_data[train_ind, ]
+valid_ind &lt;- sample(seq_len(nrow(ds_test_data[-train_ind, ])), size = valid_size)
+valid_tbl &lt;- ds_test_data[valid_ind, ]
+test_ind &lt;- sample(seq_len(nrow(ds_test_data[c(-train_ind, -valid_ind), ])), 
+    size = valid_size)
+test_tbl &lt;- ds_test_data[test_ind, ]
+valid_no_test &lt;- ds_test_data[-train_ind, ]
+h2o.init()  # Fire up h2o</code></pre>
+<p>Connection successful!</p>
+<p>R is connected to the H2O cluster: H2O cluster uptime: 6 minutes 48 seconds H2O cluster timezone: America/Los_Angeles H2O data parsing timezone: UTC H2O cluster version: 3.20.0.8 H2O cluster version age: 2 months and 4 days<br />
+H2O cluster name: H2O_started_from_R_superjohn_ymc288 H2O cluster total nodes: 1 H2O cluster total memory: 3.95 GB H2O cluster total cores: 8 H2O cluster allowed cores: 8 H2O cluster healthy: TRUE H2O Connection ip: localhost H2O Connection port: 54321 H2O Connection proxy: NA H2O Internal Security: FALSE H2O API Extensions: XGBoost, Algos, AutoML, Core V3, Core V4 R Version: R version 3.5.0 (2018-04-23)</p>
+<pre class="r"><code>h2o.no_progress()  # Turn off progress bars
+
+# Convert to H2OFrame objects
+train_h2o &lt;- as.h2o(train_tbl)
+valid_h2o &lt;- as.h2o(valid_tbl)
+test_h2o &lt;- as.h2o(test_tbl)
+valid_no_test_h20 &lt;- as.h2o(valid_no_test)
+
+# Set names for h2o
+y &lt;- &quot;cc&quot;
+x &lt;- setdiff(names(train_h2o), y)
+
+# linear regression model used, but can use any model
+automl_models_h2o &lt;- h2o.automl(project_name = &quot;ds_test_models&quot;, x = x, y = y, 
+    training_frame = train_h2o, validation_frame = valid_h2o, leaderboard_frame = test_h2o, 
+    max_runtime_secs = 60, stopping_metric = &quot;AUC&quot;, sort_metric = &quot;AUC&quot;)
+
+# Extract leader model
+automl_leader &lt;- automl_models_h2o@leader
+
+# Get Results
+pred_h2o &lt;- h2o.predict(automl_leader, test_h2o)
+h2o.performance(automl_leader, test_h2o)</code></pre>
+<p>H2OBinomialMetrics: drf</p>
+<p>MSE: 0.1221733 RMSE: 0.349533 LogLoss: 0.3911722 Mean Per-Class Error: 0.1418768 AUC: 0.9077498 Gini: 0.8154995</p>
+<p>Confusion Matrix (vertical: actual; across: predicted) for F1-optimal threshold: 0 1 Error Rate 0 71 14 0.164706 =14/85 1 15 111 0.119048 =15/126 Totals 86 125 0.137441 =29/211</p>
+<p>Maximum Metrics: Maximum metrics at their respective thresholds metric threshold value idx 1 max f1 0.459184 0.884462 75 2 max f2 0.190476 0.901639 106 3 max f0point5 0.474206 0.887622 72 4 max accuracy 0.459184 0.862559 75 5 max precision 1.000000 1.000000 0 6 max recall 0.020408 1.000000 123 7 max specificity 1.000000 1.000000 0 8 max absolute_mcc 0.459184 0.714913 75 9 max min_per_class_accuracy 0.504082 0.847059 70 10 max mean_per_class_accuracy 0.459184 0.858123 75</p>
+<p>Gains/Lift Table: Extract with <code>h2o.gainsLift(&lt;model&gt;, &lt;data&gt;)</code> or <code>h2o.gainsLift(&lt;model&gt;, valid=&lt;T/F&gt;, xval=&lt;T/F&gt;)</code></p>
+<pre class="r"><code>h2o.varimp(automl_leader)</code></pre>
+<p>Variable Importances: variable relative_importance scaled_importance percentage 1 jobs_completed 727.803711 1.000000 0.714372 2 vertical 111.160042 0.152734 0.109109 3 plan_tier 89.501068 0.122974 0.087849 4 owner_operator 54.353825 0.074682 0.053351 5 cc_rate 35.983765 0.049442 0.035320</p>
+<pre class="r"><code>h2o.varimp_plot(automl_leader, 20)</code></pre>
+<p><img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>h2o.download_mojo(automl_leader, &quot;~/Downloads/&quot;, FALSE)</code></pre>
+<p>[1] “DRF_0_AutoML_20181126_125557.zip”</p>
+<pre class="r"><code>h2o.partialPlot(automl_leader, data = train_h2o, cols = &quot;jobs_completed&quot;)</code></pre>
+<p><img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/figure-html/unnamed-chunk-5-2.png" width="672" />PartialDependence: Partial Dependence Plot of model DRF_0_AutoML_20181126_125557 on column ‘jobs_completed’ jobs_completed mean_response stddev_response std_error_mean_response 1 0.000000 0.102449 0.074828 0.002102 2 40.105263 0.778232 0.194740 0.005471 3 80.210526 0.696054 0.186578 0.005242 4 120.315789 0.711273 0.280846 0.007890 5 160.421053 0.682241 0.235010 0.006602 6 200.526316 0.677716 0.220036 0.006182 7 240.631579 0.597408 0.300183 0.008433 8 280.736842 0.599626 0.277468 0.007795 9 320.842105 0.496051 0.311450 0.008750 10 360.947368 0.611682 0.237223 0.006665 11 401.052632 0.611682 0.237223 0.006665 12 441.157895 0.524281 0.253714 0.007128 13 481.263158 0.451668 0.312553 0.008781 14 521.368421 0.448878 0.311733 0.008758 15 561.473684 0.481350 0.331755 0.009320 16 601.578947 0.481350 0.331755 0.009320 17 641.684211 0.481350 0.331755 0.009320 18 681.789474 0.462070 0.316733 0.008898 [ reached getOption(“max.print”) – omitted 2 rows ]</p>
+<pre class="r"><code>h2o.partialPlot(automl_leader, data = train_h2o, cols = &quot;owner_operator&quot;)</code></pre>
+<p><img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/figure-html/unnamed-chunk-5-3.png" width="672" />PartialDependence: Partial Dependence Plot of model DRF_0_AutoML_20181126_125557 on column ‘owner_operator’ owner_operator mean_response stddev_response std_error_mean_response 1 0.000000 0.488685 0.338093 0.009498 2 1.000000 0.446576 0.314575 0.008838</p>
+<pre class="r"><code>h2o.partialPlot(automl_leader, data = train_h2o, cols = &quot;cc_rate&quot;)</code></pre>
+<p><img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/figure-html/unnamed-chunk-5-4.png" width="672" />PartialDependence: Partial Dependence Plot of model DRF_0_AutoML_20181126_125557 on column ‘cc_rate’ cc_rate mean_response stddev_response std_error_mean_response 1 2.690000 0.499828 0.345680 0.009712 2 2.701053 0.499828 0.345680 0.009712 3 2.712105 0.499828 0.345680 0.009712 4 2.723158 0.499828 0.345680 0.009712 5 2.734211 0.499828 0.345680 0.009712 6 2.745263 0.499828 0.345680 0.009712 7 2.756316 0.499828 0.345680 0.009712 8 2.767368 0.499828 0.345680 0.009712 9 2.778421 0.499828 0.345680 0.009712 10 2.789474 0.499828 0.345680 0.009712 11 2.800526 0.452907 0.336488 0.009453 12 2.811579 0.452907 0.336488 0.009453 13 2.822632 0.452907 0.336488 0.009453 14 2.833684 0.452907 0.336488 0.009453 15 2.844737 0.452907 0.336488 0.009453 16 2.855789 0.452907 0.336488 0.009453 17 2.866842 0.452907 0.336488 0.009453 18 2.877895 0.452907 0.336488 0.009453 [ reached getOption(“max.print”) – omitted 2 rows ]</p>
+<pre class="r"><code>h2o.partialPlot(automl_leader, data = train_h2o, cols = &quot;vertical&quot;)</code></pre>
+<p><img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/figure-html/unnamed-chunk-5-5.png" width="672" />PartialDependence: Partial Dependence Plot of model DRF_0_AutoML_20181126_125557 on column ‘vertical’ vertical mean_response stddev_response 1 Carpet Cleaning 0.511901 0.342393 2 Electrical 0.500020 0.344250 3 Heating &amp; Air Conditioning 0.493474 0.346501 4 Home Cleaning 0.362564 0.276947 5 Other 0.439080 0.322083 6 Plumbing 0.523916 0.344376 std_error_mean_response 1 0.009619 2 0.009671 3 0.009735 4 0.007781 5 0.009049 6 0.009675</p>
+<pre class="r"><code>h2o.partialPlot(automl_leader, data = train_h2o, cols = &quot;plan_tier&quot;)</code></pre>
+<p><img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/figure-html/unnamed-chunk-5-6.png" width="672" />PartialDependence: Partial Dependence Plot of model DRF_0_AutoML_20181126_125557 on column ‘plan_tier’ plan_tier mean_response stddev_response std_error_mean_response 1 medium 0.420806 0.342804 0.009631 2 small 0.484023 0.336455 0.009452 3 starter 0.436919 0.314818 0.008844</p>
+<pre class="r"><code># Gains / Lift
+h2o.gainsLift(automl_leader, train_h2o)</code></pre>
+<p>Gains/Lift Table: Avg response rate: 46.17 %, avg score: 45.71 % group cumulative_data_fraction lower_threshold lift cumulative_lift 1 1 0.02131018 1.000000 1.283444 1.283444 2 2 0.03078137 0.979167 1.804843 1.443875 3 3 0.04025257 0.964898 1.263390 1.401408 4 4 0.05051302 0.956564 1.499408 1.421314 5 5 0.10023678 0.903122 1.340741 1.381345 response_rate score cumulative_response_rate cumulative_score 1 0.592593 1.000000 0.592593 1.000000 2 0.833333 0.982849 0.666667 0.994723 3 0.583333 0.969972 0.647059 0.988899 4 0.692308 0.959119 0.656250 0.982850 5 0.619048 0.929035 0.637795 0.956154 capture_rate cumulative_capture_rate gain cumulative_gain 1 0.027350 0.027350 28.344413 28.344413 2 0.017094 0.044444 80.484330 44.387464 3 0.011966 0.056410 26.339031 40.140774 4 0.015385 0.071795 49.940828 42.131410 5 0.066667 0.138462 34.074074 38.134464 [ reached getOption(“max.print”) – omitted 10 rows ]</p>
+<pre class="r"><code># Generating a Confusion Matrix
+h2o.confusionMatrix(h2o.performance(automl_leader, test_h2o))</code></pre>
+<p>Confusion Matrix (vertical: actual; across: predicted) for max f1 @ threshold = 0.459183671644756: 0 1 Error Rate 0 71 14 0.164706 =14/85 1 15 111 0.119048 =15/126 Totals 86 125 0.137441 =29/211 Distributed Random Forest produced the best classification results, which is great since trees are fairly interpretable. Precision Metrics as follows: Mean Per-Class Error: 0.145845 AUC: 0.9079832 Gini: 0.8159664</p>
+<p>Most important variable in determining cc attachment is re: vertical ~ Plumbing &amp; Electrical folks are solid, but other categories, especially</p>
+<p>Tree inconsistency found: Node 2 weight: 853.0 depth: 1 colId: 1 colName: jobs_completed leftward: false naVsRest: false splitVal: 25.5 isBitset: false predValue: 0.36928487 squaredErr: 198.67526 leftChild: Node 5 rightChild: Node 6 Node 5 weight: 197.0 depth: 2 colId: 4 colName: vertical leftward: false naVsRest: false splitVal: NaN isBitset: true predValue: 0.46700507 squaredErr: 49.035534 leftChild: Node 10 rightChild: Node 11 Node 6 weight: 358.0 depth: 2 colId: 1 colName: jobs_completed leftward: true naVsRest: false splitVal: 416.0 isBitset: false predValue: 0.32122904 squaredErr: 78.05866 leftChild: Node 12 rightChild: Node 13 nid: 2 pid: 0 nidL: 5 nidR: 6 weightL: 197.0 weightR: 358.0 predL: 0.46700507 predR: 0.32122904 sqErrL: 49.035534 sqErrR: 78.05866 reserved: 0</p>
+<p>Tree inconsistency found: Node 1 weight: 414.0 depth: 1 colId: 0 colName: owner_operator leftward: false naVsRest: false splitVal: 0.5 isBitset: false predValue: 0.8864734 squaredErr: 41.66425 leftChild: Node 3 rightChild: Node 4 Node 3 weight: 113.0 depth: 2 colId: 4 colName: vertical leftward: true naVsRest: false splitVal: NaN isBitset: true predValue: 0.8318584 squaredErr: 15.805309 leftChild: Node 7 rightChild: Node 281 Node 4 weight: 139.0 depth: 2 colId: 1 colName: jobs_completed leftward: true naVsRest: false splitVal: 0.5 isBitset: false predValue: 0.8920863 squaredErr: 13.381295 leftChild: Node 8 rightChild: Node 9 nid: 1 pid: 0 nidL: 3 nidR: 4 weightL: 113.0 weightR: 139.0 predL: 0.8318584 predR: 0.8920863 sqErrL: 15.805309 sqErrR: 13.381295 reserved: 0</p>
+<pre class="r"><code># RANDOM FOREST
+rf_models_h2o &lt;- h2o.randomForest(
+  # project_name = &quot;ds_test_models&quot;,
+  x = x, 
+  y = y, 
+  training_frame = train_h2o, 
+  validation_frame = valid_no_test_h20, 
+  categorical_encoding = &quot;Enum&quot;, 
+  max_runtime_secs = 60
+ )
+
+pred_h2o &lt;- h2o.predict(rf_models_h2o, test_h2o)
+h2o.performance(rf_models_h2o, test_h2o)</code></pre>
+<p>H2OBinomialMetrics: drf</p>
+<p>MSE: 0.1181478 RMSE: 0.3437263 LogLoss: 0.3957511 Mean Per-Class Error: 0.1361345 AUC: 0.9118114 Gini: 0.8236228</p>
+<p>Confusion Matrix (vertical: actual; across: predicted) for F1-optimal threshold: 0 1 Error Rate 0 74 11 0.129412 =11/85 1 18 108 0.142857 =18/126 Totals 92 119 0.137441 =29/211</p>
+<p>Maximum Metrics: Maximum metrics at their respective thresholds metric threshold value idx 1 max f1 0.510088 0.881633 110 2 max f2 0.260158 0.909091 144 3 max f0point5 0.661737 0.915094 94 4 max accuracy 0.510088 0.862559 110 5 max precision 0.991209 1.000000 0 6 max recall 0.020406 1.000000 170 7 max specificity 0.991209 1.000000 0 8 max absolute_mcc 0.510088 0.719778 110 9 max min_per_class_accuracy 0.510088 0.857143 110 10 max mean_per_class_accuracy 0.510088 0.863866 110</p>
+<p>Gains/Lift Table: Extract with <code>h2o.gainsLift(&lt;model&gt;, &lt;data&gt;)</code> or <code>h2o.gainsLift(&lt;model&gt;, valid=&lt;T/F&gt;, xval=&lt;T/F&gt;)</code></p>
+<pre class="r"><code>h2o.varimp(rf_models_h2o)</code></pre>
+<p>Variable Importances: variable relative_importance scaled_importance percentage 1 jobs_completed 5680.913574 1.000000 0.762058 2 vertical 800.327148 0.140880 0.107359 3 plan_tier 438.642334 0.077213 0.058841 4 owner_operator 322.948395 0.056848 0.043321 5 cc_rate 211.873032 0.037296 0.028421</p>
+<pre class="r"><code>h2o.varimp_plot(rf_models_h2o, 20)</code></pre>
+<p><img src="/articles/Predicting-cc-attachment/predicting-credit-card-attachment-using-h2o_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code>h2o.download_mojo(rf_models_h2o, &quot;~/Downloads/&quot;, FALSE)</code></pre>
+<p>[1] “DRF_model_R_1543265347594_3463.zip”</p>
+</div>
