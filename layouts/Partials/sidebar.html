@@ -69,12 +69,12 @@
         {{ end }}
       </div>
 
-      {{ if ge (len (where .Site.Pages "Type" "post")) ($.Scratch.Get "postLimit") }}
+      {{ if ge (len (where .Site.Pages "Type" "articles")) ($.Scratch.Get "postLimit") }}
         <a href=
           {{ with .Site.Params.viewMorePostLink }}
             {{ . }}
           {{ else }}
-            "/post/"
+            "/articles/"
           {{ end }}
         class="button">View more posts</a>
       {{ end }}
