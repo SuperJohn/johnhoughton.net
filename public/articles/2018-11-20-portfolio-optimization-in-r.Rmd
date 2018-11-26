@@ -1,0 +1,28 @@
+---
+title: 'Portfolio Optimization in R '
+author: John Houghton
+date: '2018-11-20'
+slug: portfolio-optimization-in-r
+categories: []
+tags: []
+description: 'Optimizing & Rebalancing Financial Portfolios in R using tidyquant & PerformanceAnalytics'
+summary: "A custom summary of my post."
+featuredpath: /articles/2018-11-20-portfolio-optimization-in-r_files/portfolio_optimization_shiny_app.png
+featured: ""
+featuredalt: ""
+---
+
+# Project Summary
+I've always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ [business-science.io](https://business-science.io), an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he's written [tidyquant](https://business-science.github.io/tidyquant/), financial analysis and portfolio optimization is much more user friendly, so I thought I'd give it a go. 
+
+## Shiny App
+![](/articles/2018-11-20-portfolio-optimization-in-r_files/portfolio_optimization_shiny_app.png#floatleft){width=300px height=300px}
+
+I have a shiny application that's currently in development (as of Nov-2018), which implements a narrow optimization strategy that's suited for my needs. I'm hoping to find time to build it out to handle more generalized needs in the near future. Check it out! 
+
+Here's a Link to my app on shinyapps.io:
+  [https://superjohnca.shinyapps.io/portfolio_optimization/](https://superjohnca.shinyapps.io/portfolio_optimization/)
+
+
+# My R Notebook via gist
+{{<gist SuperJohn 58ced0f37a27b4ca073d6dd01dac6034>}}

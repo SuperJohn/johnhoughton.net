@@ -12,28 +12,13 @@
     
     
     <item>
-      <title>Contact Us</title>
-      <link>/about/contact/</link>
-      <pubDate>Sun, 08 Apr 2018 09:16:58 -0800</pubDate>
+      <title>Ridge Regression with cross-validation in Python</title>
+      <link>/articles/ridge-regression-cross-validation-in-python/</link>
+      <pubDate>Sat, 24 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/about/contact/</guid>
-      <description>We are a little busy exploring space right now; we&amp;rsquo;ll get back to you when we return to this solar system.</description>
-    </item>
-    
-    <item>
-      <title>This Theme</title>
-      <link>/about/hugo/</link>
-      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/hugo/</guid>
-      <description>Hugo-Smorg is a theme for Hugo, the blazingly fast super flexible static site engine.
-See the project page: https://github.com/solutionroute/hugo-smorg, and
-the demo site: https://solutionroute.github.io/hugo-smorg/exampleSite/
-for more information.
-Go Hugo!
-Hugo Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
+      <guid>/articles/ridge-regression-cross-validation-in-python/</guid>
+      <description>Ridge Regression is a hyper-parameter tuning technique that helps us deal with multi-collinearity and variance in regression models. Here, we use cross-validation to provide a robust OLS estimation with variance taken into account. This allows us to have the benefits of polynomial regression (low bias), while penalizing high-variance to find a balanced model that has a good fit, but generalizes well to new data.
+ Further Reading: A great article on Ridge Regression Fundamentals</description>
     </item>
     
     <item>
@@ -46,30 +31,21 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about/about/</link>
-      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/about/</guid>
-      <description>Here is some stuff I’m writing</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/about/</link>
-      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/about/</guid>
-      <description>Here is some stuff I&amp;rsquo;m writing</description>
-    </item>
-    
-    <item>
       <title>Embedded Shiny App Test</title>
       <link>/itemized/embedded-shiny-app-test/</link>
       <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/itemized/embedded-shiny-app-test/</guid>
       <description>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.”</description>
+    </item>
+    
+    <item>
+      <title>Portfolio Optimization in R </title>
+      <link>/articles/portfolio-optimization-in-r/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/portfolio-optimization-in-r/</guid>
+      <description>Project Summary I’ve always wanted to build out some tools to start managing my portfolio. I was recently inspired by Matt Dancho @ business-science.io, an author of the tidyquant package, who wrote an article describing his initial interest in R for investment portfolio optimization and his quick success at quickly turning around his performance through quantitative analytics. Now that he’s written tidyquant, financial analysis and portfolio optimization is much more user friendly, so I thought I’d give it a go.</description>
     </item>
     
     <item>
@@ -88,7 +64,7 @@ It makes use of a variety of open source projects including:
       
       <guid>/itemized/test-itemized-nov-20/</guid>
       <description>Titanic: Machine Learning from disaster https://www.kaggle.com/c/titanic
-## ── Attaching packages ───────────────────────────────────────────────────────────────── tidyverse 1.2.1 ── ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.5.1 ## ── Conflicts ──────────────────────────────────────────────────────────────────── tidyverse_conflicts() ── ## ✖ dplyr::filter() masks stats::filter() ## ✖ dplyr::lag() masks stats::lag() library(knitr) library(rmdformats) ## Global options options(max.</description>
+## ── Attaching packages ──────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ── ## ✔ ggplot2 3.1.0 ✔ purrr 0.2.5 ## ✔ tibble 1.4.2 ✔ dplyr 0.7.6 ## ✔ tidyr 0.8.2 ✔ stringr 1.3.1 ## ✔ readr 1.1.1 ✔ forcats 0.3.0 ## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.5.1 ## ── Conflicts ─────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ── ## ✖ dplyr::filter() masks stats::filter() ## ✖ dplyr::lag() masks stats::lag() library(knitr) library(rmdformats) ## Global options options(max.</description>
     </item>
     
     <item>
@@ -111,6 +87,20 @@ It makes use of a variety of open source projects including:
     
     <item>
       <title>How to Make Awesome R Markdown for Blogdown</title>
+      <link>/articles/how-to-make-awesome-r-markdown-for-blogdown/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/how-to-make-awesome-r-markdown-for-blogdown/</guid>
+      <description> knitr::read_chunk(&amp;#39;~/Documents/Github/r_snippets/blogdown.R&amp;#39;) R Notebook Options  Great Article on configuration / tips &amp;amp; tricks https://medium.com/@jeffmcmorris/tips-and-tricks-for-building-a-theme-in-hugo-4806bdd747d7
+blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.html  Knitr Examples on Github https://github.com/yihui/knitr-examples ## CheatSheet https://www.ethz.ch/content/dam/ethz/special-interest/math/statistics/sfs/Education/Advanced%20Studies%20in%20Applied%20Statistics/course-material-1719/Datenanalyse/rmarkdown-2.pdf
+  Markdown Themes rmdformats package https://github.com/juba/rmdformats The github README.md provides some good examples
+ Here’s a great collection of examples of themes http://www.datadreaming.org/post/r-markdown-theme-gallery/
+ Custom Build Functions https://yutani.rbind.io/post/2017-10-25-blogdown-custom/
+  </description>
+    </item>
+    
+    <item>
+      <title>How to Make Awesome R Markdown for Blogdown</title>
       <link>/post/how-to-make-awesome-r-markdown-for-blogdown/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
@@ -121,24 +111,6 @@ blogdown documentation here: https://bookdown.org/yihui/rmarkdown/html-document.
  Here’s a great collection of examples of themes http://www.datadreaming.org/post/r-markdown-theme-gallery/
  Custom Build Functions https://yutani.rbind.io/post/2017-10-25-blogdown-custom/
   </description>
-    </item>
-    
-    <item>
-      <title>Hulk Hogan for President!!!</title>
-      <link>/about/hulk-hogan-for-president/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/hulk-hogan-for-president/</guid>
-      <description> THis is something  </description>
-    </item>
-    
-    <item>
-      <title>Hulk Hogan for President!!!</title>
-      <link>/about/hulk-hogan-for-president/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/about/hulk-hogan-for-president/</guid>
-      <description> THis is something </description>
     </item>
     
     <item>

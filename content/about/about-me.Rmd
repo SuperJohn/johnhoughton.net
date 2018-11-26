@@ -1,18 +1,12 @@
+---
+title: About Me
+author: John Houghton
+date: '2018-11-24'
+slug: about-me
+---
 
-
-+++
-type = "itemized"
-author = "John Houghton"
-date = "2018-11-20"
-title = "About Me"
-description = "I'm a Data Scientist living in San Diego, CA"
-categories = [""]
-linktitle = "about_me"
-format = "R"
-link = "#"
-+++
-> ## Hi, I'm John. 
-### I'm a Data Scientist living in San Diego, CA.
+## Hi, I'm John. 
+ I'm a Data Scientist living in San Diego, CA.
 
 {{< img-post path="/img/profile_pics/" file="profile1.jpg" alt="Alt Text" type="left" >}}
 #### *Connect with me on LinkedIn*

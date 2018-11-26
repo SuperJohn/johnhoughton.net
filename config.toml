@@ -17,7 +17,7 @@ canonifyURLs = true
   # Sets the navbarTitle that appears in the top left of the navigation bar
   navbarTitle          = "John Houghton"
   # Sets where "View More Posts" links
-  viewMorePostLink     = "/post/"
+  viewMorePostLink     = "/articles/"
 
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
@@ -63,7 +63,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # customCSS            = ["default", "/path/to/file"]
   # customJS             = ["default", "/path/to/file"]
   customCSS            = ["css/add-on.css", "css/main_custom.css"]
-  customJS             = ["default"]
+  customJS             = ["default", "js/add-on.js"]
 
   # options for highlight.js (version, additional languages, and theme)
   disable_highlight = false # set to true to disable Highlight
@@ -127,17 +127,17 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "fa fa-id-card-o"
   weight = 2
 
-[[menu.main]]
-  name = "Articles"
- url = "/post/"
- identifier = "fa fa-newspaper-o"
- weight = 3
+#[[menu.main]]
+#  name = "Posts"
+# url = "/post/"
+# identifier = "fa fa-newspaper-o"
+# weight = 3
 
 [[menu.main]]
- name = "Projects"
- url = "/itemized/"
- identifier = "fa fa-list"
- weight = 4
+ name = "Articles"
+ url = "/articles/"
+ identifier = "fa fa-list stuff"
+ weight = 3
 
 #[[menu.main]]
 # name = "Categories"

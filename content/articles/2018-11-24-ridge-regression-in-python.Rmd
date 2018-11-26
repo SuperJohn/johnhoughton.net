@@ -1,0 +1,24 @@
+---
+title: 'Ridge Regression with cross-validation in Python'
+author: John Houghton
+date: '2018-11-24'
+slug: ridge-regression-cross-validation-in-python
+categories: []
+tags: []
+description: 'A Ridge Regression demo for optimization and hyper-parameter tuning for regression models in R'
+LinkTitle: "ridge-regression"
+summary: "A custom summary of my post."
+featuredpath: /articles/2018-11-24-ridge-regression-in-python_files/RidgeRegression.png
+featured: ""
+featuredalt: ""
+---
+
+![Ridge Regression](/articles/2018-11-24-ridge-regression-in-python_files/RidgeRegression.png#floatleft){width=300px height=300px type=left}
+Ridge Regression is a hyper-parameter tuning technique that helps us deal with multi-collinearity and variance in regression models. Here, we use cross-validation to provide a robust OLS estimation with variance taken into account. This allows us to have the benefits of polynomial regression (low bias), while penalizing high-variance to find a balanced model that has a good fit, but generalizes well to new data. 
+
+> [Further Reading: A great article on Ridge Regression Fundamentals](https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Ridge_Regression.pdf)
+
+
+# Jupyter Notebook via Gist
+
+{{<gist SuperJohn 5174ec5984df4b2e502e4cb52258a513>}}

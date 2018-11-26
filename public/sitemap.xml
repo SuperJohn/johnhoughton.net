@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/about/contact/</loc>
-    <lastmod>2018-04-08T09:16:58-08:00</lastmod>
+    <loc>/about/</loc>
+    <lastmod>2018-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/hugo/</loc>
-    <lastmod>2018-03-01T00:00:00+00:00</lastmod>
+    <loc>/articles/ridge-regression-cross-validation-in-python/</loc>
+    <lastmod>2018-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,17 +18,12 @@
   </url>
   
   <url>
-    <loc>/about/about/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/about/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/itemized/embedded-shiny-app-test/</loc>
+    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/articles/portfolio-optimization-in-r/</loc>
     <lastmod>2018-11-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -43,11 +38,6 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/portfolio-optimization-in-r/</loc>
     <lastmod>2018-11-20T00:00:00+00:00</lastmod>
   </url>
@@ -58,17 +48,12 @@
   </url>
   
   <url>
+    <loc>/articles/how-to-make-awesome-r-markdown-for-blogdown/</loc>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/how-to-make-awesome-r-markdown-for-blogdown/</loc>
-    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/hulk-hogan-for-president/</loc>
-    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/hulk-hogan-for-president/</loc>
     <lastmod>2018-11-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,14 +98,13 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
+    <loc>/articles/</loc>
+    <lastmod>2018-11-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,13 +152,7 @@
   
   <url>
     <loc>/categories/examplesite/</loc>
-    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/howto/</loc>
-    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
+    <lastmod>2018-11-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

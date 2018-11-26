@@ -10,9 +10,30 @@ section.recent-posts{
   padding: 0;
 }
 
+.gist {
+    clear: left;
+}
+
+h1 {clear:left;}
+
 .gist iframe.render-viewer {
     border: 0;
     height: 480px;
     overflow: hidden;
     width: 100%;
 }
+
+img[src$='#floatleft']
+{
+	float: left;
+	border:10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+img[src$='#floatright']
+{
+	float:right;
+       //etc. etc.
+}
+

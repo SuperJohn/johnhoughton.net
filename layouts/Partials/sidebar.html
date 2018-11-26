@@ -44,7 +44,7 @@
           {{ $.Scratch.Set "postLimit" 5 }}
         {{ end }}
 
-        {{ range first ($.Scratch.Get "postLimit") (where ($.Scratch.Get "recentPosts") "Type" "post") }}
+        {{ range first ($.Scratch.Get "postLimit") (where ($.Scratch.Get "recentPosts") "Type" "articles") }}
           <article class="mini-post">
             <header>
               <h3>
@@ -79,7 +79,11 @@
         class="button">View more posts</a>
       {{ end }}
     </div>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="johnkirkhoughton"><a class="LI-simple-link" href='https://www.linkedin.com/in/johnkirkhoughton?trk=profile-badge'>John Houghton</a></div>
   </section>
+  
+  
 
   <!-- This if statement only applies if someone goes to the /categories url -->
   <!-- Otherwise this section is shown for all other links -->
@@ -117,7 +121,7 @@
   {{ end }}
   {{ end }}
 
-  <!-- About -->
+  <!-- About 
   {{ with .Site.Params.intro.about }}
     <section id="mini-bio">
       <h3>About</h3>
@@ -125,6 +129,7 @@
       <a href="/about/" class="button">Learn More</a>
     </section>
   {{ end }}
+  -->
 
   <!-- Footer -->
   <section id="footer">
