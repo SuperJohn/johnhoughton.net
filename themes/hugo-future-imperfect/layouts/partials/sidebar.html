@@ -44,7 +44,7 @@
           {{ $.Scratch.Set "postLimit" 5 }}
         {{ end }}
 
-        {{ range first ($.Scratch.Get "postLimit") (where ($.Scratch.Get "recentPosts") "Type" "post") }}
+        {{ range first ($.Scratch.Get "postLimit") (where ($.Scratch.Get "recentPosts") "Type" "articles") }}
           <article class="mini-post">
             <header>
               <h3>
@@ -60,12 +60,12 @@
         {{ end }}
       </div>
 
-      {{ if ge (len (where .Site.Pages "Type" "post")) ($.Scratch.Get "postLimit") }}
+      {{ if ge (len (where .Site.Pages "Type" "articles")) ($.Scratch.Get "postLimit") }}
         <a href=
           {{ with .Site.Params.viewMorePostLink }}
             {{ . }}
           {{ else }}
-            "/post/"
+            "/articles/"
           {{ end }}
         class="button">View more posts</a>
       {{ end }}
