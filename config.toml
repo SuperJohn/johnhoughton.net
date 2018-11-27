@@ -63,7 +63,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # customCSS            = ["default", "/path/to/file"]
   # customJS             = ["default", "/path/to/file"]
   customCSS            = ["css/add-on.css", "css/main_custom.css"]
-  customJS             = ["default"]
+  customJS             = ["default", "js/add-ons.js"]
 
   # options for highlight.js (version, additional languages, and theme)
   disable_highlight = false # set to true to disable Highlight
